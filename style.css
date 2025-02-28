@@ -41,6 +41,10 @@ body {
   border-radius: 4px;
   box-sizing: border-box;
 }
+.highlight {
+    color: red; /* Büyük harfli kelimelerin rengi */
+    font-weight: bold; /* İsteğe bağlı: kelimeleri kalın yapma */
+}
 
    
 
