@@ -1,26 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Tüm metin içeriğini tarayacak fonksiyon
-    function highlightUppercaseWords(node) {
-        if (node.nodeType === Node.TEXT_NODE) {
-            // Metin içeriğindeki kelimeleri kontrol et
-            const words = node.nodeValue.split(/\s+/);
-            const newWords = words.map(word => {
-                // Eğer kelime tamamen büyük harflerden oluşuyorsa
-                if (/^[A-ZÇĞİÖŞÜ]+$/.test(word)) {
-                    return `<span class="highlight">${word}</span>`;
-                }
-                return word;
-            });
-            node.nodeValue = newWords.join(' ');
-        } else if (node.nodeType === Node.ELEMENT_NODE) {
-            // Eğer element node ise, çocuklarını kontrol et
-            Array.from(node.childNodes).forEach(highlightUppercaseWords);
-        }
-    }
 
-    // Tüm body içeriğini tarayarak büyük harfli kelimeleri renklendir
-    highlightUppercaseWords(document.body);
-});
 function debounce(func, delay) {
     let timeout;
     return function (...args) {
