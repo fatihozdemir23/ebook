@@ -8,6 +8,10 @@ body {
   min-height: 100vh; /* Tam ekran yüksekliği */
   overflow-x: hidden;
 }
+h1 {
+            color: red; /* Büyük harf kelimelerinin rengi */
+            font-weight: bold; /* İsteğe bağlı: Kalın yazı */
+        }
 
     /* Okuma alanı (A4 boyutunda) */
     .reading-container {
