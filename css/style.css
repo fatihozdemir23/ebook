@@ -1,0 +1,52 @@
+
+body {
+  background-color: #fbf0cb;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Yatay ortalama */
+  align-items: center; /* Dikey ortalama */
+  min-height: 100vh; /* Tam ekran yüksekliği */
+  overflow-x: hidden;
+}
+.uppercase-text {
+    color: red; /* Yazı rengini kırmızı yap */
+    font-weight: bold; /* Kalın yaz */
+}
+
+
+    /* Okuma alanı (A4 boyutunda) */
+    .reading-container {
+    width: 210mm; /* A4 genişliği */
+    max-width: 90%;
+    background: #fbf0cb;
+    padding: 50px;
+    box-shadow: 0px 0px 13px 0px rgba(74, 3, 3, 0.84);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden; /* İçerik taşmasını engelle */
+ 
+   
+
+    }
+    .reading-area {
+    width: 100%; /* İçeriğin tam oturmasını sağla */
+    font-size: var(--font-size); /* CSS değişkeni ile kontrol */
+    line-height: 1.6;
+    transform-origin: center top;
+    transition: transform 0.1s ease-out;
+    overflow-wrap: break-word;
+    will-change: font-size; /* Önceden bildirilen değişiklik */
+}
+#filter-input-book {
+  width: 100%;
+  max-width: 600px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+   
+
+   
