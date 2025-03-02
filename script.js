@@ -1,39 +1,4 @@
 
-function debounce(func, delay) {
-    let timeout;
-    return function (...args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(this, args), delay);
-    };
-}
-
- let originalText = document.getElementById("reading-area").innerHTML;
-
-        function searchText() {
-            let query = document.getElementById("searchBox").value.trim();
-            if (!query) {
-                document.getElementById("reading-area").innerHTML = originalText;
-                return;
-            }
-
-            let options = {
-                keys: ["reading-area"],
-                threshold: 0.3 // Eşleşme hassasiyeti (0.0 = tam eşleşme, 1.0 = çok geniş arama)
-            };
-
-            let fuse = new Fuse([{ content: originalText }], options);
-            let result = fuse.search(query);
-
-            if (result.length > 0) {
-                let highlightedText = originalText.replace(new RegExp(query, "gi"), match => `<mark>${match}</mark>`);
-                document.getElementById("reading-area").innerHTML = highlightedText;
-            }
-        }
-
-
-
-
-
 
     // Gündüz/Gece modu geçişi
     const toggleModeBtn = document.getElementById('toggleMode');
@@ -56,7 +21,7 @@ function debounce(func, delay) {
 
   
 
-    let fontSize = 2; // Başlangıç font-size (rem cinsinden)
+    let fontSize = 1; // Başlangıç font-size (rem cinsinden)
 
 const root = document.documentElement;
 const increaseFontBtn = document.getElementById('increaseFont');
