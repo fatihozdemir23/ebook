@@ -45,9 +45,9 @@ h1 {
   border-radius: 4px;
   box-sizing: border-box;
 }
-.highlight {
-    color: red; /* Büyük harfli kelimelerin rengi */
-    font-weight: bold; /* İsteğe bağlı: kelimeleri kalın yapma */
+.uppercase-text {
+    color: red; /* Yazı rengini kırmızı yap */
+    font-weight: bold; /* Kalın yaz */
 }
 
    
