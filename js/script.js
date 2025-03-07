@@ -30,11 +30,6 @@ function debounce(func, delay) {
             }
         }
 
-
-
-
-
-
     // Gündüz/Gece modu geçişi
     const toggleModeBtn = document.getElementById('toggleMode');
     let isNightMode = false;
@@ -56,7 +51,7 @@ function debounce(func, delay) {
 
   
 
-    let fontSize = 2; // Başlangıç font-size (rem cinsinden)
+let fontSize = 1; // Başlangıç font-size (rem cinsinden)
 
 const root = document.documentElement;
 const increaseFontBtn = document.getElementById('increaseFont');
@@ -75,3 +70,34 @@ function updateFontSizeWithIdle(change) {
 
 increaseFontBtn.addEventListener('click', () => updateFontSizeWithIdle(0.1));
 decreaseFontBtn.addEventListener('click', () => updateFontSizeWithIdle(-0.1));
+
+ 
+ 
+ // Tefekkür modu geçişi
+  var orijinalMetin = document.getElementById("readingArea").innerHTML;
+  const btnTefekkur = document.getElementById('btnTefekkur');
+  let isTefekkurMode = false;
+	
+    btnTefekkur.addEventListener('click', function() {
+      
+     var metinElementi = document.getElementById("readingArea");
+      if(isTefekkurMode) {
+          // Eski haline döndür
+                metinElementi.innerHTML = orijinalMetin;
+        btnTefekkur.textContent = 'Tefekkür Modu Aç';
+      } else {
+      // Cümle sonundaki noktaları tespit et ve `<br>` ekle
+                var yeniMetin = orijinalMetin.replace(/(?<=\b[A-Za-zÇĞİÖŞÜçğıöşü]+)\. (?=[A-ZÇĞİÖŞÜ])/g, ".<br><br>");
+
+                metinElementi.innerHTML = yeniMetin;
+        btnTefekkur.textContent = 'Tefekkür Modu Kapat';
+      }
+	    // Durumu tersine çevir
+          isTefekkurMode = !isTefekkurMode; 
+          bindModalTriggers(); // Yeni modal öğeleri için tekrar olay bağla
+    });
+
+   
+
+
+	

@@ -1,17 +1,18 @@
 const leftMenu = document.getElementById('leftMenu');
 const openLeftMenuBtn = document.getElementById('openLeftMenu');
 
-openLeftMenuBtn.addEventListener('click', function (event) {
-    leftMenu.classList.toggle('open');
-    event.stopPropagation(); // Butona tıklanınca body'ye yayılmasını önler
+openLeftMenuBtn.addEventListener('click', function(event) {
+  leftMenu.classList.toggle('open');
+  event.stopPropagation(); // Butona tıklanınca body'ye yayılmasını önler
 });
 
-document.addEventListener('click', function (event) {
-    // Eğer tıklanan eleman menünün içi değilse ve menü açıksa kapat
-    if (!leftMenu.contains(event.target) && !openLeftMenuBtn.contains(event.target)) {
-        leftMenu.classList.remove('open');
-    }
+document.addEventListener('click', function(event) {
+  // Eğer tıklanan eleman menünün içi değilse ve menü açıksa kapat
+  if (!leftMenu.contains(event.target) && !openLeftMenuBtn.contains(event.target)) {
+    leftMenu.classList.remove('open');
+  }
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Tüm başlıkları seç

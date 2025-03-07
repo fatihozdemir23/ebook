@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\cebir\\source\\repos\\fatihozdemir23\\ebook\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\cebir\\source\\repos\\fatihozdemir23\\ebook\\js\\toc.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\toc.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\cebir\\source\\repos\\fatihozdemir23\\ebook\\js\\right-menu.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\right-menu.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\cebir\\source\\repos\\fatihozdemir23\\ebook\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 11,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,6 +39,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "right-menu.js",
+              "DocumentMoniker": "C:\\Users\\cebir\\source\\repos\\fatihozdemir23\\ebook\\js\\right-menu.js",
+              "RelativeDocumentMoniker": "js\\right-menu.js",
+              "ToolTip": "C:\\Users\\cebir\\source\\repos\\fatihozdemir23\\ebook\\js\\right-menu.js",
+              "RelativeToolTip": "js\\right-menu.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-02T20:05:47.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "toc.js",
+              "DocumentMoniker": "C:\\Users\\cebir\\source\\repos\\fatihozdemir23\\ebook\\js\\toc.js",
+              "RelativeDocumentMoniker": "js\\toc.js",
+              "ToolTip": "C:\\Users\\cebir\\source\\repos\\fatihozdemir23\\ebook\\js\\toc.js",
+              "RelativeToolTip": "js\\toc.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-02T19:51:58.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "right-menu.js",
               "DocumentMoniker": "C:\\Users\\cebir\\source\\repos\\fatihozdemir23\\ebook\\right-menu.js",
               "RelativeDocumentMoniker": "right-menu.js",
@@ -41,7 +74,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\cebir\\source\\repos\\fatihozdemir23\\ebook\\index.html",
               "RelativeDocumentMoniker": "index.html",
@@ -53,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "script.js",
               "DocumentMoniker": "C:\\Users\\cebir\\source\\repos\\fatihozdemir23\\ebook\\script.js",
               "RelativeDocumentMoniker": "script.js",
