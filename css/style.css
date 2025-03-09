@@ -8,6 +8,20 @@ body {
   min-height: 100vh; /* Tam ekran yüksekliği */
   overflow-x: hidden;
 }
+table {
+  width: 100%; /* Tablo genişliği */
+  border-collapse: collapse; /* Kenarlıkların birleşmesini sağlar */
+}
+
+th, td {
+  border: 1px solid #000; /* Hücrelerin kenarlıkları */
+  padding: 8px; /* Hücre içi boşluk */
+  text-align: left; /* Metin hizalama */
+}
+
+th {
+  background-color: #f2f2f2; /* Başlık arka plan rengi */
+}
 .uppercase-text {
     color: red; /* Yazı rengini kırmızı yap */
     font-weight: bold; /* Kalın yaz */
