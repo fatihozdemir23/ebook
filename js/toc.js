@@ -15,26 +15,27 @@ document.addEventListener('click', function(event) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Tüm başlıkları seç
-  const toggles = document.querySelectorAll('li > a');
+    const toggles = document.querySelectorAll('li > a');
 
-  toggles.forEach((toggle) => {
-      // Eğer alt liste varsa, artı ikonu ekle
-      const subList = toggle.nextElementSibling;
-      if (subList && subList.tagName === 'UL') {
-          const icon = document.createElement('span');
-          icon.classList.add('toggle-icon');
-          toggle.append(icon); // İkonu <a> etiketinin içine ekliyoruz
+    toggles.forEach((toggle) => {
+        const subList = toggle.nextElementSibling;
+        if (subList && subList.tagName === 'UL') {
+            const icon = document.createElement('span');
+            icon.classList.add('toggle-icon');
+            toggle.append(icon);
 
-          // Tıklama olaylarını yönet
-          toggle.addEventListener('click', (e) => {
-              e.preventDefault(); // Sayfada gezinmeyi engelle
-              const isOpen = subList.classList.contains('open');
-              subList.classList.toggle('open', !isOpen); // Aç/kapa
-              icon.classList.toggle('open', !isOpen); // İkonu değiştir
-          });
-      }
-  });
+            // Tıklama olaylarını yönet
+            toggle.addEventListener('click', (e) => {
+                // Eğer tıklanan öğe .toggle-icon değilse, olay tetiklenmesin
+                if (!e.target.classList.contains('toggle-icon')) return;
+
+                e.preventDefault(); // Sayfada gezinmeyi engelle
+                const isOpen = subList.classList.contains('open');
+                subList.classList.toggle('open', !isOpen);
+                icon.classList.toggle('open', !isOpen);
+            });
+        }
+    });
 });
 
   
