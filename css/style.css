@@ -1,5 +1,8 @@
-
+:root{
+  --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
 body {
+  font-family: var(--bs-font-sans-serif);
   background-color: #fbf0cb;
   margin: 0;
   display: flex;
@@ -39,7 +42,6 @@ th {
     position: relative;
     overflow: hidden; /* İçerik taşmasını engelle */
  
-   
 
     }
     .reading-area {
