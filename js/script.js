@@ -10,14 +10,13 @@
         tocUl.id = "filtered-list"; // ID ekle
       }
     }
+     // Tüm TOC içindeki <a> etiketlerini seç
+     document.querySelectorAll("nav a, ul a").forEach(link => {
+         // İçindeki <b> ve <sup> etiketlerini kaldır
+         link.querySelectorAll("b, sup").forEach(tag => tag.remove());
+     });
  });
-document.addEventListener("DOMContentLoaded", function () {
-    // Tüm TOC içindeki <a> etiketlerini seç
-    document.querySelectorAll("nav a, #filtered-list a").forEach(link => {
-        // İçindeki <b> ve <sup> etiketlerini kaldır
-        link.querySelectorAll("b, sup").forEach(tag => tag.remove());
-    });
-});
+
   function filterList() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     let items = document.querySelectorAll(".list-group-item");
