@@ -77,13 +77,13 @@ decreaseFontBtn.addEventListener('click', () => updateFontSizeWithIdle(-0.1));
       if(isTefekkurMode) {
           // Eski haline döndür
                 metinElementi.innerHTML = orijinalMetin;
-        btnTefekkur.textContent = 'Tefekkür Modu Aç';
+        btnTefekkur.textContent = 'Dikkat Modu Aç';
       } else {
       // Cümle sonundaki noktaları tespit et ve `<br>` ekle
                 var yeniMetin = orijinalMetin.replace(/(?<=\b[A-Za-zÇĞİÖŞÜçğıöşü]+)\. (?=[A-ZÇĞİÖŞÜ])/g, ".<br><br>");
 
                 metinElementi.innerHTML = yeniMetin;
-        btnTefekkur.textContent = 'Tefekkür Modu Kapat';
+        btnTefekkur.textContent = 'Dikkat Modu Kapat';
       }
 	    // Durumu tersine çevir
           isTefekkurMode = !isTefekkurMode; 

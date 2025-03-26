@@ -11,6 +11,13 @@ body {
   min-height: 100vh; /* Tam ekran yüksekliği */
   overflow-x: hidden;
 }
+h1,h2,h3,h4{
+    color:red;
+}
+em{
+    font-weight:bold;
+    color:red;
+}
 table {
   width: 100%; /* Tablo genişliği */
   border-collapse: collapse; /* Kenarlıkların birleşmesini sağlar */
