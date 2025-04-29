@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!----======== CSS ======== -->
+  <link rel="stylesheet" href="css/style.css?v=1.0.1">
+  <link rel="stylesheet" href="css/toc.css?v=1.0.1">
+  <link rel="stylesheet" href="css/modal.css?v=1.0.1">
+  <link rel="stylesheet" href="css/fihrist.css?v=1.0.1">
+     <style>
+     #reading-area { max-width: 800px; margin: auto; padding: 20px; }
+    </style>
+</head>
+<body>
+  <!-- Modal -->
+  <!-- Modal -->
+<div id="listeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+background-color:rgba(0,0,0,0.7); z-index:1000; overflow:auto;">
+<div id="modalContent"  style="background:white; margin:50px auto; padding:20px; width:90%; max-width:1000px; border-radius:8px;">
+  <button onclick="closeModal()">Kapat</button>
+  <HR>
+  <h2>FİHRİST</h2>
+  <div id="listeContainer"></div>
+  <button onclick="closeModal()">Kapat</button>
+</div>
+</div>
+  <!-- Sol üst menü butonu -->
+  <button class="menu-button left" id="openLeftMenu">&#9776;</button>
+
+
+  <!-- Sol menü paneli: İçindekiler -->
+  <div class="menu-left" id="leftMenu">
+  <h2>Ayarlar</h2>
+ 
+
+    <div class="control-group">
+      <button class="btn btn-primary" id="decreaseFont">A -</button>
+      <button class="btn btn-primary" id="increaseFont">A +</button>
+	   <button class="btn btn-primary" id="toggleMode">🌙</button>
+    </div>
+	
+    <hr>
+    <h2>İçindekiler</h2>
+    
+    <div class="filter-container">
+      <input
+        type="text"
+        id="filter-input"
+        placeholder="Filtrele.."
+        class="filter-input"
+      />
+    </div>
+    <button type="button" class="btn btn-primary btn-block" onclick="showModal()">Fihrist</button> 
+ <ul>
+ <li><a href="#özet" id="toc-özet">Özet:</a></li>
+ <li><a href="#giriş" id="toc-giriş">Giriş</a></li>
+ <li><a href="#kuran-tarihine-dair-oryantalist-iddialar-ve-eleştirileri"
+ id="toc-kuran-tarihine-dair-oryantalist-iddialar-ve-eleştirileri">Kur’an
+ Tarihine Dair Oryantalist İddialar ve Eleştirileri</a></li>
+ <li><a href="#kuran-vahyinin-sözlü-aktarımı"
+ id="toc-kuran-vahyinin-sözlü-aktarımı">Kur’an Vahyinin Sözlü
+ Aktarımı</a></li>
+ <li><a href="#arap-yazısı-ve-kuranın-yazılması"
+ id="toc-arap-yazısı-ve-kuranın-yazılması">Arap Yazısı ve Kur’an’ın
+ Yazılması</a></li>
+ <li><a href="#kıraat-farklılıkları-meselesi"
+ id="toc-kıraat-farklılıkları-meselesi">Kıraat Farklılıkları
+ Meselesi</a></li>
+ <li><a href="#genel-değerlendirme-ve-sonuç"
+ id="toc-genel-değerlendirme-ve-sonuç">Genel Değerlendirme ve
+ Sonuç</a></li>
+ <li><a href="#kaynaklar" id="toc-kaynaklar">Kaynaklar:</a></li>
+ </ul>
+  </div>
+
+
+
+   <!-- Okuma alanı -->
+   <div class="reading-container" id="readingArea">
+
+    <div class="reading-area" id="reading-area">
+	
+        <blockquote>
+        <p><strong>İstanbul Üniversitesi İlahiyat Fakültesi Dergisi,
+        2012, 27, 9-28</strong></p>
+        <p><strong>Modern Dönemde Kur’an Tarihinin Ortaya Çıkışı:
+        Kur’an’ın Korunmuşluğu Hususunda Oryantalist İddialar ve
+        Müslümanlardan Cevaplar</strong></p>
+        <p><strong>Bilâl GÖKKIR*</strong></p>
+        </blockquote>
+        <h1 id="özet">Özet:</h1>
+        <blockquote>
+        <p>Kur'an'ın korunması oryantalistler arasında tartışmalı
+        noktalarından biridir. Batıda Kur'ân'ın metinleşme tarihine ilgi
+        19. Yüzyıl sonları ila 20. yüzyılın başlarına tekabül eder.</p>
+        <p>Modern zamanlarda oryantalistler Kur'an'ın korunması
+        tartışmasına Theodore Nöldeke’nin</p>
+        <p><em>Geschichte des Qurans</em> (1860) adlı çalışması ile
+        girmiş oldular. Nöldeke sonrasında ise bir Yahudi Macar olan
+        Ignaz Goldziher <em>Die Richtuungen der Islamischen
+        Koranauslegung</em> (1920) adlı eseri gündemi tuttu. Arthur
+        Jeffery gibi Batılı akademisyenler Müslümanlar tarafında da aynı
+        çalışmaların beklendiğini ve Ebu Abdillah Zincani’niye ait
+        <em>Tarihü’l-Kur'an</em> dışında bu alanda çalışmaların
+        bulunmadığını iddia etti. Sonraki dönemlerde Musa Carullah
+        Bigiyef’in <em>Tarihü’lKur'an ve'l-Mesahif</em> (1905); Ahmet
+        Cevdet Paşa'nın (1822-1895) H<em>ulasatü'l-Beyan f
+        Te'lifü’l-Kur'an</em> (İstanbul 1303/1886), İsmail Fenni
+        Ertuğrul’un, <em>Kitab-ı Izale-i Şukuk</em>, (İstanbul 1928)
+        bulunmaktadır. Elbette Osmanlı ve Arap dünyasında daha önceki
+        eserler İslam dünyasında son dönem eserler kadar
+        bilinmemektedir. Daha sonraki çalışmalar arasında şunlar
+        bulunmaktadır: Muhammed Ebû Leyle, <em>el-Kur'an el Kerim
+        minel-Manzuri'l-Istishraqi Dirase Nakdiyye Tahliliyye</em>
+        (Kahire 2002); Sasi Salim Hac
+        <em>Nakdü'l-Hitabi'l-İstişraki</em> <em>al -Zahira
+        el-Istishraqiyya ve Atharuha f alDirasat el-İslamiyye</em>
+        (Beyrut 2002); İbrahim Avad <em>el-Müsteşrikun ve'l-Kur'an:
+        Dirasa li-Tercemeti Nefer min el-Müseşerikin el-Fransiyyin
+        lil-Kur'an ve Arauhum Fih</em> (Kahire 2003). Muhammed Mustafa
+        el-A'zami <em>The History of the Qur’anic Text: from Revelation
+        to Compilation: a Comparative Study with the Old and New
+        Testament</em>s (Leicester 2003) Bu yazıda yukarıda bahsedilen
+        eserlerin bir analizi bulunmaktadır.</p>
+        <p><strong>Anahtar Kelimeler:</strong> Kur'an, Oryantalizm,
+        Kur'an tarihi, Kur'an'ın Metinleşmesi, Kur'an'ın farklı
+        kıraatleri.</p>
+        </blockquote>
+        <p>* Doç. Dr. İstanbul Üniversitesi İlahiyat Fakültesi, Tefsir
+        Anabilim Dalı.</p>
+        <blockquote>
+        <p><strong>Abstract:</strong></p>
+        <p><strong>Rise of the History of the Qur’an in Modern Time: The
+        Claims of the Western Scholars and Muslim Responses on the
+        Preservation of the Qur’an</strong></p>
+        <p>The preservation of the Qur’an is one of the debatable points
+        among the western scholars. The interest in history of the text
+        of the Qur’an in the west traces back to the 19<sup>th</sup>
+        century and early 20<sup>th</sup> century. Western scholarship
+        in modern time began to discuss the preservation of the Qur’an
+        with Theodore Nöldeke’s work Geschichte <em>des Qurans
+        (1860)</em>. Later a Jewish Hungarian scholar Ignaz Goldziher’s
+        <em>Die Richtuungen der Islamischen Koranauslegung</em> (1920)
+        came to the scene after Nöldeke and became popular. Western
+        scholars such as Arthur Jeffery expect the same from the Muslim
+        side and claimed that there is no work in this feld apart from
+        Abu Abdillah Zincani’s Tarikh al-Qur’an. Musa Jarullah Bigiyef’s
+        work <em>Tarikh alQur’an wa’l-Masahif</em> (1905); Ahmet Cevdet
+        Paşa’s (1822–1895) <em>Khulasatü’l-Bayan f Ta’lif al-Qur’an</em>
+        (Istanbul 1303/1886), İsmail Fennî Ertuğrul, <em>Kitab-ı İzale-i
+        Şükûk,</em> (İstanbul 1928) are among the early modern time
+        responses to the western scholarship. Certainly earlier works in
+        Ottoman and Arab world are not as well known as recent works in
+        Muslim world. Among the later works are: Muhammed Muhammed Abû
+        Layla, a<em>l-Qur’an al-Karim min
+        al-Manzuri’l-Istishraqi:</em></p>
+        <p><em>Dirasa Naqdiyya Tahliliyya</em> (Qairo 2002); Sasi Salim
+        Haj <em>Naqdü’l-khitabi’l-istishraqi: al-Zahira alIstishraqiyya
+        ve Atharuha f al-Dirasat al-Islâmiyya (</em>Bayrut 2002);
+        İbrahim Awad <em>al-Mustashriqun wa’l-Qur’an: Dirasa
+        li-Tarjamati Nafar min al-Mustashriqin al-Fransiyyin lil-Qur’an
+        ve Arauhum fh</em></p>
+        <p>(Kahire 2003). Muhammed Mustafa al-A’zami <em>The History of
+        the Qur’anic Text: from Revelation to Compilation: a Comparative
+        Study with the Old and New Testament</em>s (Leicester 2003).
+        This paper is an analysis of the above mentioned works.</p>
+        <p><strong>Keywords:</strong> Qur'an, orientalism, History of
+        the Qur'an, textualisation of the Qur'an, Various readings of
+        the Qur'an.</p>
+        <p>***</p>
+        </blockquote>
+        <h1 id="giriş">Giriş</h1>
+        <blockquote>
+        <p>Oryantalistlerin Kur’an’ın muhafazası aleyhindeki iddialarına
+        cevap veren çalışmalar üzerinde duracağımız bu yazımızda iki
+        husus hedefenmektedir. Birinci olarak başlıca eserlerden yola
+        çıkarak oryantalist iddialara yer veren eserlere temas etmektir.
+        İkinci olarak ise İslam dünyasından Oryantalist iddialara cevap
+        veren eserlerin tanıtımını yapmak ve bu eserlere hâkim olan
+        yaklaşım tarzını tahlil etmektir.</p>
+        <p>Kur’an’ın korunmuşluğu tartışması Oryantalist çalışmalarda
+        özellikle şu başlıklarda yer almaktadır: Kur’an’ın Hz. Peygamber
+        zamanında yazılması ve muhafaza edilmesi, Hz. Ebu Bekir ve Hz.
+        Osman zamanlarında cem edilmesi ve imam mushafın tayin ve
+        çoğaltılması, Sahabe Mushafarı, Yedi Harf ve Kıraatler. Bu
+        başlıklarda yer alan tartışmaların bütünü bugün bizim “Kur’an
+        Tarihi” dediğimiz literatürü oluşturmakta olup Kur’an’ın
+        metinleşme sürecini incelemektedir.</p>
+        <p><strong>Kur’an Tarihi Literatürü</strong></p>
+        <p>Batı’da Kur’an tarihi literatürünün oluşumu ve bu alana
+        yönelik ilgi 19.yy ve sonrası döneme rastlamaktadır. Bu dönem
+        Batı düşünce ve bilim tarihi açısından bakacak olursak Batı’nın
+        tarihçilikte ve tarih anlayışında bir kısım gelişmeler ve köklü
+        değişimler yaşadığı bir dönemdir. Siyasi tarih ve bilhassa İslam
+        dünyası ile batı dünyası arasındaki politik ilişki açısından
+        baktığımızda ise bu dönemin Batı sömürgesinin İslam dünyasına ve
+        genelde doğuya artık hâkim olmaya başladığı döneme rastladığı
+        görülür.</p>
+        <p>Kur’an’ın muhafazasını eleştirel şekilde gündeme getiren
+        Batılı Kur’an Tarihi çalışmaları ilk defa Alman
+        oryantalistlerden Theodore Nöldeke’nin 1860 yılında Almanca
+        yayınladığı <em>Geschichte des
+        Qurans</em><b><sup class="modal-trigger" data-content="Eser Türkçeye Kur'an Tarihi (İstanbul 1970) başlığı ile Muammer Sencer tarafından aktarılmıştır." style="cursor: pointer;">1</sup></b>
+        adlı eseri ile başlamıştır. <em>Encyclopedia Britannica</em>’ya
+        yazdığı “Kur’an”
+        maddesinde<b><sup class="modal-trigger" data-content="Theodor Nöldeke “The Koran” 9.baskı (1891) 16/597vd." style="cursor: pointer;">2</sup></b>
+        benzer fkirlerini özetleyen Nöldeke’nin bu eseri daha sonra
+        öğrencileri Friedrich Schwally, Gotthelf Bergsträsser ve Otto
+        Pretzl tarafından tamamlanacaktır. 19. yy’ın ortasında
+        Nöldeke’nin çalışması ile başlayan Kur’an Tarihine dönük bu
+        ilginin 20. yy’ın ortasına kadar yoğunlaşarak sürdüğünü görürüz.
+        Nitekim Yahudi asıllı bir Macar oryantalist olan Ignaz
+        Goldziher’in Leiden’de 1920 tarihinde yayınlanan <em>Die
+        Richtuungen der Islamischen
+        Koranauslegung</em><b><sup class="modal-trigger" data-content="Eser Mezahibu’t-Tefsiri’l-İslami (Kahire 1945) başlığıyla Arapçaya; Arapça çevirisinden de İslam Tefsir Ekolleri (İstanbul 1997) başlığı ile Türkçeye çevrilmiştir." style="cursor: pointer;">3</sup></b>
+        adlı eseri Nöldeke’nin eserinden sonra Batı’da en etkili
+        eserlerden biri olacaktır. Bunların takipçisi olarak Arthur
+        Jeffery, Alphonse Mingana ve Regis Blachere bu dönemde Kur’an
+        Tarihi üzerine yazan oryantalistlerin başında gelen
+        isimlerdir.</p>
+        <p>1950 sonrasına tekabül eden ve sömürgelerin çözülmeye
+        başladığı dönem diye adlandırabileceğimiz Kolonyalizm sonrası
+        evrede Kur’an metninin sıhhatini tartışan Kur’an Tarihi
+        literatürünün Oryantalist çalışmalarda ilgi kaybına uğradığı
+        söylenebilir. Akademik ilginin metnin sıhhatinden çok artık
+        Kur’an metninin dili ve üslûbu ile metnin bizzat tefsirine doğru
+        yönelmeye başladığı gözlenir. Ancak şu var ki, her ne kadar ilgi
+        metnin üslubu ve tefsiri üzerine gözükse de temelde metnin dili,
+        üslubu ve yorumu üzerine yapılan çalışmaların nihayette metnin
+        sıhhati ve muhafazasına yönelik tarihsel tartışmaları sıkça
+        gündeme taşıdığı söylenebilir. Kuran’ın teolojik, sosyal,
+        kültürel ve hukuki muhtevası</p>
+        <p>çerçevesinde yapılan Tefsir temelli tartışmaların başında
+        İslam’ın ve Kur’an’ın Yahudi-Hıristiyan gelenek ile ve bu
+        geleneğin kutsal metinleri ile paylaştığı tarihsel fgürler,
+        teolojik, hukuki ve ahlaki değerler üzerine karşılaştırmalar
+        yapılması bu değerlerin “ödünç alındığı” iddiasını perçinleme
+        çabası içindedir.</p>
+        <p>Nitekim, 20.yy’ın ikinci yarısında Kur’an Tarihi John
+        Wansbrough’nın <em>Qur’anic Studies</em> (1977) ve <em>Secterian
+        Milieu</em> (1978) adlı eserleri ile “revizyonist” bir
+        yaklaşımla tekrar gündeme geldiğinde söz konusu eserlerde Yahudi
+        ve Hıristiyan teolojisi ve kutsalları ile Kur’an’ın bağlantıları
+        en önemli başlıkları
+        oluşturacaktır.<b><sup class="modal-trigger" data-content="Kur’an metninin sıhhati ve muhafazası tartışmalarını yeniden tartışmaya açan John Wansbrough’nun revizyonist yaklaşımı John Burton, Michele Cook ve Patricia Crone gibi isimler tarafından da desteklenmiş ancak bu yaklaşım geleneksel Oryantalizm’in kendi içinde bile pek rağbet göstermediği bir tez olarak kalmıştır." style="cursor: pointer;">4</sup></b></p>
+        <p>Batılı Oryantalist çalışmalar da dikkat çeken en önemli
+        özelliklerden birisi literatür taraması kapsamında “Kur’an
+        Tarihi”ne dair Müslümanlar tarafından yazılan eserleri de
+        incelemeye almalarıdır. Ancak Batılı bir yaklaşım ve bilim dalı
+        olarak “Kur’an Tarihi” üzerine müslümanlar tarafından kaleme
+        alınmış doğrudan bir eserin olmamasını eleştirmektedirler.
+        Avustralyalı oryantalist Arthur Jeffery, Nöldeke’nin bu alandaki
+        öncülüğünü belirttiği ve müslüman okuyucularına hitaben yazdığı
+        bir yazısında Batı’da Kitab-ı Mukaddes çalışmalarına yönelik
+        nakilci ve akılcı iki kesim olduğunu belirtir. Amacı bunu
+        müslüman okuyucusuna örnek vermek olan Jeffery, Batıda Kitab-ı
+        Mukaddes’e akılcı ve analitik yaklaşımın, nakilci kesimlerden
+        eleştiri alsa da akılcı-analitik düşünen kesimin sonunda hâkim
+        duruma geldiklerini ifade eder. Akılcı- analitik yaklaşımın
+        Kur’an çalışmalarına yansımasının ilk ürünü olarak Theodore
+        Nöldeke’nin Kur’an tarihi üzerine yazdığı <em>Geschichte des
+        Qurans</em> adlı eserini
+        gösterir.<b><sup class="modal-trigger" data-content="Jeffery, “Mukaddime”, Materials for the History of the Text of the Qur’an, Leiden 1937, s. 4. 6 Jeffery, “Mukaddime”, Materials for the History of the Text of the Qur’an, s. 4." style="cursor: pointer;">5</sup></b>
+        Jeffery Batı dünyasında Kitab-ı Mukaddes tarihi ve yorumu
+        alanında modern çalışmaların varlığından ve bu alanda Batı
+        dünyasının başarılarından bahsettikten sonra Kur’an tarihi
+        alanında İslam dünyasında Batıya benzer bir tablonun olmadığını
+        ve Ebu Abdullah Zincani’nin <em>Tarihu’l-Kur’an</em> adlı eseri
+        dışında çalışma görülmediğini belirtir.<sup>6</sup></p>
+        <p>Burada oldukça ilginç bir durum söz konusudur. “Kur’an Tarihi
+        alanında İslam âlimlerince bir çalışmanın yapılmadığı” iddiasını
+        İbn Ebi</p>
+        <p>Davud es-Sicistani’ye yazdığı Arapça mukaddimesinde
+        dillendiren Arthur</p>
+        <p>Jeffery bizzat kendi döneminin İslam âlimlerinden olan ve
+        Mısır’da yaşamış olan Musa Carullah Bigeyef tarafından kaleme
+        alınan <em>Tarihü’lKur’an ve’l-Mesahif</em> (h.1323/m.1905) adlı
+        esere her neden ise hiç değinmez.</p>
+        <p>Uzun yıllar Mısır’da ikamet eden Musa Carullah’ın bu eseri
+        Arapçadır. Musa Carullah eserinde, oryantalistlerin isimlerine
+        yer vermeden ve doğrudan muhatap almadan geleneksel anlamda
+        Kur’an’ın cem edilmesi meselesini özetlemiş görünüşe bakılırsa
+        Nöldeke ile başlatılan tartışmalara gelenekteki ifadelere
+        yaptığı vurgularla üstü kapalı cevaplar vermiştir. Zira Musa
+        Carullah’ın yaşadığı dönem olan 20. yy’ın başında henüz Batılı
+        İslam araştırmalarının İslam âlimlerince bilimsel anlamda pek
+        ciddiye alınmadığı ve doğrudan muhatap görülmedikleri bir
+        dönemdir.</p>
+        </blockquote>
+        <p>Oysaki aynı Arthur Jeffery Sicistani’nin Mesahif’ine
+        yazdığı</p>
+        <blockquote>
+        <p>İngilizce aynı önsözde “şaz kıraatleri” kendisine okuttuğu
+        için Musa Carullah’a teşekkür
+        etmektedir.<b><sup class="modal-trigger" data-content="Jeffery, “Preface”, Materials for the History of the Text of the Qur’an, s. x." style="cursor: pointer;">6</sup></b>
+        Fakat 1937’de yayınladığı bu çalışmasında Musa Carullah’a
+        katkılarından ötürü teşekkür eden Jeffery’nin, Musa Carullah’ın
+        1905 baskı tarihli Kur’an Tarihi ile ilgili eserinin varlığına
+        dahi işaret etmemesinde bir gariplik
+        vardır.<b><sup class="modal-trigger" data-content="Jeffery “Mukaddime”de Seyyid Nevvar’a metnin Arapçasını çözümlemede teşekkürlerini yineleyecektir. Zahid el-Kevseri’ye de teşekkür eden Jeffery, Kevseri’nin isnatlar konusundaki yardımlarından söz eder. Bkz. Jeffery, “Mukaddime”, Materials for the History of the Text of the Qur’an, s. 16–17." style="cursor: pointer;">7</sup></b></p>
+        <p>Aslında Musa Carullah öncesine gidecek olursak bu konuda
+        yazılanlar arasında Ahmet Cevdet Paşa’nın (1822–1895)
+        <em>Hülasatü’l-Beyan f Te’lif’l-Kur’an</em> (İstanbul
+        h.1303/m.1886) adlı eserini görürüz. Büyük ihtimalle bu eser
+        Ahmet Cevdet Paşa’nın kendi döneminde Avrupa’da Nöldeke ile
+        başlayan tartışmalara cevaben yazdığı bir eserdir. Cevdet</p>
+        <p>Paşanın eseri Arapça olarak kaleme almış olması ise İslam
+        dünyasında ve Avrupa’da Arapça bilen müsteşriklerin de
+        okumalarını kolaylaştırmak bakımından önemlidir. Her iki eser de
+        geleneksel biçimde Mushafın cemi meselesini özetlemiş ve
+        kıraatlere yer vermiştir.</p>
+        <p>Jeffery’nin iddiasının aksine Batılı anlamda Kur’an Tarihi
+        başlıklı çalışmaların İslam geleneğinde olmaması Kur’an Tarihini
+        ihtiva eden bilgilerin İslam kaynaklarında tartışılmadığını
+        göstermez. Kur’an Tarihi batılı bir formattır ve başta Nöldeke
+        olmak üzere oryantalistler bu formatta bir çalışmanın içeriğini
+        Mushaf tarihi, siyer, meğazi gibi yine İslam kaynaklarından
+        edinmektedir. Nitekim Jeffery mushafar üzerine</p>
+        <p>İslam dünyasında yazılan eserlerin uzunca bir listesini
+        vermekte<b><sup class="modal-trigger" data-content="Jeffery’nin bize sunduğu eserler listesi şu şekildedir: İbn Amir (118) İhtilafu Mesahifş-Şam ve’l-Hicaz ve’l-İrak; Kisai (189) İhtilafu Mesahif Ehli’l-Medine ve Ehli’l Kufe ve Ehli’l-Basra; Ferra el –Bağdadi (207), İhtilafu Ehli’l Kufe ve’l-Basra ve’ş- Şam f’l-Mesahif;İbn Hişam (229) İhtilafü’lMesahif; Medaini (231) İhtilafü’l-Mesahif ve Camiu’l-Kıraat, Ebu Hatim (248) İhtilafü’l-MesahifMuhammed b. İsa el-İsbahani (253) Kitabu’l-Mesahif; İbn Ebi Davud Sicistani (316) Kitabu’lMesahif; İbnü’l-Enbari (327) Kitabu’l-Mesahif; İbn Eşte el-İsbahani (360), Kitabu’l-Mesahif. Bkz., Jeffery, “Mukaddime”, Materials for the History of the Text of the Qur’an, s. 10." style="cursor: pointer;">8</sup></b>
+        ve bu eserlerden günümüze kendisinin yayınladığı İbn Ebi Davud
+        es-Sicistani’ye ait (316/m.928) <em>Kitabu’l-Mesahif</em> adlı
+        eserin ulaştığını
+        belirtmektedir.<b><sup class="modal-trigger" data-content="İbn Ebi Davud meşhur hadis imamı Ebu Davud’un oğludur. Başta babası Ebu Davud olmak üzere hakkında pek çok İslam âliminin eleştirleri bulunduğunu anlıyoruz. Bkz.Abdurrahman Çetin, Kur’an-ı Kerim’in İndirildiği Yedi Harf ve Kıraatler, İstanbul 2005, s. 302." style="cursor: pointer;">9</sup></b></p>
+        </blockquote>
+        <p>Oryantalistler içinde en çok tepki alan Reinhardt
+        Dozy’nin</p>
+        <blockquote>
+        <p>(1820/1883) <em>Essai sur l’histoire de l’Islamisme</em> adlı
+        kitabı olacaktır. Eser İslam Tarihine dair olmakla beraber
+        Kur’an ve Hz. Peygamber ile ilgili düşünceler oldukça radikal ve
+        saldırgan bir tutum içindedir. Kitabın,</p>
+        <p>İslam Tarihi (İstanbul 1908) başlığında İttihat ve Terakki
+        mensubu ve Jön</p>
+        <p>Türk hareketinin öncülerinden Abdullah Cevdet (1869-1932)
+        tarafından Türkçeye çevrilmiş olması tepkileri daha da
+        arttırmıştır.<b><sup class="modal-trigger" data-content="Eser 2006 yılında Gri yayınları tarafından tekrar basılmıştır." style="cursor: pointer;">10</sup></b>
+        Manastırlı İsmail Hakkı’nın (1846-1912) <em>Hak ve Hakîkat adlı
+        eseri</em> Şehbenderzâde Filibeli Ahmed Hilmi’nin (1865-1914)
+        <em>Tarih-i İslâm</em> adlı eseri hep Dozy’e verilen cevapları
+        içermektedir. Ancak bunların yanında Kur’an ve özellikle Hz.
+        Peygamber'e dair en köklü cevabı İsmail Fennî Ertuğrul,
+        <em>Kitab-ı İzale-i Şükûk,</em> (Orhaniye Matb., İstanbul 1928)
+        adlı eserinde verecektir. Bu eser özellikle Kur’an ile ilgili
+        Dozy’nin eleştirilerini ciddi şekilde
+        irdelemektedir.<b><sup class="modal-trigger" data-content="Geniş tahlil için bkz Hakan Uğur, “Osmanlı’nın Son Döneminde Oryantalistlerin Kur’anHakkındaki İddialarına Karşı Osmanlı Ulemasının Yaptığı Çalışmalar-İsmail Fenni ErtuğrulÖrneği, yayınlanmamış tebliğ, Kur’an ve Tefsir Akademisi 4-8 Temmuz 2012 13 Ezher Dil ve Tercüme Bilimleri Fakültesi Dinler Tarihi Öğretim Üyesi." style="cursor: pointer;">11</sup></b></p>
+        <p>Biraz daha günümüze doğru gelindiğinde, 20.yy’ın ikinci
+        yarısında ve 21.yy. başında Kur’an Tarihi üzerine olan
+        oryantalist iddialarına cevaplar devam etmektedir.</p>
+        <p>Bu isimlerin başında Muhammed Ebû Leyle<sup>13</sup>
+        gelmektedir. <em>elKur’anu’l-Kerim mine’l-Manzuri’l-İstişraki:
+        Dirase Nakdiyye Tahliliyye</em> (Kahire’de 2002) adlı eserinde
+        Oryantalistler tarafından batıda yayınlanan <em>Encyclopaedia of
+        Islam</em> (New Edition)’da Alford T. Welch ve J.D. Pearson
+        tarafından ortak şekilde kaleme alınan “Kur’an” maddesinin
+        birebir tahlil etmekte ve rivayetler ışığında konuyu ele alan
+        Muhammed Ebu Leyle adı geçen yazarların başlıkları ve ele
+        aldıkları konular çerçevesinde eleştirisini
+        yapmaktadır.<sup>14</sup> Bu kapsamda özellikle Kur’an’ın
+        korunmuşluğu tartışmasının ele alındığı başlıklar şunlardır: H.
+        632 Sonrası Kur’an Tarihi, Kur’an’ın Cem’i, Kıraatler ve Sahabe
+        Mushafarı, İmam Mushafı ve Kıraatler.</p>
+        </blockquote>
+        <p>Bir diğer önemli eser ise Sasi Salim Hac’ın
+        <em>Nakdü’l-Hitabi’l-İstişraki:</em></p>
+        <blockquote>
+        <p><em>ez-Zahiretü’l-İstişrakiyye ve Eseruha
+        fî’d-Dirasati’l-İslâmiyye</em> adlı iki kalın ciltten oluşan
+        eseridir. Eser önce 1991 yılında Malta’da yayınlanır. Daha sonra
+        2002 yılında Beyrut’ta 2. baskısı yapılır. Eserinde Oryantalizm
+        Tarihi, Kur’an, Hadis, Siyer ve İslam Hukuku ayrı başlıklarda
+        incelenmiş, bu alanlarda Oryantalist yaklaşımlar tanıtılmış ve
+        eleştirilmiştir. Eserin birinci cilt 253–396 sayfaları arası
+        Kur’an ve Oryantalizm konusuna ayrılmıştır. Salim Hac eserinde
+        öncelikle Müsteşriklerin Kur’an’a dair düşüncelerine ve bu
+        düşüncelerin eleştirisine yer vermeden Kur’an ile ilgili
+        geleneksel düşünceyi özetlemeyi tercih etmiştir. Kur’an’ın
+        tercümesi meselesi, Kur’an’ın kaynakları, müsteşrikler ve vahy-i
+        ilahi, Kur’an’ın cem’i, tertibi</p>
+        <p>14</p>
+        <p>Ansiklopedi maddesinde Welch’in yer verdiği başlıklar
+        şunlardır:</p>
+        </blockquote>
+        <p>1. Kuran Kelimesinin etimolojisi ve eşanlamlıları</p>
+        <ol type="a">
+        <li><p>Kur’an’ın İştikakı ve Kur’an’daki Kullanımları</p></li>
+        <li><p>Eşanlamlıları</p></li>
+        </ol>
+        <blockquote>
+        <p>2. Hz. Muhammed ve Kur’an 3. Kur’an Tarihi -632 Sonrası</p>
+        </blockquote>
+        <ol type="a">
+        <li><p>Kur’an’ın Cem’i</p></li>
+        <li><p>Kıraatler ve Sahabe Mushafarı</p></li>
+        <li><p>İmam Mushafı ve Kıraatler 4. Yapısal Açıdan
+        Kur’an</p></li>
+        </ol>
+        <ol type="a">
+        <li><p>Sureler ve İsimleri</p></li>
+        <li><p>Ayetler</p></li>
+        <li><p>Besmele</p></li>
+        <li><p>Huruf-u Mukatta’a 5. Tarihsel Açıdan Kur’an</p></li>
+        </ol>
+        <ol type="a">
+        <li><p>Kur’an’da Tarihsel Referanslar</p></li>
+        <li><p>Geleneksel İslami Tarihlendirme</p></li>
+        <li><p>Modern Batılı Tarihlendirme</p></li>
+        </ol>
+        <p>6. Dil ve Üslup</p>
+        <ol type="a">
+        <li><p>Kur’an’ın Dili</p></li>
+        <li><p>Yabancı Kelimeler</p></li>
+        <li><p>Fasılalar ve Sec’</p></li>
+        <li><p>Şematik formlar ve tekrar ifadeler 7. Edebi Form ve
+        Başlıca Konular</p></li>
+        </ol>
+        <ol type="a">
+        <li><p>Yeminler ve İlgili Formlar</p></li>
+        <li><p>“Ayet” Pasajları</p></li>
+        <li><p>“De ki” Pasajları</p></li>
+        <li><p>Kıssalar</p></li>
+        <li><p>Ahkâm-Hukuki Düzenlemeler</p></li>
+        <li><p>İbadat</p></li>
+        <li><p>Diğerleri</p></li>
+        </ol>
+        <blockquote>
+        <p>8. Müslümanların Hayatlarında ve Düşüncelerinde Kur’an 9.
+        Kur’an’ın Tercümesi</p>
+        </blockquote>
+        <ol type="a">
+        <li><p>Sunni Doktrin</p></li>
+        <li><p>Belli Başlı Dillere Yapılan Tercümeler.</p></li>
+        </ol>
+        <blockquote>
+        <p>ve yazılması, Kur’an’ın yedi harf üzere indirilmesi, Mekki ve
+        Medeni ve Nasih ve Mensuh başlıklarına yer verir.</p>
+        </blockquote>
+        <p>Modern dönemde bir diğer önemli eser ise İbrahim Avad’ın
+        <em>el-</em></p>
+        <blockquote>
+        <p><em>Müsteşrikun ve’l-Kur’an: Dirase li-Tercemeti Nefer
+        mine’l-Müsteşrikini’lFransiyyin lil-Kur’an ve Arauhum fh</em>
+        adlı eseri olup eser iki kısımdan oluşmaktadır. Birinci kısımda
+        üç tanesi Fransız, birisi ise Fransa’da yaşayan bir müslümana
+        ait dört Fransızca Kur’an tercümesinde yapılan hatalar ortaya
+        konulmaktadır. İkinci kısımda ise Kur’an’ın kaynakları, tarihi,
+        cem’i ve önceki kutsal kitaplar ile ilgisini konu edinen dört
+        müsteşrikten tercümeler aktarmaktadır. Bunlardan yaptığı
+        tercümelerin ardından her birine birer ek olarak tahlillerini
+        yapmaktadır.</p>
+        <p>Yukarıda sözü edilen eserler hep Arapça olarak kaleme
+        alınmıştır. Bu alanda Muhammed Mustafa
+        A‘zami<b><sup class="modal-trigger" data-content="Hindistan asıllı, doktorasını Cambridge’de (1966) yapmış olan A‘zami daha ziyade Hadis alanındaki çalışmalarıyla bilinir. Hadis ile ilgili çalışması olan Studies in Early Hadith Literature 1968, İlk Devir Hadis Edebiyatı (çev. Hulusi Yavuz, İz Yayıncılık, İstanbul 1993) başlığıyla Türkçeye çevirilmiştir." style="cursor: pointer;">12</sup></b>
+        tarafından İngilizce olarak kaleme alınan ve önemli tahliller
+        içeren <em>Kur’an
+        Tarihi</em><b><sup class="modal-trigger" data-content="Muhammad Mustafa Al-A‘zami, The History of the Qur’anic Text: from Revelation toCompilation : a Comparative Study with the Old and New Testaments, UK Islamic Academy, Leicester 2003. XXII, 376 s. Eser’in Türkçe çevirisi: Vahyedilişinden Derlenişine Kur’an Tarihi,Eski ve Yeni Ahit ile Karşılaştırmalı Bir Araştırma (çev. Ömer Türker-Fatih Serenli, İz Yayıncılık, İstanbul 2006)" style="cursor: pointer;">13</sup></b>
+        adlı eseri oryantalizmin Kur’an Tarihi çalışmalarına ciddi ve
+        köklü eleştiriler getirmektedir. Eserin İngilizce orijinal tam
+        ismi <em>The History of the Qur’anic Text: from Revelation to
+        Compilation: a Comparative Study with the Old and New
+        Testament</em>s (Leicester 2003). A‘zami dünyada İngilizce'yi
+        konuşan büyük bir kesimin Kur’an hakkındaki bilgi eksikliği
+        nedeniyle saldırılar karşısında savunmasız kaldıklarından dolayı
+        eserini İngilizce yayınladığını belirtir. Bu eser yazarın
+        Oryantalizm üzerine yaptığı ilk çalışma değildir. A‘zami daha
+        önce 1985 yılında kaleme aldığı <em>On Schacht’s Origins of
+        Muhammedan Jurisprudence</em> adlı çalışması ile
+        Oryantalistlerden J. Schacht’ın İslam hukukunun kaynağına dair
+        düşüncelerini tahlil ve eleştiriye tabi
+        tutmuştur.<b><sup class="modal-trigger" data-content="Eserin Türkçesi: İslam Fıkhı ve Sünnet-Oryantalist J. Schact’a Eleştiri, (çev. Mustafa Ertürk, İz Yayıncılık, İstanbul 1996)." style="cursor: pointer;">14</sup></b></p>
+        <p>A‘zami’nin <em>Kur’an Tarihi</em> eserini kaleme almak için
+        önemli muharriklerden birisinin Toby Lester’in <em>The Atlantic
+        Monthly</em> (Ocak 1999) de yayınladığı “What is the Koran”
+        başlıklı
+        makale<b><sup class="modal-trigger" data-content="Toby Lester “What is the Koran” The Atlantic Monthly (January 1999), 283/1, s. 43–56." style="cursor: pointer;">15</sup></b>
+        olduğu söylenebilir. Lester Yemen’in San’a şehrinde bulunan
+        Kur’an’ın Yemen’de bulunan fragmanlarının onarımıyla meşgul olan
+        Dr. Gerd R. Joseph Puin’in bu</p>
+        <p>bulunan parçalarla ilgili hikâyesini aktarmaktadır. Lester’ın
+        ve Puin’in aslında birer uzman olmadıklarına eserinde yer yer
+        değinecek olan A‘zami onların ve batılı anlamda birer uzman da
+        olsalar oryantalistlerin genelde müslümanların Kur’an’ın sıhhati
+        konusundaki temel ölçütlerini göz ardı ettiklerini belirtir.
+        A‘zami “müslümanlar her ne kadar Kur’anın değişime uğramamış
+        ilahi bir kitap olduğuna inanıyorlarsa da bu görüşü bilimsel
+        ölçütler dâhilinde savunmaktan tamamıyla aciz oldukları”
+        şeklindeki Lester’in ifadelerini bir meydan okuma olarak
+        görür.</p>
+        </blockquote>
+        <h1
+        id="kuran-tarihine-dair-oryantalist-iddialar-ve-eleştirileri">Kur’an
+        Tarihine Dair Oryantalist İddialar ve Eleştirileri</h1>
+        <blockquote>
+        <p>Arthur Jeffery “Mukaddime”’de Nöldeke ve ardından öğrencileri
+        Friedrich Schwally, Gotthelf Bergsträsser ve Otto Pretzl
+        tarafından Kur’an Tarihi’nde yer verilen iddiaları aktarır.
+        İddialar özetle
+        şöyledir:<b><sup class="modal-trigger" data-content="Jeffery, “Mukaddime”, Materials for the History of the Text of the Qur’an, s. 5-10. 20 Goldziher, İslam Tefsir Ekoller, (çev. Mustafa İslamoğlu), İstanbul 1997, s. 20-80 21 Goldziher, İslam Tefsir Ekoller, s. 21." style="cursor: pointer;">16</sup></b>
+        Hz. Peygamber vefat ettiğinde Müslümanların ellerinde bir kitap
+        olarak Kur’an bulunmamaktaydı. Peygamber sonrasında Sahabe
+        Mushafarı arasında ihtilaf bulunmaktadır. Hz. Osman insanları
+        bir “harf” üzerinde toplamıştır. Osman Mushafında noktalamalar
+        bulunmamaktadır. Hz. Osman’ın gönderdiği mushafardaki yazımlarda
+        tıpkı Osman’ın yasakladığı mushafarda da olduğu gibi,
+        farklılıklar mevcuttu ve noktalamalar olmadığından okuyucunun
+        kendi seçimine bırakılan hususlar bulunmaktaydı. Zamanla her
+        bölgede bir okuyuş meşhur oldu ve insanlar diğerlerini bırakıp
+        onu takip ettiler.</p>
+        <p>Daha sonraki yıllarda Ignaz Goldziher de Kur’an metninin
+        sübûtunu kuşkulu bulur ve bu kuşkusunu kıraatler üzerinden ifade
+        etmeye çalışır.<sup>20</sup> Ona göre Hz. Osman Kur’an’ı yazma
+        ameliyesi ile farklı okuyuşları teke indirgemek ve ittifak
+        sağlamak istemiş ancak bunda başarılı olamamıştır.<sup>21</sup>
+        Goldziher’in bu noktada Nöldeke ile paralel olan iki iddiası da
+        İslam âlimlerinin eleştirisini almıştır: Birincisi Kur’an’ı Hz.
+        Osman’ın yazdırdığı; ikincisi ise bunu yapmakla kıraatleri teke
+        indirmek istediğidir. Oysa Kur’an Hz. Peygamber zamanında
+        yazılmaya başlanmıştır ve Ebu Bekr döneminde de kitap halinde
+        bir araya getirilmiştir. Hz. Osman zamanında nüshalar çoğaltılıp
+        çevre beldelere gönderilmiştir. İkinci iddiaya yanıt ise Hz.
+        Osman’ın bunu kıraatleri teke indirmek için yapmadığıdır.
+        Nitekim nüshalarda farklı fakat mütevatir kıraatlere uygun bir
+        yazım söz
+        konusudur.<b><sup class="modal-trigger" data-content="Çetin, Kur’an-ı Kerim’in İndirildiği Yedi Harf ve Kıraatler, s. 288." style="cursor: pointer;">17</sup></b></p>
+        <p>Goldziher’e göre kıraat farklılıklarının bir kısmı Arap
+        yazısından kaynaklanmaktadır. İlk dönemlerde sessiz harferin
+        noktalamalardan ârî olması harekelerin bulunmaması önemli bir
+        âmildir. Goldziher verdiği örneklerde özellikle muhatap ve gaybı
+        belirleyen <em>ta</em> ve <em>ya</em> harferi üzerinde
+        duracaktır.<b><sup class="modal-trigger" data-content="Goldziher, İslam Tefsir Ekoller, s. 22-23." style="cursor: pointer;">18</sup></b>
+        Ancak şurası bir gerçektir ki Kur’an’da her muhatap veya gayb
+        ifade eden fllerde içtihadi şekilde böyle bir seçenek
+        sunulmamıştır. Bu kıraat seçeneği ancak rivayet ile sabit
+        olabilir. Sebep bunların hem Gayb hem de muhatap okuyuşa müsait
+        olarak yazılmış olması değil; söz konusu okuyuş hakkında
+        tevatüren gelen bir kıraatin olmasıdır. Bu da bu mushafarın
+        yazılmasından önce de kıraat farklılıkların olduğunu
+        göstermektedir.<b><sup class="modal-trigger" data-content="Çetin, Kur’an-ı Kerim’in İndirildiği Yedi Harf ve Kıraatler, s. 292-293. 25 The History of the Qur’anic Text, s. 55-56." style="cursor: pointer;">19</sup></b></p>
+        </blockquote>
+        <h1 id="kuran-vahyinin-sözlü-aktarımı">Kur’an Vahyinin Sözlü
+        Aktarımı</h1>
+        <blockquote>
+        <p>İlk vahiy süreci hakkında vahyin başlangıcı, Kur’an’ın
+        müşrikler üzerine tesiri ve Cebrail ile yapılan Kur’an
+        mukabelesi konularına yer verdikten sonra A‘zami
+        oryantalistlerden bir kısmının öne sürdüğü Kur’an’ın Hz.
+        Peygamber tarafından unutulması (Nöldeke) ve İslam toplumunun
+        ilk aşamalarda Kur’an’ı muhafazayı önemsememesi (Mingana)
+        iddiaları üzerinde durur. A‘zami’nin bunlara yönelik cevapları
+        tarihsel olmaktan çok, sade bir mantık örgüsü içinde
+        olacaktır.</p>
+        <p>Eğer o [Hz. Peygamber] gerçekten Allah’ın elçisi ise durum
+        açıktır: Kitab’ı korumak kutsal bir görevdi. Daha önce
+        belirtildiği gibi Kur’an, ona bahşedilen ilk ve en büyük mucize
+        idi ve onun tabiatı hiçbir beşer tarafından yazılmadığının
+        tanığıydı. Dolayısıyla onun gerçekte Allah’ın peygamberi
+        olduğunun yegâne delili olan bu mucizeyi önemsememesi son derece
+        safık olurdu.</p>
+        <p>Fakat eğer Hz. Muhammed, farz edelim ki bir sahtekâr idiyse
+        ne olacak? Kur’an’ın bizzat onun uydurması olduğunu
+        varsaydığımızda acaba o, Kur’an’a aldırmazlık edebilir miydi?
+        Kesinlikle hayır: O zevahiri kurtarmak ve Kur’an’a son derece
+        önem vermek ve ilgi göstermek zorundaydı, zira başka türlü
+        davranması açıkça kendi sahtekârlığını kabul etmesi demekti.
+        Hangi durumda olursa olsun hiçbir lider böylesine pahalıya mal
+        olacak bir hatayı göze alamaz.<sup>25</sup></p>
+        <p>Vahyin yazılmasının Medine’de başladığı, Hicret öncesinde
+        Mekke döneminde Kur’an’ın yazılmadığı iddiasında Mingana yalnız
+        olmadığı gibi bunlara cevap konusunda A‘zami de yalnız
+        değildir.</p>
+        <p>Bu iddialara cevap veren Sasi Salim Hac’ın bu kapsamda
+        muhatabı ise Fransız oryantalistlerden Régis Blachère olacaktır.
+        Mingana gibi Kur’an’ın Hicret öncesinde yazılmadığını belirten
+        Blachère Arapları kültürel olarak “geleceği düşünmeyen” ve “anı
+        yaşayan bir yapıya sahip” genellemesi içinde değerlendirerek Hz.
+        Peygamber ve sahabenin de aynı temayül ile “işleri olduğu
+        şekilde terk ettiği” ithamında bulunur.</p>
+        <p>Bu iddiasıyla Blachère aslında döneminin sosyal düşüncesini
+        yansıtmaktadır. Ari ırk-Sami ırk ayrımı noktasında Sami ırkı
+        ikincil sayan ve daha sonra Hitler ile zirveye taşınacak olan
+        üstün Aryani ırk tezinin tesiri ile Blachère Sami milletleri ve
+        Sami milletlerin bir parçası olarak değerlendirdiği Arap
+        toplumunu küçümsemektedir.</p>
+        <p>Blachère’in böylesi bir zihniyet altyapısı ile konuştuğuna
+        değinmeden doğrudan Araplar hakkındaki bu tiplemeyi ve
+        genellemeyi ret ile söze başlayan Salim Hac, haklı olarak bu
+        tezin bilimsel, akli ve mantıki dayanağının olmadığını söyler.
+        Tarihsel olarak, Hz. Peygamberin, aksine kendinden sonra
+        Kur’an’ın kaybolması endişesiyle, sahabeyi Kur’an’ı hıfza,
+        yazmaya ve toplamaya teşvik ettiğini belirtir. Hz. Peygamber
+        Kur’an’ı yazmaları için daha Mekke dönemindeyken kendine resmi
+        kâtipler tayin etmiş, bizzat sahabe de kendileri için Kur’an’ı
+        yazmışlardır. Hatta Hz. Peygamber kendi sözleriyle karışmaması
+        için sahabeye Kur’an dışında bir şey yazmamalarını
+        emretmiştir.<b><sup class="modal-trigger" data-content="Hac, Nakdü’l-Hitabi’l-İstişraki, s. 325-326." style="cursor: pointer;">20</sup></b></p>
+        <p>Salim Hac Mekke döneminde okuma-yazma bilenlerin tarihen
+        sabit olduğunu ispat yönünde Varaka b. Nevfel gibi Hanif olan
+        kişilerin kutsal metinleri okudukları, Mekkelilerden alınan
+        Bedir esirlerinin hürriyetleri karşılığında müslüman çocuklarına
+        okuma yazma öğretmeleri gibi tarihsel olaylara dikkat çeker.
+        Belazuri’nin <em>Fütühu’l-Büldan</em>’ına dayanarak tarihçilerin
+        o dönemde on yedi okuryazar Mekkeli’den söz ettiklerini belirten
+        Salim Hac bunlar arasında Ömer b. Hattab, Ali b Ebi Talib, Osman
+        b. Affan ve Ebu Ubeyde ibn Cerrah ve Talha’yı
+        sayar.<b><sup class="modal-trigger" data-content="Hac, Nakdü’l-Hitabi’l-İstişraki, s. 322-323." style="cursor: pointer;">21</sup></b></p>
+        <p>Blachère’in Kur’an’ın “Hicret’ten sonra yazılmaya başlandı”
+        sözünün devamı aslında Nöldeke’yi çağrıştırırcasına, “Kur’an
+        Hz.</p>
+        <p>Peygamber döneminde eksik tedvin edildi, kayıtlara sağlam
+        geçirilmedi, pek çok ayet kayboldu” iddiasını akla
+        getirmektedir. Salim Hac bu sözü temelden “kabul edilemez”
+        bulur. Zira iddia delillerden yoksundur. Hz. Peygamber kendine
+        inen vahiyleri ashabına okuyor ve onlara ayetleri koymaları
+        gereken yeri haber veriyordu. Böylece Kur’an’ın muhafazası ve
+        tertibi onlar için artık mütevatir bir hal almıştı. Sahabe de
+        Hz. Peygamber sonrasında Kur’an’ı iki kapak arasına almak
+        istediklerinde artık kaybolmuş hiçbir şey yoktu. Çünkü hem
+        satırlarda (yazılı) hem de sadırlarda (ezberde) korunmuş bir
+        şekilde Kur’an
+        mevcuttu.<b><sup class="modal-trigger" data-content="Hac, Nakdü’l-Hitabi’l-İstişraki, s. 324." style="cursor: pointer;">22</sup></b></p>
+        <p>Bu noktada A’zami ise vahyin başlangıcından günümüze kadar
+        İslam toplumunda var olan Kur’an’ı öğrenme, öğretme ve okumaya
+        yönelik teşviklerin varlığını Kur’an’ın korunmuşluğuna önemli
+        delillerden biri olarak
+        görür.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 60-62." style="cursor: pointer;">23</sup></b>
+        Hem Mekke hem de Medine döneminde Hz. Peygamber’in ısrarla
+        öğreticilik yapması, sahabenin teşvik edilmesi ve bunların
+        sonucunda da pek çok hafız sahabenin yetişmiş olması üzerinde
+        önemle durulur. Burada temel kaynaklara dayanılarak oldukça
+        önemli ve oldukça da detaylı tarihsel bilgilere yer
+        verilir.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 63-69." style="cursor: pointer;">24</sup></b></p>
+        </blockquote>
+        <h1 id="arap-yazısı-ve-kuranın-yazılması">Arap Yazısı ve
+        Kur’an’ın Yazılması</h1>
+        <blockquote>
+        <p>A‘zami’nin oryantalist söylemin eleştirisinde üzerinde
+        durduğu en önemli hususlardan biri de Arap yazısının tarihi ve
+        gelişimi meselesidir. Oryantalistler tarafından öne sürülen
+        “Arapçanın Hz. Peygamber zamanında bilinen bir alfabeye sahip
+        olmadığı (Mingana), kıraat farklılıklarının ilk Arap imlasındaki
+        yanlışlıklardan kaynaklandığı (Goldziher) ve Kuf tarzda yazılan
+        nüshaların ilk yüzyıla değil 2. hatta 3. yy’a ait olduğu
+        (Gruendler)” türden iddialar, A’zami’ye göre sadece Arap
+        yazısını değil Kur’an’ın sıhhatini de ilgilendiren bir iddia
+        olduğuna dikkat
+        çeker.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 123." style="cursor: pointer;">25</sup></b>
+        Arap dilinin Hz. Peygamber döneminde ve öncesinde kendine has
+        bir alfabesinin olduğunu, Kûf yazının ilk hicri yüzyılın
+        ortalarında önem kazandığını, dolayısıyla ilk dönemlerde de
+        kullanıldığını, fakat ilk mushafarın yazımında Hicazi yazının
+        kullanıldığını,<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 196-197. 33 The History of the Qur’anic Text, s. 123-139." style="cursor: pointer;">26</sup></b>
+        batılı dilbilimciler tarafından öne çıkarılan Nebati dilinin
+        Arap dilinden başka bir şey olmadığını ortaya koymaya
+        çalışır.<sup>33</sup></p>
+        <p>Hz. Peygamber zamanında Kur’an’ın yazılmış olmasına şüphe ile
+        bakan oryantalistlerin iddialarını A‘zami şu ifadelerle
+        özetler:</p>
+        <p><em>...Oryantalistler, Kur’an şayet Peygamber zamanında
+        kaydedildi ise niçin Ömer, Yemame savaşında hafızların
+        ölmesinden korkup Ebubekir’e onlarla birlikte kitabın birçoğunun
+        da yok olabileceğinden söz etmiş olduğunu sorgularlar. Ayrıca,
+        niçin yazılan malzeme Peygamberin kendi himayesinde
+        alıkonulmamıştır? Şayet alıkonuldu ise, niçin Zeyd b. Sabit bunu
+        Suhuf’un hazırlanmasında kullanamamıştır? Buhari’nin naklettiği
+        ve Müslümanların kabul ettiği bu ifadelere göre bu ayrıntılar
+        oryantalistler nezdinde ilk yazdırma ve kaydetme çabalarının
+        uydurma olduğunu
+        düşündürmektedir.</em><b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 336." style="cursor: pointer;">27</sup></b></p>
+        <p>Bu iddialara cevaben gerek A’zami gerekse diğerleri oldukça
+        sade İslam Tarihi bilgilerinde yer alan bir kısım hususları
+        hatırlatmakla yetinirler. Hz. Peygamber zamanında yazılmış olan
+        metinler Ebu Bekir döneminde cem edilirken iki şahit olmadan
+        geçerli sayılmamaktadır. Peygamberin yazdırması aynı zamanda
+        hoca-talebe ilişkisi içinde pratik rivayet yöntemini
+        oluşturmaktadır. Elde yazılı belgelerin şahitlerle doğrulanması
+        gerektiğinden, Ömer’in hafızların ölmelerinden korkması da
+        şahitlerin kaybolmasından korkması anlamını
+        taşır.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 336-337; Ebu Leyle, Mine’l-Manzuri’l-İştiraki, s. 150152; İbrahim Awad, el-Müsteşrikun ve’l-Kur’an, s. 142. 36 Ebu Leyle, Mine’l-Manzuri’l-İstişraki, s. 150-157 37 Ebu Leyle, Mine’l-Manzuri’l-İstişraki, s. 158." style="cursor: pointer;">28</sup></b></p>
+        <p>Kur’an’ın cem’inin ne zaman yapıldığına dair rivayetlerin
+        ihtilafına işaret eden Oryantalistlerden Welch bu noktada bir
+        karmaşa olduğunu ima eder. Muhammed Ebu Leyle ilgili rivayetleri
+        hadis tenkidi açısından değerlendirerek bir karmaşanın
+        olmadığını belirtir ve Hz. Ebu Bekir ve Osman dönemlerinde
+        yapılan cemlerin ne olduğunu ve aralarındaki farkları izah
+        eder.<sup>36</sup> Bir kısım kaynakların 70 değil sadece 12
+        sahabe hafızın şehadetinden söz etmesine dayanarak, Yemame
+        vakıasında, halifeyi telaşlandıracak miktarda bir kayıp
+        olmadığını dolayısıyla bunun Kur’an’ın cemi meselesinde bir
+        sebep teşkil edemeyeceğini iddia eden Kettani gibi
+        oryantalistlere Ebu Leyle böyle salt bir şüpheye binaen
+        rivayetin sıhhatinden süphe etmenin makul olmadığını söyler.
+        Aksi halde bu nassın zahirine tecavüz sayılır.<sup>37</sup>
+        Nitekim Welch Kur’an’ın Hz. Ebu Bekir döneminde cem edildiğine
+        dair kesin delil olmadığını, üstelik bu düşüncenin Peygamber
+        dönemindeki fragmanların rolünü hiç gündeme getirmemiş
+        olduklarına dikkat çeker. Bu görüşün tarihselliğini tartışmaya
+        açan Welch’e göre böyle bir hadise örgüsünün gerçekte Hz.
+        Osman</p>
+        <p>zamanında olan cem meselesini geri plana atmak için üretilmiş
+        olabileceğini öne
+        sürer.<b><sup class="modal-trigger" data-content="Welch, “Kur’an”, s. 405." style="cursor: pointer;">29</sup></b>
+        Ebu Leyle, Welch’i kendi görüşüne aykırı pek çok değerli
+        rivayeti yok saymak ve garip bir ısrar içinde olmakla itham
+        etmekle
+        yetinir.<b><sup class="modal-trigger" data-content="Ebu Leyle, Mine’l-Manzuri’l-İstişraki, s. 159" style="cursor: pointer;">30</sup></b></p>
+        <p>Müslüman müelliferden gelen cevaplar genelde İslam tarihi
+        verilerinden ve rivayetlerinden aktarılan oldukça temel
+        bilgilerdir. Özetle ifade edecek olursak söylenen şudur: Kur’an
+        Hz. Peygamber zamanında yazılmış olmakla beraber derlenmiş bir
+        kitap formunu almış
+        değildi.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 83." style="cursor: pointer;">31</sup></b>
+        Hz. Ebu Bekir Döneminde Zeyd b. Sabit’in başkanlığındaki bir
+        komisyon tarafından
+        derlenmişti.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 84." style="cursor: pointer;">32</sup></b>
+        Hz. Osman, farklı okuyuşları bertaraf için tekrar Zeyd b.
+        Sabit’in başkanlığında bir komisyon kurmuş ve Hz. Hafsa ve Hz.
+        Aişe’den de alınan mushafarla karşılaştırarak resmi mushaf
+        oluşturmuştu.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 95." style="cursor: pointer;">33</sup></b>
+        Ardından bu mushaf çoğaltılmış ve karilerle beraber bu mushafar
+        muhtelif bölgelere gönderilmiştir. Kariler şunlardır. Medine’de
+        Zeyd b. Sabit, Mekke’de Abdullah b. Saib, Suriye’de Muğire b.
+        Şihab, Basra’da Amir b. Kays ve Kufe’de Ebu Abdurrahman
+        es-Sülemi.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 103." style="cursor: pointer;">34</sup></b></p>
+        <p>Öte yandan Dr. Gerd –R. Joseph Puin’in San’a fragmanları ile
+        ilgili olarak kaleme aldığı makalesinde bu fragmanları Kur’an’ın
+        Hicri ilk asırda tamamlandığının tek kanıtı olarak göstermesini
+        A‘zami yanlış bulur ve hicri ilk asra dayanan onlarca Kur’an
+        yazmasının dünyanın muhtelif kütüphanelerinde sergilendiğini
+        belirterek bir kısmının listesini
+        verir.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 347-350. 45 The History of the Qur’anic Text, s. 347." style="cursor: pointer;">35</sup></b>
+        Her ne kadar Puin bu fragmanları Kur’an’ın 2. yy. sonunda geriye
+        dönük şekilde teşekkül ettiğini söyleyen Wansbrough gibi
+        oryantalistlerin başını çektiği revizyonist akıma cevap
+        niteliğine dikkat çekse de A‘zami İslam dünyasının bu konuda
+        sadece San’a’daki fragmanlara bağımlı olmadığını vurgular.
+        <sup>45</sup></p>
+        </blockquote>
+        <h1 id="kıraat-farklılıkları-meselesi">Kıraat Farklılıkları
+        Meselesi</h1>
+        <blockquote>
+        <p>İslam kaynakları bir ayetin kıraatinin sıhhatini tespitte üç
+        ilkenin önemine işaret eder:</p>
+        </blockquote>
+        <ol type="1">
+        <li><p>Kıraat tevatüren gelmelidir. Tek raviden gelmemeli,
+        birçok ravi tarafından aktarılmalı, Hz. Peygambere kadar
+        kesintisiz ulaşmalı, bu şekilde kıraatin güvenirliği ve katiliği
+        desteklenmelidir.</p></li>
+        <li><p>Kıraat Osman mushafına uygun olmalıdır.</p></li>
+        <li><p>Telaffuz Arap grameriyle uyuşmalıdır.
+        <b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 239-240." style="cursor: pointer;">36</sup></b></p></li>
+        </ol>
+        <blockquote>
+        <p>İslam tarihinde Osman mushafını göz ardı eden bir kısım
+        yaklaşımlar tarihte olmuş ancak bunlar rağbet görmemişlerdir.
+        Döneminin önemli kıraatçilerinden sayılan ve Osman mushafına
+        uygunluğu aramayan İbn Şenebûz (v. Hicri 328) bir kıraatin
+        farklı rivayet kanallarınca doğru olarak alındığı ve Arap
+        gramerine uyduğu müddetçe Osman mushafından farklı bile olsa
+        geçerli olacağını iddia etmiştir. İbn Şenebuz’un bu görüşünden
+        dolayı ceza aldığı ve düşüncesinden de döndüğü
+        kaydedilir.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 242; krş. Welch, “Kur’an”, s. 409. ; Mehmet Dağ,“İbn Mücahid’in Kıraat Ekollerini Yedi ile Sınırlaması: Eleştirel Bir Yaklaşım”, EKEV Akademi Dergisi, (2006) Yıl 10, Sayı 27, s. 81-104." style="cursor: pointer;">37</sup></b></p>
+        <p>Oryantalistler tarafından yayınlanan İslam Ansiklopedisi’nin
+        gerek ilk baskısında Frantz Buhl gerekse yeni baskısında A. T.
+        Welch’in yazdığı “Kur’an” maddelerinde Osman mushafında
+        noktaların olmadığını dolayısıyla okuyucunun “ayetlerin anlam ve
+        bağlamına uygun şekilde kendi işaretlerini koymakta özgür
+        olduğu”
+        <b><sup class="modal-trigger" data-content="Frantz Buhl “Kur’an” İA, 5/1007; Welch, “Kur’an”, s. 408." style="cursor: pointer;">38</sup></b>
+        hatta Kur’an’ın “mana olarak yansıtan farklı kelimelerle
+        okunabileceği” kanaati geniş bir şekilde işlenmektedir.
+        <b><sup class="modal-trigger" data-content="Sasi Salim Hac, Nakdü’l-Hitabi’l-İstişraki, adlı eserinde Blachere ve Goldzhier’in bu fkirlerini detaylı şekilde ortaya koyar. Bkz. Hac, Nakdü’l-Hitabi’l-İstişraki, s. 336-342." style="cursor: pointer;">39</sup></b>
+        Mustafa A‘zami ve Muhammed Ebu Leyle bu yanlışa saplanmanın
+        temel nedeni olarak İslam tarihindeki sözlü geleneğin öneminin
+        dikkate alınmamasını
+        gösterirler.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 193-194, Muhammed Ebu Leyle, Mine’l-Manzuri’lİstişraki, s.186." style="cursor: pointer;">40</sup></b>
+        Söz konusu bir kıraatin sahih olabilmesi için mushafa uygun olma
+        şartı ile beraber sözlü gelenek olarak mütevatiren aktarılması
+        da gerekmektedir. Nitekim pek çok ayetin mushaftaki yazımı
+        birden fazla okuma şekline müsait iken yalnızca bir şekilde
+        okunması bu sözlü aktarımın önceliğini
+        göstermektedir.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 193-194." style="cursor: pointer;">41</sup></b>
+        O halde konu linguistik veya içtihadi bir konu
+        olmayıp<b><sup class="modal-trigger" data-content="Çetin, Kur’an-ı Kerim’in İndirildiği Yedi Harf ve Kıraatler, s. 324. 53 Ebu Leyle, Mine’l-Manzuri’l-İstişraki, s. 189." style="cursor: pointer;">42</sup></b>
+        bir gelenek konusudur ve her halükarda Osman mushafına uygunluk,
+        Arap gramerine uygunluk ve tevatüren aktarılmış olmak kaçınılmaz
+        kurallardır.<sup>53</sup> A‘zami sözlü</p>
+        <p>aktarımın önemini vurgulamak için, eserinde özellikle hadis
+        ve isnat sisteminin önemi üzerinde oldukça uzun
+        duracaktır.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 203-229." style="cursor: pointer;">43</sup></b>
+        Ancak bu görüşün gelenekte de örneklerinin olduğunu bir başka
+        yerde
+        belirtecektir.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 242-243." style="cursor: pointer;">44</sup></b>
+        Nitekim İbn Miksem (v. Hicri 354 /m.965) tevatüren gelmesine
+        dikkat etmeden Osman mushafıyla ve dil kurallarıyla uyumlu her
+        kıraatin geçerli olacağı düşüncesinden ötürü fukaha ve kurra
+        huzurunda tevbe etmesi
+        istenmiştir.<b><sup class="modal-trigger" data-content="Welch, “Kur’an”, s. 408." style="cursor: pointer;">45</sup></b>
+        Gerek İbn Şenebuz gerekse İbn Miksem’in dönemin siyasi
+        otoritesince takibat görmesi ve dışlanmasında,
+        <em>Kitabü’s-Seb’a</em> eseriyle kıraat ekollerini yediye
+        indiren İbn Mücahid’in rolü büyük
+        olacaktır.<b><sup class="modal-trigger" data-content="Tam adı Ebu Bekr Ahmed b. Musa b. Abbas b. Mücahid et-Temimi (v.324/936) olup İbnMücahid olarak meşhur olmuştur. Bkz. Tayyar Altıkulaç, “İbn Mücahid” DİA 20/214-215; Mehmet Dağ, “İbn Mücahid’in Kıraat Ekollerini Yedi ile sınırlaması: Eleştirel Bir Yaklaşım”, , s. 81-104." style="cursor: pointer;">46</sup></b>
+        Oryantalistlerin İbn Şenebuz ve İbn Miksem için üzüntülerini
+        bildirmesi karşısında A‘zami kendi tarihlerinde böyle durumlarda
+        “yakılma cezası” alan William Tyndale (1494–1536) gibi isimleri
+        hatırlatarak İslam dünyasının bu konuda daha insafı hareket
+        ettiğini
+        belirtir.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 243." style="cursor: pointer;">47</sup></b></p>
+        <p>Salim Hac oryantalistlerin “yedi kıraat” ile “yedi harf”
+        kavramlarını iyi ayrıştırmadıkları üzerinde
+        durur.<b><sup class="modal-trigger" data-content="Yedi Harf ve Kıraatler konusunda bkz. Çetin, Kur’an-ı Kerim’in İndirildiği Yedi Harf ve Kıraatler, İstanbul 2005; Suat Yıldırım, “el-Ahrufu’s-Seb’a” DİA 2/175-177; Mehmet Dağ, “İbn Mücahid’in Kıraat Ekollerini Yedi ile Sınırlaması: Eleştirel Bir Yaklaşım”, s. 81-104." style="cursor: pointer;">48</sup></b>
+        Ona göre bu ayrım iyi yapılırsa problem çözülecektir. Sayısal
+        anlamda yedi ile sınırlanarak meşhur olan Yedi kıraat Osman
+        mushafına sadık bir şekilde kasr med hareke ve sükun
+        farklılıklarını içerir. (Fonetik farklar) Yedi harf ise Kur’an
+        lafızlarında lehçe ve kelime farklarını içeren
+        değişimlerdir.(Grametik Farklar) Kıraatler konusunda serbestlik
+        mushafa bağımlı ve yine rivayetlere dayalı olarak okuma ile
+        sınırlıdır.<b><sup class="modal-trigger" data-content="Hac, Nakdü’l-Hitabi’l-İstişraki, s. 339-341. 61 Hac, Nakdü’l-Hitabi’l-İstişraki, s. 341." style="cursor: pointer;">49</sup></b>
+        Ancak eğer “yedi harf” hadisini sahih hadis kabul edersek bu
+        hadis ile Kur’an’ı ifade, lafızları ile konuşma yollarında yedi
+        harf sınırları içinde bir çeşitlilik kast edilmektedir. Kur’an
+        manasıyla öğretileri arasında tenakuz anlamında bir ihtilafı
+        kesinlikle reddeder. Zira Kıraat yolları çeşitli olsa da
+        sûreleri ve âyetleri muhkem halkaları birbirine bağlı bir zincir
+        gibidir.” <sup>61</sup></p>
+        <p>Oryantalizme yapılan bu eleştirlerde en dikkat çekici
+        hususlardan birisi M. A’zami’nin Kur’an Tarihi eserinde
+        karşılaştırmalı bir metot izliyor olması ve Eski Ahid ve Yeni
+        Ahid metin tarihine de yer veriyor olmasıdır. Bu kapsamda
+        Lester’in kendi düşünceleri için alıntıladığı bilim</p>
+        <p>adamlarının Yahudi ve Hristiyan asıllı olduklarını belirten
+        A‘zami kendisinin de konuyu karşılaştırmalı olarak ele aldığını
+        dolayısıyla Eski ve Yeni Ahid’in metinleşme tarihlerine yer
+        verdiğini belirtir. A‘zami’yi Kur’an tarihini Eski ve Yeni Ahit
+        karşılaştırmalı çalışmaya iten ana saik aslında oryantalizmin
+        Kitab-ı Mukaddes geleneği içinde yetişmeleri ve bu alanın kavram
+        ve görüşleriyle konuşmuş
+        olmalarıdır.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 245-246." style="cursor: pointer;">50</sup></b>
+        Kitab-ı Mukaddes geleneğinde gelişmiş metotların Kur’an’a
+        uygulanmasını “Çok meşhur bir ailenin çocuğu ile öksüzlüğe terk
+        edilmiş bir çocuk kıyaslanmaktadır ve ilginç olan bu meşhur
+        çocuğun ebeveynini tespitte terk edilmiş çocuk için geliştirilen
+        işlemde ısrar
+        edilmesi”<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 201." style="cursor: pointer;">51</sup></b>
+        olarak görür. Bir başka ifade ile Kitab-ı Mukaddes
+        çalışmalarında geliştirilmiş metotlarla Kur’an’a yaklaşım ona
+        göre ‘haham kıyafetini Müslüman bir Şeyhin üzerine giydirmeye
+        benzer.’<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 338." style="cursor: pointer;">52</sup></b>
+        Oryantalist eleştiride İslami araştırmaların tümden Batı
+        terminolojisine dönüşmesini rahatsız edici
+        bulur.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 337." style="cursor: pointer;">53</sup></b>
+        Müslümanlara tavsiyesi ise oldukça sadedir: “Müslümanlar,
+        konumlarını zamana uydurmak için düzenli olarak hareket eden
+        oryantalist kamp içerisinde eriyip gitmektense ilk
+        <em>muhaddisun</em> tarafından önü açılan yola sıkıca
+        yapışmalıdır” diyen A‘zami sade fakat oldukça önemli bir soru
+        yöneltir: “muhaddislerin kriterini Kitab-ı Mukaddes
+        incelemelerine uygulamış olsaydık acaba ne olurdu?”
+        <b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 245. 67 A‘zami, The History of the Qur’anic Text, s. 13." style="cursor: pointer;">54</sup></b></p>
+        <p>İslam ve Kur’an üzerine “meşru yazma ve konuşma” hakkının
+        “samimi müslüman”a ait olduğunu belirten A‘zami Yahudilerden,
+        Hıristiyanlardan, ateistlerden ve inancının gereğini yerine
+        getirmeyen Müslümanlardan gelecek yorumların önemsiz sayılması
+        gerektiğini belirtir ve “bu ilim dindir, dininizi kimden
+        aldığınıza dikkat edin” sözünü hatırlatır.<sup>67</sup></p>
+        <p>Oryantalist yaklaşımın tarafsız olamayacağını ifade için
+        A’zami şu soruyu sorar: “Yahudi karşıtı bir bilim adam Yahudi
+        meselesini araştırırken tarafsız olabilir mi? Bu konuda yaşanmış
+        örneklere işaretle batıda buna müsamaha edilmediğini
+        belirtir.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 354." style="cursor: pointer;">55</sup></b>
+        Benzer sorularına devam eder:</p>
+        <p>Anti-semitistlere karşı uyguladıkları akademik dışlamalar
+        niçin İslam’ı çarpıtanlara karşı uygulanmamaktadır? Niçin
+        müslüman olmayanlar, dinini yaşayan Müslümanları dışlayan
+        otoriteler olarak kabul</p>
+        <p>edilmektedir? Niçin kilise adamları kendi dinlerinin İslam’ı
+        gölgede bırakmasınından başka bir şey arzu etmeyen Mingana
+        Guillaume, Watt, Anderson, Lammense ve bir sürü
+        diğerleri-‘tarafsız’ İslami araştırmalarda birer standart olarak
+        görülmektedir? Niçin Muir Kur’anın ‘dünyanın bugüne kadar
+        gördüğü, medeniyetin, özgürlüğün ve hakikatin en katı
+        hasımlarından’ biri olduğunu yazarken Hz. Peygamberin hayatı
+        üzerine bir otorite
+        sayılmaktadır.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. 371." style="cursor: pointer;">56</sup></b></p>
+        <p>Bu satırların okuyucusu geleneksel İslam reddiyeciliğinin
+        A‘zami üzerinde etkisini görecektir. Ancak A‘zami’nin
+        yaklaşımında geleneksel reddiyecilik kendini oryantalistlerin
+        Kur’an’a yaptıkları eleştirileri Kitab-ı Mukaddes’e
+        yansıtmasında gösterecektir. Kur’an’ın, “Hz. Peygamber, hatta
+        Hz. Ebu Bekir zamanında yazdırılmadığı, sadece sözlü rivayet
+        olarak aktarıldığı, 15 yıl kadar aradan sonra Hz. Osman
+        zamanında yazıya geçirildiği” iddiasıyla Oryantalistlerin bu
+        sözlü aktarıma şüphe ile baktıklarını belirten A‘zami Eski
+        Ahid’in önemli bir kısmının MÖ 8.yy’a kadar sözlü olarak
+        aktarımını gündeme getirir. Eski Ahit için söz konusu olan zaman
+        dilimi yüzyıllarla ölçülecek kadar fazla bir zamandır.
+        A’zami’nin amacı çelişkiye dikkat çekmektir. Nitekim aynı
+        karşılaştırmalı tavrı oryantalistler Arap yazısını “yetersizlik”
+        ve “kusurluluk” ile itham ettiğinde de gösterir. Ona göre “Son
+        derece düzensiz bir sözlü gelenekle ve iki bin yıl boyunca tek
+        bir sesli harfn bulunmadığı bir metinle aktarılma sıkıntısını
+        yaşayan Eski Ahit daha samimi bir kuşku imtiyazını” hak
+        etmektedir.<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. xviii." style="cursor: pointer;">57</sup></b>
+        “Eski ve Yeni Ahid’in bütün kitapları anonim olarak yazılmasına
+        rağmen Batılı bilim adamları bunlara çoğu zaman kuşkulandıkları
+        veya yetersiz buldukları İslami rivayet zincirinden daha kolay
+        tarihsel meşruiyet
+        vermektedirler.”<b><sup class="modal-trigger" data-content="A‘zami, The History of the Qur’anic Text, s. xix-xx." style="cursor: pointer;">58</sup></b></p>
+        </blockquote>
+        <h1 id="genel-değerlendirme-ve-sonuç">Genel Değerlendirme ve
+        Sonuç</h1>
+        <blockquote>
+        <p>Ahmet Cevdet Paşa’nın (1822–1895) <em>Hülasatü’l-Beyan f
+        Te’lif’lKur’an</em> (İstanbul h.1303/m.1886) Musa Carullah
+        Bigeyef tarafından kaleme alınan <em>Tarihü’l-Kur’an
+        ve’l-Mesahif</em> (h.1323/m.1905) eserleri Kur’an Tarihi
+        konusunda oryantalist eleştirilere cevap verme konusunda daha
+        ilk dönemlerde bile bir çabanın olduğunu göstermektedir. Ancak
+        19.yy’ın sonunda ve 20. yy ın başına tekabül eden bu ilk
+        dönemlerde (kolonyalizm dönemi) müslümanlar tarafından verilen
+        cevaplarda “gerçeğin tekrarı” kabilinden geleneksel anlatım
+        hemen hemen aynıyla tekrarlanmıştır.</p>
+        <p>Batılı müellifer isim ve kaynakça olarak neredeyse hiç
+        muhatap alınmamıştır. Ahmet Cevdet Paşanın, Musa Carullah
+        Bigiyef’in ve Zincani’nin eserleri bunun tipik örnekleridir.</p>
+        <p>20. yy.’ın ilk yarısında Oryantalistleri ve düşüncelerini
+        doğrudan muhatap alan eserlerin başında gelen İsmail Fennî
+        Ertuğrul’un eseri, <em>Kitab-ı İzale-i Şükûk,</em> Reinhardt
+        Dozy’nin (1820/1883) <em>Essai sur l’histoire de
+        l’Islamisme</em> adlı kitabına cevaptır. 20. yy.’ın sonu ve
+        günümüze tekabül eden ikinci dönemde (kolonyalizm sonrası) ise
+        oryantalistler doğrudan muhatap alınıp Kur’an ile ilgili
+        fkirleri tartışılmış üstelik Oryantalizmin bir alan olarak
+        eleştirisi ve oryantalistlerin yetkinliği tartışmaları da aynı
+        bağlamda gündeme taşınmıştır. Tartışmaları, A‘zami’de olduğu
+        gibi Kur’an ve Kitab-ı Mukaddes metinleşme tarihleri mukayesesi
+        boyutunda yapan İslam araştırmacıları da olmuştur. Ancak bu tür
+        Modern dönem çalışmalarında geleneksel anlatımdan vazgeçilmemiş
+        özellikle “sözlü aktarım” çerçevesinde İslam rivayet geleneği
+        sıkça vurgulanmıştır.</p>
+        <p>Burada belirtmek gerekir ki geleneksel düşünce ve ifadeyi
+        tekrar etmek tabir yerindeyse ancak “ağrı kesici” vazifesi
+        görecektir. Batılı düşünce ve altyapıyı okuyarak formülü çözmek,
+        nedenlere inmek ise problemi kökünden çözmenin yollarını
+        araştırmak olacaktır. Bu kapsamda Mustafa A‘zami’nin eserindeki
+        gayretler ışığında konuşacak olursak, Oryantalizmin daha iyi
+        tahlil edilebilmesi için dini ve kültürel boyutu ile Oryantalist
+        alt yapının iyi kavranması gerektiği söylenebilir.</p>
+        <p>Oryantalizmin Kur’an’ın sıhhatini tartışmaya açması İslam
+        dünyasında eleştirilere neden olduğunu; bu eleştirilerin ilk
+        dönemlerde “Oryantalizm” doğrudan muhatap alınmadan “kendi
+        doğrusunu tekrar” mahiyetinde olurken kolonyalizm sonrası ve
+        özellikle de 20 yy.’ın sonuna doğru “bu doğrudan muhatap alma”
+        ve hatta “oryantalizmin kendisini tartışma” şekline dönüştüğünü
+        gördük. Bunda Edward Said’in oryantalizm eleştirisinin rolü
+        büyüktür. Nitekim oryantalizme karşı serdedilen argümanlara
+        bakıldığında Said’in argümanlarıyla paralellik hemen fark
+        edilecek ve Edward Said’in Oryantalizm eleştirisinin etkileri
+        kendini gösterecektir. Daha da ileri giderek bu yaklaşımın
+        oryantalizme karşı Batı çalışmaları yapmak yani bir
+        <em>occidentalism</em> olduğu bile söylenebilir. Ancak bu
+        <em>Occidentalism</em> Oryantalizm içinde büyümüş bir çaba
+        olacaktır. Zira tartışılan yine Şark’ın kendi değerleridir.</p>
+        </blockquote>
+        <h1 id="kaynaklar">Kaynaklar:</h1>
+        <blockquote>
+        <p>A. T. Welch, “Kur’an”<em>, Encyclopedia of Islam, Lieden</em>
+        1986.</p>
+        <p>Abdurrahman Çetin, <em>Kur’an-ı Kerim’in İndirildiği Yedi
+        Harf ve Kıraatler</em>, İstanbul 2005.</p>
+        <p>Ahmet Cevdet Paşa, <em>Hülasatü’l-Beyan f
+        Te’lif’l-Kur’an,</em> İstanbul</p>
+        <p>h.1303/m.1886.</p>
+        <p>Arthur Jeffery, <em>Materials for the History of the Text of
+        the Qur’an</em>, Leiden 1937.</p>
+        <p>Ignaz Goldziher, <em>İslam Tefsir Ekolleri</em> çev. M.
+        İslamoğlu, İstanbul</p>
+        <p>1997, (Türkçe tercümesi Arapça tercümesi olan
+        <em>Mezahibu’t-</em> <em>Tefsiri’l-İslami</em></p>
+        <p>Kahire 1945 adlı eserden yapılmıştır.)</p>
+        <p>İbrahim Avad <em>el-Müsteşrikun ve’l-Kur’an: Dirase
+        li-Tercemeti Nefer mine’l-Müsteşrikini’l-Fransiyyin lil-Kur’an
+        ve Arauhum fh</em> Kahire 2003.</p>
+        <p>Mehmet Dağ, “İbn Mücahid’in Kıraat Ekollerini Yedi ile
+        Sınırlaması: Eleştirel Bir Yaklaşım”, <em>EKEV Akademi
+        Dergisi,</em> (2006) Yıl 10, Sayı 27, s. 81-104.</p>
+        <p>Muhammed Ebû Leyle <em>el-Kur’anu’l-Kerim
+        mine’l-Manzuri’l-İstişraki: Dirase Nakdiyye Tahliliyye,</em>
+        Kahire 2002.</p>
+        <p>Muhammed Mustafa A‘zami, <em>The History of the Qur’anic
+        Text: from Revelation to Compilation: a Comparative Study with
+        the Old and New Testament</em>s, Leicester 2003.</p>
+        <p>Sasi Salim Hac, <em>Nakdü’l-Hitabi’l-İstişraki:
+        ez-Zahiretü’l-İstişrakiyye ve Eseruha
+        fî’d-Dirasati’l-İslâmiyye</em> Beyrut 2002.</p>
+        <p>Tayyar Altıkulaç, “İbn Mücahid” <em>DİA,</em> 20/214-215
+        İstanbul.</p>
+        <p>Theodor Nöldeke “The Koran” <em>Encyclopedia Britannica</em>
+        9.baskı, Londra 1891.</p>
+        <p>Theodor Nöldeke, <em>Kur'an Tarihi</em> çev. Muammer Sencer,
+        İstanbul 1970.</p>
+        <p>Toby Lester “What is the Koran” <em>The Atlantic Monthly</em>
+        (January 1999).</p>
+        </blockquote>
+      
+    </div>
+	 
+   </div>
+   <script src="js/script.js?v=1.0.3"></script>
+   <script src="js/toc.js?v=1.0.3"></script>
+   <script src="js/modal.js?v=1.0.3"></script>
+ 
+</body>
+</html>
