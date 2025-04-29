@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!----======== CSS ======== -->
+  <link rel="stylesheet" href="css/style.css?v=1.0.1">
+  <link rel="stylesheet" href="css/toc.css?v=1.0.1">
+  <link rel="stylesheet" href="css/modal.css?v=1.0.1">
+  <link rel="stylesheet" href="css/fihrist.css?v=1.0.1">
+     <style>
+     #reading-area { max-width: 800px; margin: auto; padding: 20px; }
+    </style>
+</head>
+<body>
+  <!-- Modal -->
+  <!-- Modal -->
+<div id="listeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+background-color:rgba(0,0,0,0.7); z-index:1000; overflow:auto;">
+<div id="modalContent"  style="background:white; margin:50px auto; padding:20px; width:90%; max-width:1000px; border-radius:8px;">
+  <button onclick="closeModal()">Kapat</button>
+  <HR>
+  <h2>FİHRİST</h2>
+  <div id="listeContainer"></div>
+  <button onclick="closeModal()">Kapat</button>
+</div>
+</div>
+  <!-- Sol üst menü butonu -->
+  <button class="menu-button left" id="openLeftMenu">&#9776;</button>
+
+
+  <!-- Sol menü paneli: İçindekiler -->
+  <div class="menu-left" id="leftMenu">
+  <h2>Ayarlar</h2>
+ 
+
+    <div class="control-group">
+      <button class="btn btn-primary" id="decreaseFont">A -</button>
+      <button class="btn btn-primary" id="increaseFont">A +</button>
+	   <button class="btn btn-primary" id="toggleMode">🌙</button>
+    </div>
+	
+    <hr>
+    <h2>İçindekiler</h2>
+    
+    <div class="filter-container">
+      <input
+        type="text"
+        id="filter-input"
+        placeholder="Filtrele.."
+        class="filter-input"
+      />
+    </div>
+    <button type="button" class="btn btn-primary btn-block" onclick="showModal()">Fihrist</button> 
+ <ul>
+ <li><a href="#yıllık-peygamberlik-sürecinin-kronolojik-incelemesi"
+ id="toc-yıllık-peygamberlik-sürecinin-kronolojik-incelemesi">23 Yıllık
+ Peygamberlik Sürecinin Kronolojik İncelemesi</a></li>
+ <li><a
+ href="#giriş-hz.-muhammedin-23-yıllık-peygamberlik-yolculuğuna-giriş"
+ id="toc-giriş-hz.-muhammedin-23-yıllık-peygamberlik-yolculuğuna-giriş">1.
+ Giriş: Hz. Muhammed'in 23 Yıllık Peygamberlik Yolculuğuna
+ Giriş</a></li>
+ <li><a
+ href="#peygamberliğin-1.-yılı-yaklaşık-610-ilk-vahiy-ve-islama-ilk-çağrı"
+ id="toc-peygamberliğin-1.-yılı-yaklaşık-610-ilk-vahiy-ve-islama-ilk-çağrı">2.
+ Peygamberliğin 1. Yılı (yaklaşık 610 ): İlk Vahiy ve İslam'a İlk
+ Çağrı</a></li>
+ <li><a
+ href="#peygamberliğin-2.-yılı-yaklaşık-611-ilk-takipçiler-ve-gizli-tebliğin-başlangıcı"
+ id="toc-peygamberliğin-2.-yılı-yaklaşık-611-ilk-takipçiler-ve-gizli-tebliğin-başlangıcı">3.
+ Peygamberliğin 2. Yılı (yaklaşık 611 ): İlk Takipçiler ve Gizli
+ Tebliğin Başlangıcı</a></li>
+ <li><a
+ href="#peygamberliğin-3.-yılı-yaklaşık-612-artan-muhalefet-ve-tevhid-mesajı"
+ id="toc-peygamberliğin-3.-yılı-yaklaşık-612-artan-muhalefet-ve-tevhid-mesajı">4.
+ Peygamberliğin 3. Yılı (yaklaşık 612 ): Artan Muhalefet ve Tevhid
+ Mesajı</a></li>
+ <li><a
+ href="#peygamberliğin-4.-yılı-yaklaşık-613-açık-tebliğ-emri-ve-ilk-direniş"
+ id="toc-peygamberliğin-4.-yılı-yaklaşık-613-açık-tebliğ-emri-ve-ilk-direniş">5.
+ Peygamberliğin 4. Yılı (yaklaşık 613 ): Açık Tebliğ Emri ve İlk
+ Direniş</a></li>
+ <li><a
+ href="#peygamberliğin-5.-yılı-yaklaşık-614-şiddetlenen-zulüm-ve-habeşistana-ilk-hicret"
+ id="toc-peygamberliğin-5.-yılı-yaklaşık-614-şiddetlenen-zulüm-ve-habeşistana-ilk-hicret">6.
+ Peygamberliğin 5. Yılı (yaklaşık 614 ): Şiddetlenen Zulüm ve
+ Habeşistan'a İlk Hicret</a></li>
+ <li><a
+ href="#peygamberliğin-6.-yılı-yaklaşık-615-habeşistana-ikinci-hicret-ve-önemli-isimlerin-islamı-kabulü"
+ id="toc-peygamberliğin-6.-yılı-yaklaşık-615-habeşistana-ikinci-hicret-ve-önemli-isimlerin-islamı-kabulü">7.
+ Peygamberliğin 6. Yılı (yaklaşık 615 ): Habeşistan'a İkinci Hicret ve
+ Önemli İsimlerin İslam'ı Kabulü</a></li>
+ <li><a href="#peygamberliğin-7.-yılı-yaklaşık-616"
+ id="toc-peygamberliğin-7.-yılı-yaklaşık-616">8. Peygamberliğin 7. Yılı
+ (yaklaşık 616 ): </a></li>
+ <li><a
+ href="#peygamberliğin-8.-yılı-yaklaşık-617-banu-haşime-sosyal-ve-ekonomik-boykot"
+ id="toc-peygamberliğin-8.-yılı-yaklaşık-617-banu-haşime-sosyal-ve-ekonomik-boykot">9.
+ Peygamberliğin 8. Yılı (yaklaşık 617 ): Banu Haşim'e Sosyal ve Ekonomik
+ Boykot</a></li>
+ <li><a
+ href="#peygamberliğin-9.-yılı-yaklaşık-618-boykotun-sonu-ve-hüzün-yılı-hatice-ve-ebu-talibin-vefatları"
+ id="toc-peygamberliğin-9.-yılı-yaklaşık-618-boykotun-sonu-ve-hüzün-yılı-hatice-ve-ebu-talibin-vefatları">10.
+ Peygamberliğin 9. Yılı (yaklaşık 618 ): Boykotun Sonu ve Hüzün Yılı
+ (Hatice ve Ebu Talib'in Vefatları)</a></li>
+ <li><a
+ href="#peygamberliğin-10.-yılı-yaklaşık-619-taif-yolculuğu-ve-mekkede-artan-zorluklar"
+ id="toc-peygamberliğin-10.-yılı-yaklaşık-619-taif-yolculuğu-ve-mekkede-artan-zorluklar">11.
+ Peygamberliğin 10. Yılı (yaklaşık 619 ): Taif Yolculuğu ve Mekke'de
+ Artan Zorluklar</a></li>
+ <li><a
+ href="#peygamberliğin-11.-yılı-yaklaşık-620-medineli-hacılarla-karşılaşma-ve-ilk-akabe-biatı"
+ id="toc-peygamberliğin-11.-yılı-yaklaşık-620-medineli-hacılarla-karşılaşma-ve-ilk-akabe-biatı">12.
+ Peygamberliğin 11. Yılı (yaklaşık 620 ): Medineli Hacılarla Karşılaşma
+ ve İlk Akabe Biatı</a></li>
+ <li><a
+ href="#peygamberliğin-12.-yılı-yaklaşık-621-ikinci-akabe-biatı-ve-medinede-desteğin-artması"
+ id="toc-peygamberliğin-12.-yılı-yaklaşık-621-ikinci-akabe-biatı-ve-medinede-desteğin-artması">13.
+ Peygamberliğin 12. Yılı (yaklaşık 621 ): İkinci Akabe Biatı ve
+ Medine'de Desteğin Artması</a></li>
+ <li><a
+ href="#peygamberliğin-13.-yılı-yaklaşık-622-hicret-hazırlıkları-ve-ikinci-akabe-biatı"
+ id="toc-peygamberliğin-13.-yılı-yaklaşık-622-hicret-hazırlıkları-ve-ikinci-akabe-biatı">14.
+ Peygamberliğin 13. Yılı (yaklaşık 622 ): Hicret Hazırlıkları ve İkinci
+ Akabe Biatı</a></li>
+ <li><a
+ href="#peygamberliğin-14.-yılı-1-ah622-623-hicret-ve-medinede-ilk-müslüman-topluluğunun-kurulması"
+ id="toc-peygamberliğin-14.-yılı-1-ah622-623-hicret-ve-medinede-ilk-müslüman-topluluğunun-kurulması">15.
+ Peygamberliğin 14. Yılı (1 AH/622-623 ): Hicret ve Medine'de İlk
+ Müslüman Topluluğunun Kurulması</a></li>
+ <li><a
+ href="#peygamberliğin-15.-yılı-2-ah623-624-medinedeki-önemli-olaylar-bedir-savaşı-ve-dini-uygulamalarda-değişiklikler"
+ id="toc-peygamberliğin-15.-yılı-2-ah623-624-medinedeki-önemli-olaylar-bedir-savaşı-ve-dini-uygulamalarda-değişiklikler">16.
+ Peygamberliğin 15. Yılı (2 AH/623-624 ): Medine'deki Önemli Olaylar,
+ Bedir Savaşı ve Dini Uygulamalarda Değişiklikler</a></li>
+ <li><a
+ href="#peygamberliğin-16.-yılı-3-ah624-625-uhud-savaşı-ve-sonuçları"
+ id="toc-peygamberliğin-16.-yılı-3-ah624-625-uhud-savaşı-ve-sonuçları">17.
+ Peygamberliğin 16. Yılı (3 AH/624-625 ): Uhud Savaşı ve
+ Sonuçları</a></li>
+ <li><a
+ href="#peygamberliğin-17.-yılı-4-ah625-626-çeşitli-seferler-ve-toplumsal-gelişmeler"
+ id="toc-peygamberliğin-17.-yılı-4-ah625-626-çeşitli-seferler-ve-toplumsal-gelişmeler">18.
+ Peygamberliğin 17. Yılı (4 AH/625-626 ): Çeşitli Seferler ve Toplumsal
+ Gelişmeler</a></li>
+ <li><a
+ href="#peygamberliğin-18.-yılı-5-ah626-627-hendek-savaşı-ve-beni-kureyza-savaşı"
+ id="toc-peygamberliğin-18.-yılı-5-ah626-627-hendek-savaşı-ve-beni-kureyza-savaşı">19.
+ Peygamberliğin 18. Yılı (5 AH/626-627 ): Hendek Savaşı ve Beni Kureyza
+ Savaşı</a></li>
+ <li><a href="#peygamberliğin-19.-yılı-6-ah627-628-hudeybiye-antlaşması"
+ id="toc-peygamberliğin-19.-yılı-6-ah627-628-hudeybiye-antlaşması">20.
+ Peygamberliğin 19. Yılı (6 AH/627-628 ): Hudeybiye Antlaşması</a></li>
+ <li><a
+ href="#peygamberliğin-20.-yılı-7-ah628-629-hayber-savaşı-ve-umre-ziyareti"
+ id="toc-peygamberliğin-20.-yılı-7-ah628-629-hayber-savaşı-ve-umre-ziyareti">21.
+ Peygamberliğin 20. Yılı (7 AH/628-629 ): Hayber Savaşı ve Umre
+ Ziyareti</a></li>
+ <li><a href="#peygamberliğin-21.-yılı-8-ah629-630-mekkenin-fethi"
+ id="toc-peygamberliğin-21.-yılı-8-ah629-630-mekkenin-fethi">22.
+ Peygamberliğin 21. Yılı (8 AH/629-630 ): Mekke'nin Fethi</a></li>
+ <li><a
+ href="#peygamberliğin-22.-yılı-9-ah630-631-tebük-seferi-ve-heyetler-yılı"
+ id="toc-peygamberliğin-22.-yılı-9-ah630-631-tebük-seferi-ve-heyetler-yılı">23.
+ Peygamberliğin 22. Yılı (9 AH/630-631 ): Tebük Seferi ve Heyetler
+ Yılı</a></li>
+ <li><a
+ href="#peygamberliğin-23.-yılı-10-11-ah631-632-veda-haccı-ve-hz.-muhammedin-vefatı"
+ id="toc-peygamberliğin-23.-yılı-10-11-ah631-632-veda-haccı-ve-hz.-muhammedin-vefatı">24.
+ Peygamberliğin 23. Yılı (10-11 AH/631-632 ): Veda Haccı ve Hz.
+ Muhammed'in Vefatı</a></li>
+ <li><a
+ href="#sonuç-23-yıllık-peygamberlik-sürecinin-değerlendirilmesi-ve-mirası"
+ id="toc-sonuç-23-yıllık-peygamberlik-sürecinin-değerlendirilmesi-ve-mirası">25.
+ Sonuç: 23 Yıllık Peygamberlik Sürecinin Değerlendirilmesi ve
+ Mirası</a></li>
+ </ul>
+  </div>
+
+
+
+   <!-- Okuma alanı -->
+   <div class="reading-container" id="readingArea">
+
+    <div class="reading-area" id="reading-area">
+	
+        <h2 id="yıllık-peygamberlik-sürecinin-kronolojik-incelemesi">23
+        Yıllık Peygamberlik Sürecinin Kronolojik İncelemesi</h2>
+        <h2
+        id="giriş-hz.-muhammedin-23-yıllık-peygamberlik-yolculuğuna-giriş">1.
+        Giriş: Hz. Muhammed'in 23 Yıllık Peygamberlik Yolculuğuna
+        Giriş</h2>
+        <p>İslam'ın son peygamberi Hz. Muhammed'in (yaklaşık 570-632 )
+        hayatının son 23 yılı, İslam dininin doğuşuna ve yayılışına
+        tanıklık eden dönüm noktalarıyla doludur. Bu süre zarfında,
+        Mekke'nin pagan inanışlarının hakim olduğu bir toplumdan, tevhid
+        inancının ve ahlaki değerlerin ön plana çıktığı bir topluma
+        doğru evrimi gerçekleşmiştir. Bu rapor, Hz. Muhammed'in
+        peygamberliğinin başlangıcından vefatına kadar geçen 23 yıllık
+        dönemi kronolojik bir sırayla inceleyerek, her yıl meydana gelen
+        önemli olayları ve bu olaylarla eş zamanlı olarak nazil olan
+        Kur'an ayetlerini detaylı bir şekilde ele almaktadır.</p>
+        <p>Hz. Muhammed, peygamberlik öncesinde de Mekke toplumunda
+        dürüstlüğü, güvenilirliği ve adil tutumuyla saygın bir yere
+        sahipti. Başarılı bir ticaret hayatı sürdürmüş ve Hatice bint
+        Khuwaylid ile evlenmişti. Ancak, kırk yaşına yaklaştığında,
+        Mekke toplumunun içinde bulunduğu ahlaki ve dini boşluk onu
+        derinden etkilemiş ve inzivaya çekilerek tefekkür etmeye
+        başlamıştı. Özellikle Hira Dağı'ndaki bir mağaraya düzenli
+        olarak giderek, toplumsal sorunlar ve hayatın derin anlamları
+        üzerine düşünüyordu. Bu dönemde, Kabe'deki putperestlik ve
+        yaygın olan adaletsizlik onu rahatsız ediyordu. Kaynaklar,
+        peygamberlik öncesinde Hz. Muhammed'in rüyalarında manevi
+        işaretler görmeye başladığını ve bu durumun onu yaklaşan büyük
+        göreve hazırladığını belirtmektedir. Ayrıca, Kabe'nin yeniden
+        inşası sırasında ortaya çıkan Hacerü'l-Esved'in yerine
+        yerleştirilmesi konusundaki anlaşmazlıkta hakemlik yapması, onun
+        toplumsal kabul görmüşlüğünün bir göstergesidir.</p>
+        <p>İslam inancına göre, Hz. Muhammed'e ilk vahiy 610  yılında,
+        Ramazan ayında Hira Mağarası'nda inzivadayken geldi. Bu olay,
+        peygamberliğin başlangıcı olarak kabul edilir ve 23 yıl sürecek
+        olan vahiy sürecinin ilk adımıdır. Bu uzun ve çileli süreç,
+        Mekke döneminde (yaklaşık 610-622 ) İslam'ın ilk tohumlarının
+        atıldığı ve Medine döneminde (622-632 ) ise İslam devletinin
+        kurulup yayıldığı iki ana evreye ayrılır. Bu raporun temel
+        amacı, bu 23 yıllık dönemi kronolojik bir çerçevede ele alarak,
+        önemli olayları ve bu olaylarla bağlantılı olarak nazil olan
+        Kur'an ayetlerini incelemektir. Bu sayede, İslam'ın doğuş
+        sürecindeki ilahi rehberlik ve tarihi gelişmeler arasındaki
+        ilişki daha net bir şekilde anlaşılacaktır.</p>
+        <h2
+        id="peygamberliğin-1.-yılı-yaklaşık-610-ilk-vahiy-ve-islama-ilk-çağrı">2.
+        Peygamberliğin 1. Yılı (yaklaşık 610 ): İlk Vahiy ve İslam'a İlk
+        Çağrı</h2>
+        <p>Peygamberliğin ilk yılı, Hz. Muhammed'in hayatında dönüm
+        noktası teşkil eden ilk vahyin gelişiyle başlar. İslam inancına
+        göre, 610  yılının Ramazan ayında, Hz. Muhammed Hira Dağı'ndaki
+        mağarada tefekkür halindeyken, Cebrail meleği aracılığıyla ilk
+        vahyi almıştır. Bu olay, İslam'ın başlangıcı olarak kabul edilir
+        ve Hz. Muhammed'in peygamberlik görevinin resmen başlaması
+        anlamına gelir. Çeşitli İslami kaynaklar, bu olayın farklı
+        tarihlerde gerçekleştiğini belirtse de, genel kabul gören görüş
+        610  yılıdır. Örneğin, bazı alimler bu olayın Rabiülevvel ayının
+        9. günü (12 Şubat 610 AD) gerçekleştiğini belirtirken ,
+        diğerleri Ramazan ayının 21. günü (10 Ağustos 610 ) olduğunu
+        ifade etmektedir.</p>
+        <p>İlk nazil olan Kur'an ayetleri, Alak Suresi'nin (96. sure)
+        ilk beş ayetidir. Bu ayetler şöyledir: "Yaratan Rabbinin adıyla
+        oku! O, insanı bir alaktan (embriyodan) yarattı. Oku! Rabbin en
+        keremli olandır. O, kalemle (yazmayı) öğretendir. O, insana
+        bilmediğini öğretendir.". Bu ilk vahiy, İslam'ın temelini
+        oluşturan okuma, yaratılış ve ilahi öğretinin önemini vurgular.
+        Bu ayetlerin gelişiyle, Hz. Muhammed'e insanlığı karanlıktan
+        aydınlığa çıkaracak olan ilahi mesajın sorumluluğu
+        verilmiştir.</p>
+        <p>Bu olağanüstü deneyim karşısında Hz. Muhammed büyük bir
+        heyecan ve korku yaşamış, hemen eşi Hatice'nin yanına dönerek
+        ondan kendisini örtmesini istemiştir. Hatice, eşinin
+        dürüstlüğüne ve iyiliğine olan inancıyla onu teselli etmiş ve
+        Allah'ın onu asla yalnız bırakmayacağını söylemiştir. Daha sonra
+        Hatice, Hz. Muhammed'i amcasının oğlu olan ve Hıristiyanlık
+        hakkında bilgi sahibi olan Varaka bin Nevfel'e götürmüştür.
+        Varaka, bu olayın daha önceki peygamberlere gelen vahiylere
+        benzediğini ve Hz. Muhammed'in de bir peygamber olduğunu teyit
+        etmiştir. Bu destek, Hz. Muhammed'in peygamberlik görevini kabul
+        etmesinde önemli bir rol oynamıştır.</p>
+        <p>Peygamberliğin ilk yılında, İslam'ın ilk ibadet şekilleri de
+        belirlenmeye başlamıştır. Kaynaklar, bu dönemde sabah (Fecr) ve
+        ikindi (Asr) namazlarının ikişer rekat olarak farz kılındığını
+        belirtmektedir. Bu, İslam'ın sadece bir inanç sistemi değil,
+        aynı zamanda belirli ibadetleri de içeren bir yaşam biçimi
+        olarak şekillenmeye başladığının bir göstergesidir.</p>
+        <h2
+        id="peygamberliğin-2.-yılı-yaklaşık-611-ilk-takipçiler-ve-gizli-tebliğin-başlangıcı">3.
+        Peygamberliğin 2. Yılı (yaklaşık 611 ): İlk Takipçiler ve Gizli
+        Tebliğin Başlangıcı</h2>
+        <p>İlk vahyin ardından bir süre vahiy kesilmiş, bu döneme
+        "Fetret" denilmiştir. Bazı kaynaklara göre bu duraksama yaklaşık
+        üç yıl sürmüştür. Bu süre zarfında Hz. Muhammed'in yoğun bir
+        şekilde dua ve tefekkürle meşgul olduğu belirtilmektedir. Vahyin
+        tekrar başlamasıyla, Müddessir Suresi'nin (74. sure) ilk
+        ayetleri nazil olmuştur. Bu ayetler, Hz. Muhammed'e kalkıp
+        insanları uyarma, Rabbini yüceltme, elbiselerini temiz tutma ve
+        putlardan uzak durma emrini vermiştir. Bu, Hz. Muhammed'in
+        peygamberlik görevinin sadece kendisine yönelik bir deneyim
+        olmaktan çıkıp, insanlara yönelik bir tebliğ görevine
+        dönüştüğünün işaretidir.</p>
+        <p>Peygamberliğin ikinci yılında, İslam'a ilk inananlar ortaya
+        çıkmaya başlamıştır. Bu ilk Müslümanlar arasında Hz. Muhammed'in
+        eşi Hatice, amcasının oğlu Ali bin Ebu Talib, yakın arkadaşı Ebu
+        Bekir ve azatlı kölesi Zeyd bin Harise bulunmaktadır. Hatice,
+        Hz. Muhammed'in peygamberliğine ilk inanan kişi olarak özel bir
+        yere sahiptir. Ali bin Ebu Talib, İslam'a giren ilk çocuk olarak
+        bilinirken , Ebu Bekir ise İslam'a giren ilk hür erkek olarak
+        kabul edilir ve Hz. Muhammed'in en yakın destekçilerinden biri
+        olmuştur. Zeyd bin Harise ise İslam'a giren ilk azatlı köle
+        olarak bilinir ve Hz. Muhammed tarafından çok sevilmiştir. Bu
+        ilk inananlar, İslam'ın yayılması için büyük fedakarlıklarda
+        bulunmuşlardır.</p>
+        <p>Bu dönemde, Hz. Muhammed İslam'ı öncelikle yakın çevresine ve
+        güvendiği kişilere gizlice tebliğ etmeye başlamıştır. Bu gizli
+        tebliğ faaliyetleri için Erkam bin Ebi'l-Erkam'ın evi bir merkez
+        olarak kullanılmıştır. Burada, ilk Müslümanlar bir araya gelerek
+        Kur'an öğreniyor, ibadet ediyor ve İslam'ın temel prensiplerini
+        öğreniyorlardı. Kaynaklar, bu dönemde yaklaşık 40 kişinin
+        İslam'ı kabul ettiğini belirtmektedir. Bu gizli tebliğ dönemi,
+        İslam'ın Mekke toplumunda yavaş yavaş kök salmasına ve bir
+        çekirdek topluluk oluşturmasına olanak sağlamıştır.</p>
+        <p>Peygamberliğin ikinci yılında nazil olan Kur'an ayetleri,
+        genellikle peygamberliğin mahiyeti, uyarı görevi ve Allah'ın
+        birliği gibi temel konulara odaklanmıştır. Müddessir Suresi'nin
+        ilk ayetleri, Hz. Muhammed'e açıkça uyarı görevini üstlenme emri
+        verirken , diğer ayetler de Allah'ın evrendeki mutlak
+        hakimiyetini ve peygamberlerin insanlık için taşıdığı önemi
+        vurgulamış olabilir.</p>
+        <h2
+        id="peygamberliğin-3.-yılı-yaklaşık-612-artan-muhalefet-ve-tevhid-mesajı">4.
+        Peygamberliğin 3. Yılı (yaklaşık 612 ): Artan Muhalefet ve
+        Tevhid Mesajı</h2>
+        <p>Peygamberliğin üçüncü yılında, İslam'a olan ilgi artmaya
+        devam etmiş ve gizli tebliğ faaliyetleri meyvelerini vermeye
+        başlamıştır. Erkam'ın evi, Müslümanların buluşma ve eğitim
+        merkezi olarak işlev görmeye devam etmiş ve İslam'ı kabul
+        edenlerin sayısı giderek artmıştır. Ancak, bu gelişmeler
+        Mekke'nin önde gelenleri ve putperest inançlarına sıkı sıkıya
+        bağlı olanlar arasında rahatsızlığa neden olmaya
+        başlamıştır.</p>
+        <p>Üçüncü yılın sonlarına doğru, Hz. Muhammed peygamberliğini
+        ilk kez halka açık bir şekilde ilan etmeye başlamıştır. Bu açık
+        davet, özellikle Mekke'nin geleneksel dini ve sosyal düzeninden
+        faydalanan kesimler tarafından büyük bir tepkiyle
+        karşılanmıştır. Mekke'nin zengin ve nüfuzlu kişileri, Hz.
+        Muhammed'in tevhid inancına dayalı mesajının, atalarının dinini
+        ve Kabe'nin ticari önemini tehdit ettiğini düşünmüşlerdir.
+        Ayrıca, Hz. Muhammed'in sosyal eşitlik, putların reddi ve
+        zenginliğin ihtiyaç sahipleriyle paylaşılması yönündeki
+        çağrıları, mevcut toplumsal hiyerarşiyi sarsmıştır. Bu nedenle,
+        Hz. Muhammed'in ilk takipçileri genellikle toplumun alt
+        kesimlerinden, kölelerden ve kadınlardan oluşmuştur.</p>
+        <p>Mekke'li müşriklerin Hz. Muhammed'e ve onun takipçilerine
+        yönelik muhalefeti ve alaycı tavırları bu dönemde artmıştır.
+        Özellikle Ebu Cehil ve Ebu Leheb gibi önde gelen isimler,
+        İslam'a karşı şiddetli bir düşmanlık beslemişlerdir. Bu kişiler,
+        Hz. Muhammed'i deli, sihirbaz veya şair olarak nitelendirerek
+        halkı ondan uzaklaştırmaya çalışmışlardır.</p>
+        <p>Peygamberliğin üçüncü yılında nazil olan Kur'an ayetleri,
+        büyük olasılıkla tevhid inancını vurgulamaya, putperestliği
+        reddetmeye ve artan muhalefete karşı sabırlı olmayı öğütlemeye
+        devam etmiştir. Örneğin, Kehf Suresi'nin (18. sure) bu dönemde
+        nazil olduğu düşünülmektedir ve bu surede zulme karşı direnme,
+        inançta sebat etme ve Allah'ın hikmetine güvenme gibi temalar
+        işlenmektedir. Ayrıca, Necm Suresi'nin (53. sure) ilk ayetleri
+        de bu döneme aittir ve bu ayetlerde Hz. Muhammed'in vahiy
+        dışında konuşmadığı ve Allah'ın kendisine öğrettiği
+        vurgulanmaktadır. Bu ayetler, hem peygamberi teselli etmiş hem
+        de onun mesajının ilahi kaynaklı olduğunu takipçilerine
+        hatırlatmıştır.</p>
+        <h2
+        id="peygamberliğin-4.-yılı-yaklaşık-613-açık-tebliğ-emri-ve-ilk-direniş">5.
+        Peygamberliğin 4. Yılı (yaklaşık 613 ): Açık Tebliğ Emri ve İlk
+        Direniş</h2>
+        <p>Peygamberliğin dördüncü yılında, Allah tarafından Hz.
+        Muhammed'e İslam'ı açıkça ilan etme emri verilmiştir. Hicr
+        Suresi'nin (15. sure) 94-95. ayetlerinde bu emir şöyle ifade
+        edilir: "Öyleyse sen emrolunduğun şeyi açıkça söyle ve
+        müşriklerden yüz çevir. Şüphesiz biz, o alay edenlere karşı sana
+        yeteriz.". Bu ayetler, Hz. Muhammed'e artık gizli tebliğ
+        döneminin sona erdiğini ve İslam'ı çekinmeden halka duyurması
+        gerektiğini bildiriyordu.</p>
+        <p>Bu ilahi emir üzerine Hz. Muhammed, Safa Tepesi'ne çıkarak
+        halkı İslam'a davet etmiştir. Öncelikle yakın akrabalarını
+        çağırmış ve onlara Allah'ın birliğini ve kendi peygamberliğini
+        anlatmıştır. Şuara Suresi'nin (26. sure) 214-218. ayetleri de bu
+        durumu desteklemektedir: "En yakın akrabanı uyar. Sana uyan
+        mü'minlere kol kanat ger. Sana karşı gelirlerse de ki: 'Ben
+        sizin yaptıklarınızdan uzağım.' Sen o çok güçlü ve çok
+        merhametli olan Allah'a güven.". Bu ilk açık davet,
+        Abdulmuttalib'in oğulları arasında pek fazla destek bulmamış
+        olsa da, Ali bin Ebu Talib'in genç yaşına rağmen ilk destek
+        verenlerden olduğu belirtilmektedir.</p>
+        <p>Açık tebliğin başlamasıyla birlikte, Kureyş'in Hz. Muhammed'e
+        yönelik direnci ve alaycı tavırları daha da artmıştır. Özellikle
+        Ebu Cehil ve Ebu Leheb gibi isimler, Hz. Muhammed'in
+        peygamberliğini şiddetle reddetmiş ve onu engellemek için
+        çeşitli yollara başvurmuşlardır. Hz. Muhammed'in Kabe'de namaz
+        kılmasını engellemeye çalışmışlar, ona hakaret etmişler ve halkı
+        ondan uzak durmaya çağırmışlardır.</p>
+        <p>Bu dönemde nazil olan Kur'an ayetleri, açık tebliğ emrini
+        pekiştirmenin yanı sıra, Hz. Muhammed'in görevinin
+        evrenselliğini ve Allah'ın onu koruyacağını da vurgulamıştır.
+        A'raf Suresi'nin (7. sure) 158. ayeti bu durumu açıkça ifade
+        eder: "De ki: Ey insanlar! Ben sizin hepinize, göklerin ve yerin
+        sahibi olan Allah'ın gönderdiği peygamberiyim. O'ndan başka ilah
+        yoktur. O, diriltir ve öldürür. Öyleyse Allah'a ve O'na, Allah'a
+        ve O'nun sözlerine inanan o ümmi peygambere iman edin ve ona
+        uyun ki doğru yolu bulasınız.". Ayrıca, Maide Suresi'nin (5.
+        sure) 67. ayeti de peygamberin tebliğ görevini eksiksiz yerine
+        getirmesi gerektiğini ve Allah'ın onu insanlardan koruyacağını
+        belirtir. Bu ayetler, Hz. Muhammed'e hem görevini hatırlatmış
+        hem de karşılaşacağı zorluklara karşı ona moral vermiştir.</p>
+        <h2
+        id="peygamberliğin-5.-yılı-yaklaşık-614-şiddetlenen-zulüm-ve-habeşistana-ilk-hicret">6.
+        Peygamberliğin 5. Yılı (yaklaşık 614 ): Şiddetlenen Zulüm ve
+        Habeşistan'a İlk Hicret</h2>
+        <p>Peygamberliğin beşinci yılında, Mekke'li müşriklerin İslam'a
+        olan muhalefeti daha da şiddetlenmiş ve Müslümanlara yönelik
+        zulüm ve baskılar artmıştır. Özellikle toplumun zayıf
+        kesimlerine mensup olan ilk Müslümanlar, işkenceye, açlığa,
+        aşağılamaya ve sosyal boykota maruz kalmışlardır. Bilal-i Habeşi
+        gibi köleler, İslam'dan dönmeleri için acımasızca işkence
+        görmüşlerdir. Sümeyye bint Hubbat, İslam'dan vazgeçmeyi
+        reddettiği için efendisi Ebu Cehil tarafından şehit edilen ilk
+        Müslüman olarak bilinir. Bu zulümler, Mekke'deki Müslümanların
+        yaşamını dayanılmaz hale getirmiştir.</p>
+        <p>Bu zorlu şartlar altında, Hz. Muhammed, bazı Müslümanların
+        Habeşistan'a (Etiyopya) hicret etmelerine izin vermiştir.
+        Hıristiyan bir kral olan Necaşi'nin (Negus) adil yönetimi
+        altında sığınma bulacaklarını ummuşlardır. İslam tarihindeki bu
+        ilk hicret, Müslümanların inançlarını özgürce yaşayabilecekleri
+        bir ortama kavuşmaları açısından önemli bir adım olmuştur. İlk
+        hicret kafilesinde yaklaşık 11 erkek ve 4 kadının bulunduğu
+        belirtilmektedir. Bu muhacirler arasında Osman bin Affan ve eşi
+        Rukiye (Hz. Muhammed'in kızı) da yer almıştır.</p>
+        <p>Bu dönemde nazil olan Kur'an ayetleri, zulme uğrayan
+        müminlere sabır ve metanet telkin etmiş, Allah'ın onlarla
+        birlikte olduğunu hatırlatmış ve gelecekteki kurtuluş müjdesini
+        vermiş olabilir. Örneğin, Kasas Suresi'nin (28. sure) 40. ayeti,
+        "Onlar, sırf 'Rabbimiz Allah'tır' dedikleri için yurtlarından
+        haksız yere çıkarılmışlardır." ifadesi, bu dönemin atmosferini
+        yansıtabilir. Ayrıca, Necm Suresi'nin (53. sure) bu dönemde
+        nazil olduğu ve Hz. Muhammed'in bu sureyi Kabe'de okuduğu,
+        müşriklerin de secde ettiği rivayet edilmektedir. Bu olay,
+        Habeşistan'daki muhacirlere ulaşmış ve onların umutlarını
+        artırmıştır.</p>
+        <h2
+        id="peygamberliğin-6.-yılı-yaklaşık-615-habeşistana-ikinci-hicret-ve-önemli-isimlerin-islamı-kabulü">7.
+        Peygamberliğin 6. Yılı (yaklaşık 615 ): Habeşistan'a İkinci
+        Hicret ve Önemli İsimlerin İslam'ı Kabulü</h2>
+        <p>Peygamberliğin altıncı yılında, Mekke'deki baskılar artmaya
+        devam edince, daha fazla Müslüman Habeşistan'a hicret etmiştir.
+        İkinci hicret kafilesinin ilkinden daha kalabalık olduğu ve
+        yaklaşık 82 erkek ve 18 kadından oluştuğu belirtilmektedir. Bu
+        kafileye Cafer bin Ebu Talib liderlik etmiştir.</p>
+        <p>Mekke'li müşrikler, Müslümanların Habeşistan'da iyi
+        karşılanmasından endişelenerek, Necaşi'ye bir heyet
+        göndermişlerdir. Abdullah bin Rabia ve Amr bin As liderliğindeki
+        bu heyet, Necaşi'den Müslümanları Mekke'ye geri göndermesini
+        istemişlerdir. Ancak, Necaşi, Müslümanları dinledikten ve Cafer
+        bin Ebu Talib'in İslam'ı anlatan etkileyici konuşmasından sonra,
+        onları geri göndermeyi reddetmiştir. Bu olay, Mekke'li müşrikler
+        için büyük bir hayal kırıklığı olmuştur.</p>
+        <p>Peygamberliğin altıncı yılı, İslam toplumu için iki önemli
+        ismin İslam'ı kabul etmesiyle de ayrı bir önem taşımaktadır: Hz.
+        Muhammed'in amcası Hamza bin Abdulmuttalib ve Ömer bin Hattab.
+        Hamza'nın İslam'ı kabulü, Hz. Muhammed'e ve ilk Müslümanlara
+        büyük bir güç ve destek sağlamıştır. Ömer bin Hattab'ın İslam'ı
+        kabulü ise, İslam toplumunda önemli bir dönüm noktası olmuştur.
+        Ömer'in güçlü kişiliği ve adalete olan bağlılığı, İslam'ın
+        Mekke'deki konumunu önemli ölçüde güçlendirmiştir. Rivayetlere
+        göre, Ömer İslam'ı kabul ettikten sonra Müslümanlar Kabe'de daha
+        rahat bir şekilde ibadet etmeye başlamışlardır.</p>
+        <p>Bu dönemde nazil olan Kur'an ayetleri, Habeşistan'daki
+        Müslümanların korunması, Hamza ve Ömer'in İslam'ı kabulüyle
+        topluluğun güçlenmesi ve Mekke'li müşriklerin çabalarının
+        sonuçsuz kalması gibi konularla ilgili olabilir. Örneğin, Bakara
+        Suresi'nin (2. sure) 91. ayeti, "Onlara: 'Allah'ın indirdiğine
+        iman edin' denildiği zaman, 'Biz sadece bize indirilene iman
+        ederiz' derler ve ondan sonra geleni, oysa o kendilerinde olanı
+        doğrulayan bir gerçek iken inkar ederler." ifadesi, Mekke'li
+        müşriklerin İslam'ı reddetmelerine bir gönderme olabilir.</p>
+        <h2 id="peygamberliğin-7.-yılı-yaklaşık-616">8. Peygamberliğin
+        7. Yılı (yaklaşık 616 ): </h2>
+        <p>İslam'ı Kabul Eden Önemli Figürlerin Yükselişi ve Artan
+        Düşmanlık <em>(Not: Bazı kaynaklara göre Hamza ve Ömer'in
+        İslam'ı kabulü 6. Yıla denk gelmektedir. Kaynaklardaki
+        farklılıklar göz önünde bulundurularak her iki olasılık da
+        değerlendirilecektir.)</em></p>
+        <p>Peygamberliğin yedinci yılı, önceki yılda İslam'ı kabul eden
+        Hamza bin Abdulmuttalib ve Ömer bin Hattab gibi nüfuzlu
+        isimlerin Müslüman toplum içindeki etkilerinin daha belirgin
+        hale geldiği bir dönemdir. Bu kişilerin İslam'ı kabul etmesi,
+        Mekke'deki Müslümanların moralini yükseltmiş ve onlara daha
+        fazla cesaret vermiştir. Ancak, bu olumlu gelişmelere rağmen,
+        Kureyş'in İslam'a olan düşmanlığı azalmamış, aksine daha
+        organize bir muhalefet ortaya çıkmaya başlamıştır.</p>
+        <p>Mekke'li müşrikler, İslam'ın yayılmasını engellemek için
+        çeşitli planlar yapmaya devam etmişlerdir. Hz. Muhammed'e
+        yönelik hakaretler ve alaycı tavırlar artmış, Müslümanlara
+        yönelik psikolojik baskı yoğunlaşmıştır. Fiziksel şiddet de
+        zaman zaman devam etmiş, özellikle toplumun alt kesimlerine
+        mensup olan Müslümanlar bu durumdan daha fazla
+        etkilenmişlerdir.</p>
+        <p>Bu dönemde nazil olan Kur'an ayetleri, müminlere zorluklar
+        karşısında sabırlı olmayı, inançlarında sebat etmeyi ve Allah'a
+        güvenmeyi öğütlemiş olabilir. Ayrıca, İslam'ı reddedenlerin
+        karşılaşacakları sonuçlar hakkında uyarılar içeren ayetler de
+        nazil olmuş olabilir. Örneğin, Rum Suresi'nin (30. sure) 3-7.
+        ayetlerinde Bizans İmparatorluğu'nun Persler karşısında aldığı
+        yenilginin ardından birkaç yıl içinde tekrar galip geleceği
+        müjdelenmektedir. Bu olay, o dönemde müşriklerin Müslümanların
+        zayıf durumunu küçümsemesine karşı, Allah'ın vaadinin
+        gerçekleşeceği ve müminlerin sonunda zafere ulaşacağı şeklinde
+        yorumlanmış olabilir.</p>
+        <h2
+        id="peygamberliğin-8.-yılı-yaklaşık-617-banu-haşime-sosyal-ve-ekonomik-boykot">9.
+        Peygamberliğin 8. Yılı (yaklaşık 617 ): Banu Haşim'e Sosyal ve
+        Ekonomik Boykot</h2>
+        <p>Peygamberliğin sekizinci yılında, Kureyş, İslam'ın
+        yayılmasını durdurmak için daha acımasız bir yönteme
+        başvurmuştur: Hz. Muhammed ve onu koruyan Banu Haşim (ve Banu
+        Muttalib) klanına karşı kapsamlı bir sosyal ve ekonomik boykot.
+        Bu boykot, her türlü ticari ve sosyal ilişkinin kesilmesini,
+        Müslümanlarla evlenilmemesini ve onlara kız verilmemesini
+        içeriyordu. Boykotun amacı, Banu Haşim'i Hz. Muhammed'i terk
+        etmeye zorlamaktı.</p>
+        <p>Bu boykot nedeniyle, Hz. Muhammed ve Banu Haşim'e mensup
+        Müslümanlar, Mekke'nin bir vadisi olan Şi'b-i Ebu Talib'e (Ebu
+        Talib Mahallesi) hapsedilmiş ve yaklaşık üç yıl boyunca büyük
+        zorluklar ve yokluklar içinde yaşamışlardır. Yiyecek ve su
+        kıtlığı çekilmiş, ticaret yapmaları engellenmiş ve temel
+        ihtiyaçlarını karşılamakta büyük sıkıntılar yaşamışlardır. Bu
+        zorlu şartlar altında bile, Hz. Muhammed ve takipçileri
+        inançlarından vazgeçmemiş ve sabırla bu dönemi atlatmaya
+        çalışmışlardır. Bazı Mekke'lilerin gizlice onlara yardım etmeye
+        çalıştığı da rivayet edilmektedir.</p>
+        <p>Bu çetin boykot döneminde nazil olan Kur'an ayetleri, büyük
+        olasılıkla sabrı, dayanıklılığı, zorluklar karşısında Allah'a
+        tevekkül etmeyi ve adaletsizliği kınamayı içeren temalara
+        odaklanmıştır. Rivayetlere göre, boykotun şiddetlendiği bir
+        dönemde Hz. Muhammed'in yedi yıl sürecek bir kıtlık için dua
+        ettiği belirtilmektedir. Ayrıca, Rum Suresi'ndeki (30. sure)
+        Bizans'ın zaferiyle ilgili kehanet, bu zorlu dönemde
+        Müslümanlara umut ve geleceğe dair bir bakış açısı sunmuş
+        olabilir.</p>
+        <h2
+        id="peygamberliğin-9.-yılı-yaklaşık-618-boykotun-sonu-ve-hüzün-yılı-hatice-ve-ebu-talibin-vefatları">10.
+        Peygamberliğin 9. Yılı (yaklaşık 618 ): Boykotun Sonu ve Hüzün
+        Yılı (Hatice ve Ebu Talib'in Vefatları)</h2>
+        <p>Peygamberliğin dokuzuncu yılında, Mekke'li müşriklerin Banu
+        Haşim'e uyguladığı sosyal ve ekonomik boykot sona ermiştir.
+        Rivayetlere göre, boykot kararının yazılı olduğu belgenin
+        güveler tarafından yenildiği mucizevi bir şekilde ortaya çıkmış
+        ve bu durum boykotun kaldırılmasına yol açmıştır. Bu gelişme,
+        Müslümanlar için büyük bir rahatlama olmuştur.</p>
+        <p>Ancak, bu sevinç kısa sürmüş ve aynı yıl Hz. Muhammed'in
+        hayatında derin izler bırakan iki büyük kayıp yaşanmıştır: eşi
+        Hatice bint Khuwaylid ve amcası Ebu Talib'in vefatları. Hatice,
+        Hz. Muhammed'in peygamberliğine ilk inanan, ona her zaman destek
+        olan ve İslam'ın yayılması için büyük fedakarlıklarda bulunan
+        değerli bir eşti. Ebu Talib ise, Hz. Muhammed'i çocukluğundan
+        beri himaye eden, ona kol kanat geren ve Mekke'li müşriklerin
+        zulmünden koruyan sevgili bir amcaydı. Bu iki önemli insanın
+        vefatı, Hz. Muhammed'i derinden üzmüş ve bu yıl "Hüzün Yılı"
+        olarak anılmıştır. Ebu Talib'in vefatıyla, Hz. Muhammed'in
+        Mekke'deki toplumsal güvencesi de zayıflamış ve müşriklerin ona
+        yönelik düşmanlıkları daha da artmıştır.</p>
+        <p>Bu zorlu dönemde nazil olan Kur'an ayetleri, büyük olasılıkla
+        Hz. Muhammed'e sabır, metanet ve Allah'a tevekkül etme
+        konularında teselli ve rehberlik sunmuştur. Ancak, bu yıla özel
+        olarak ilişkilendirilen belirli ayetler kaynaklarda net olarak
+        belirtilmemektedir.</p>
+        <h2
+        id="peygamberliğin-10.-yılı-yaklaşık-619-taif-yolculuğu-ve-mekkede-artan-zorluklar">11.
+        Peygamberliğin 10. Yılı (yaklaşık 619 ): Taif Yolculuğu ve
+        Mekke'de Artan Zorluklar</h2>
+        <p>Hüzün Yılı'nın ardından Mekke'deki şartların daha da
+        zorlaşması üzerine, Hz. Muhammed İslam'ı tebliğ etmek ve
+        Mekke'li müşriklerin baskısından korunmak amacıyla Taif şehrine
+        bir yolculuk yapmıştır. Ancak, Taif'te de umduğu gibi bir
+        karşılama görmemiş, aksine alay ve hakaretlere maruz kalmış ve
+        hatta şehir eşrafının kışkırttığı çocuklar tarafından taşlanarak
+        şehirden çıkarılmıştır. Bu olay, Hz. Muhammed için büyük bir
+        hayal kırıklığı olmuştur.</p>
+        <p>Taif'ten Mekke'ye dönerken, Hz. Muhammed'in kalbi kırık ve
+        üzgündü. Karn-ı Menazil denilen yere ulaştığında, Cebrail meleği
+        gelerek Allah'ın halkının kendisine verdiği cevabı duyduğunu ve
+        dilerse dağlar meleğinin onları cezalandırabileceğini
+        bildirmiştir. Ancak Hz. Muhammed, onların hidayet bulması
+        ümidiyle bu teklifi kabul etmemiştir. Mekke'ye döndükten sonra,
+        Ebu Talib'in vefatıyla zayıflayan toplumsal konumu nedeniyle
+        Mut'im bin Adiyy'in himayesi altına girmiştir. Mekke'li
+        müşriklerin Hz. Muhammed'e yönelik cüretleri, Ebu Talib'in
+        koruması kalktıktan sonra daha da artmıştır.</p>
+        <p>Bu dönemde nazil olan Kur'an ayetleri, Taif yolculuğunun
+        hayal kırıklığını yansıtabilir, sabrı ve tebliğ görevine devam
+        etmenin önemini vurgulayabilir. Ayrıca, A'raf Suresi'nin (7.
+        sure) 158. ayetinde belirtilen peygamberin evrensel misyonu ve
+        Kasas Suresi'nin (28. sure) 56. ayetinde geçen "Şüphesiz sen
+        sevdiğini hidayete erdiremezsin, fakat Allah dilediğini hidayete
+        erdirir..." ifadesi, bu dönemin olaylarına ışık tutmaktadır.</p>
+        <h2
+        id="peygamberliğin-11.-yılı-yaklaşık-620-medineli-hacılarla-karşılaşma-ve-ilk-akabe-biatı">12.
+        Peygamberliğin 11. Yılı (yaklaşık 620 ): Medineli Hacılarla
+        Karşılaşma ve İlk Akabe Biatı</h2>
+        <p>Peygamberliğin on birinci yılında, Hz. Muhammed'in hayatında
+        önemli bir dönüm noktası yaşanmıştır. Hac mevsiminde Mekke'ye
+        gelen Medineli (o zamanki adıyla Yesrib) bir grup hacı ile Akabe
+        denilen yerde karşılaşmıştır. Bu altı kişilik Medineli grup, Hz.
+        Muhammed'in davetini dinlemiş ve İslam'ı kabul etmişlerdir.
+        Medineliler, daha önce Yahudi komşularından gelecekte bir
+        peygamberin geleceğini duymuşlardı ve Hz. Muhammed'in
+        anlattıklarının bu beklentileriyle örtüştüğünü
+        düşünmüşlerdir.</p>
+        <p>Medine'ye döndüklerinde, bu ilk Müslümanlar İslam'ı kendi
+        şehirlerinde yaymaya başlamışlardır. Kısa sürede Medine'de
+        İslam'a olan ilgi artmış ve bir sonraki hac mevsiminde daha
+        kalabalık bir grupla Mekke'ye gelmişlerdir. Bu olay, İslam'ın
+        Mekke dışına yayılmasının ilk önemli adımı olmuştur.</p>
+        <p>Bu dönemde, Miraç olayı da gerçekleşmiştir. İslam inancına
+        göre, Hz. Muhammed bir gece Cebrail meleği eşliğinde önce
+        Kudüs'teki Mescid-i Aksa'ya götürülmüş (İsra), oradan da göğe
+        yükseltilmiştir (Miraç). Bu mucizevi yolculukta, önceki
+        peygamberlerle görüşmüş ve Allah ile doğrudan iletişim
+        kurmuştur. Miraç olayında, beş vakit namazın farz kılındığına
+        inanılır. İsra Suresi'nin (17. sure) ilk ayeti bu olayı
+        anlatmaktadır: "Kulunu (Muhammed'i) bir gece Mescid-i Haram'dan,
+        çevresini mübarek kıldığımız Mescid-i Aksa'ya götüren Allah her
+        türlü noksandan münezzehtir. Şüphesiz O, her şeyi işiten, her
+        şeyi görendir.". Miraç, Hz. Muhammed ve ilk Müslümanlar için
+        büyük bir manevi destek ve teselli kaynağı olmuştur.</p>
+        <h2
+        id="peygamberliğin-12.-yılı-yaklaşık-621-ikinci-akabe-biatı-ve-medinede-desteğin-artması">13.
+        Peygamberliğin 12. Yılı (yaklaşık 621 ): İkinci Akabe Biatı ve
+        Medine'de Desteğin Artması</h2>
+        <p>Peygamberliğin on ikinci yılında, bir önceki yıl İslam'ı
+        kabul eden altı Medineli, bu kez yanlarında altı yeni Müslüman
+        ile birlikte hac için Mekke'ye gelmişlerdir. Akabe'de Hz.
+        Muhammed ile tekrar görüşmüşler ve ona bağlılık sözü
+        vermişlerdir. Bu olay, "Birinci Akabe Biatı" olarak bilinir.
+        Medineliler, Allah'a ortak koşmamaya, hırsızlık yapmamaya, zina
+        etmemeye, çocuklarını öldürmemeye, iftira atmamaya ve Hz.
+        Muhammed'e itaat etmeye söz vermişlerdir. Bu biat, İslam'ın
+        Arabistan yarımadasında yayılması için önemli bir dönüm noktası
+        olmuştur.</p>
+        <p>Bu biatın ardından, Hz. Muhammed, Mus'ab bin Umeyr'i
+        Medine'ye İslam'ı öğretmek ve Kur'an'ı yaymakla
+        görevlendirmiştir. Mus'ab'ın Medine'deki başarılı tebliğ
+        çalışmaları sayesinde, kısa sürede birçok kişi İslam'ı kabul
+        etmiş ve Medine, Mekke'deki baskılardan kaçan Müslümanlar için
+        güvenli bir sığınak haline gelmeye başlamıştır. Mus'ab'ın
+        çabaları, Medine'de İslam'ın hızla yayılmasında önemli bir rol
+        oynamıştır. Rivayetlere göre, Mus'ab'ın tebliği sayesinde Evs ve
+        Hazrec kabileleri arasında İslam büyük bir kabul görmüştür.</p>
+        <p>Bu dönemde nazil olan Kur'an ayetleri, büyük olasılıkla
+        müminlerin görevlerini, İslam'ı yaymanın önemini ve topluluğun
+        güçlenmesini teşvik eden konulara odaklanmıştır. Birinci Akabe
+        Biatı'nın şartları, bu dönemde nazil olan ayetlerin ahlaki ve
+        etik ilkelerini yansıtmaktadır.</p>
+        <h2
+        id="peygamberliğin-13.-yılı-yaklaşık-622-hicret-hazırlıkları-ve-ikinci-akabe-biatı">14.
+        Peygamberliğin 13. Yılı (yaklaşık 622 ): Hicret Hazırlıkları ve
+        İkinci Akabe Biatı</h2>
+        <p>Peygamberliğin on üçüncü yılında, Medine'den yaklaşık 75
+        kişilik bir Müslüman heyeti hac için Mekke'ye gelmiştir. Bu
+        heyet, Akabe'de Hz. Muhammed ile gizlice görüşerek ona
+        bağlılıklarını bildirmiş ve onu Medine'ye davet etmişlerdir. Bu
+        olay, "İkinci Akabe Biatı" olarak bilinir ve Hicret'in
+        (Medine'ye göç) en önemli hazırlık adımlarından birini
+        oluşturmuştur. Medineliler, Hz. Muhammed'i ve Mekke'deki
+        Müslümanları kendi şehirlerinde koruyacaklarına ve onlara her
+        türlü desteği vereceklerine söz vermişlerdir. Bu biat,
+        Medine'nin İslam'ın yeni merkezi olma yolunda önemli bir
+        adımdır.</p>
+        <p>Bu gelişmeler üzerine, Mekke'li müşriklerin Hz. Muhammed'e ve
+        Müslümanlara yönelik zulüm ve baskıları daha da artmıştır. Mekke
+        liderleri, Hz. Muhammed'i öldürmek için planlar yapmaya
+        başlamışlardır. Bu tehlikeli durum karşısında, Hz. Muhammed,
+        Müslümanlara Medine'ye hicret etmeleri talimatını vermiştir.
+        Müslümanlar, gruplar halinde gizlice Mekke'den ayrılarak
+        Medine'ye doğru yola çıkmışlardır.</p>
+        <p>Sonunda, Hz. Muhammed de Ebu Bekir ile birlikte Mekke'den
+        Medine'ye hicret etmiştir. Bu tarihi olay, İslam tarihinde bir
+        dönüm noktası olmuş ve Hicri takvimin başlangıcı olarak kabul
+        edilmiştir. Hicret, Mekke'deki baskılardan kurtuluşu ve
+        Medine'de yeni bir İslam toplumunun temellerinin atılmasını
+        simgelemektedir. Hz. Muhammed'in Medine'ye hicreti,
+        peygamberliğin Mekke döneminin sona erdiği ve Medine döneminin
+        başladığı anlamına gelir. Hicretin tarihi, kaynaklara göre Safer
+        ayının 27. günü, peygamberliğin 13. yılı (16 Eylül 622 AD)
+        olarak belirtilmektedir.</p>
+        <p>Bu dönemde nazil olan Kur'an ayetleri, hicretin önemini,
+        muhacirlerin faziletlerini ve Medine'de yeni bir topluluk
+        kurmanın gerekliliğini vurgulamış olabilir. İkinci Akabe
+        Biatı'nın şartları, Medinelilerin peygambere olan bağlılıklarını
+        ve koruma sözlerini içeren önemli bir taahhüttü ve bu durum, o
+        dönemde nazil olan ayetlerin ruhunu yansıtmaktadır.</p>
+        <h2
+        id="peygamberliğin-14.-yılı-1-ah622-623-hicret-ve-medinede-ilk-müslüman-topluluğunun-kurulması">15.
+        Peygamberliğin 14. Yılı (1 AH/622-623 ): Hicret ve Medine'de İlk
+        Müslüman Topluluğunun Kurulması</h2>
+        <p>Hz. Muhammed'in Medine'ye ulaşmasıyla birlikte, İslam
+        tarihinde yeni bir dönem başlamıştır. Medine, İslam'ın ilk
+        merkezi haline gelmiş ve burası "Peygamber Şehri" anlamına gelen
+        Medinetü'n-Nebi olarak anılmaya başlanmıştır. Hz. Muhammed,
+        Medine'ye varışının ardından ilk iş olarak Kuba'da bir mescit
+        inşa etmiş, ardından da Medine'nin merkezinde Mescid-i
+        Nebevi'nin temellerini atmıştır. Bu mescit, sadece bir
+        ibadethane değil, aynı zamanda Müslüman topluluğunun sosyal,
+        siyasi ve eğitim merkezi olarak da işlev görmüştür.</p>
+        <p>Hz. Muhammed, Medine'deki Müslüman topluluğunu güçlendirmek
+        için Mekke'den hicret eden Muhacirler ile Medineli Müslümanlar
+        (Ensar) arasında kardeşlik bağları kurmuştur. Bu uygulama,
+        Muhacirlerin Medine'deki yeni yaşamlarına uyum sağlamalarına
+        yardımcı olmuş ve Ensar'ın fedakarlığı sayesinde aralarında
+        güçlü bir dayanışma oluşmuştur.</p>
+        <p>Medine'deki farklı dini ve etnik gruplar arasındaki
+        ilişkileri düzenlemek amacıyla "Medine Vesikası" (Medine
+        Anayasası) olarak bilinen bir antlaşma hazırlanmıştır. Bu
+        vesika, Medine'deki Müslümanların, Yahudilerin ve diğer
+        toplulukların hak ve sorumluluklarını belirleyerek, barış ve
+        huzur içinde bir arada yaşamalarını sağlamayı amaçlamıştır.
+        Ayrıca, namaz için ezan okunmaya başlanmış ve bu uygulama,
+        Müslümanları belirli vakitlerde ibadet için bir araya getiren
+        önemli bir araç olmuştur.</p>
+        <p>Bu dönemde Hz. Muhammed, Ayşe ile evlenmiştir.</p>
+        <p>Medine'de nazil olan Kur'an ayetleri, bu yeni dönemin
+        ihtiyaçlarına yönelik olarak toplumsal düzen, sosyal ilişkiler,
+        ibadet esasları ve farklı inançlara sahip insanlarla ilişkiler
+        gibi konulara odaklanmıştır. Bakara Suresi gibi uzun surelerin
+        büyük bir bölümü bu dönemde nazil olmuş ve İslam'ın temel
+        prensipleri detaylı bir şekilde açıklanmıştır.</p>
+        <h2
+        id="peygamberliğin-15.-yılı-2-ah623-624-medinedeki-önemli-olaylar-bedir-savaşı-ve-dini-uygulamalarda-değişiklikler">16.
+        Peygamberliğin 15. Yılı (2 AH/623-624 ): Medine'deki Önemli
+        Olaylar, Bedir Savaşı ve Dini Uygulamalarda Değişiklikler</h2>
+        <p>Peygamberliğin on beşinci yılında, Medine'deki Müslüman
+        topluluğu giderek güçlenmiş ve İslam'ın temel dini uygulamaları
+        şekillenmeye başlamıştır. Bu dönemde, namaz kılınırken yönelinen
+        kıble, Kudüs'teki Mescid-i Aksa'dan Mekke'deki Kabe'ye
+        çevrilmiştir. Bu değişiklik, Müslümanların ibadetlerinde
+        birliğin sağlanması ve İslam'ın Mekke ile olan tarihi bağının
+        vurgulanması açısından önemli bir adımdır. Ayrıca, Ramazan
+        ayında oruç tutma ve Ramazan bayramının sonunda fitre verme
+        (zakatul-fitr) gibi ibadetler de bu dönemde farz
+        kılınmıştır.</p>
+        <p>Peygamberliğin on beşinci yılında İslam tarihindeki en önemli
+        savaşlardan biri olan Bedir Savaşı gerçekleşmiştir. Mekke'li
+        müşriklerin büyük bir orduyla Medine'ye saldırması üzerine,
+        sayıca az olan Müslümanlar büyük bir zafer kazanmıştır. Bu
+        savaş, İslam'ın ilk askeri başarısı olarak kabul edilir ve
+        Müslümanların moralini önemli ölçüde yükseltmiştir. Bedir
+        Savaşı, İslam'ın yayılışında bir dönüm noktası olmuş ve
+        Müslümanların Mekke'deki düşmanlarına karşı güç kazandığını
+        göstermiştir.</p>
+        <p>Bu dönemde Hz. Muhammed'in kızı Fatıma, Ali ile
+        evlenmiştir.</p>
+        <p>Peygamberliğin on beşinci yılında nazil olan Kur'an ayetleri,
+        Bedir Savaşı'nı, Ramazan orucunu ve kıble değişikliğini içeren
+        çeşitli konuları ele almıştır. Bedir Savaşı ile ilgili olarak
+        nazil olan ayetler, Müslümanların Allah'ın yardımıyla kazandığı
+        bu zaferin önemini vurgulamış ve müminlere Allah'a güvenmenin ve
+        sabırlı olmanın önemini hatırlatmıştır. Ramazan orucu ile ilgili
+        olarak nazil olan Bakara Suresi'nin (2. sure) 183-185. ayetleri,
+        orucun farz olduğunu ve hikmetlerini açıklamıştır. Kıble
+        değişikliği ile ilgili olarak nazil olan ayetler ise, bu
+        değişikliğin Allah'ın emriyle gerçekleştiğini ve Müslümanların
+        bu emre itaat etmeleri gerektiğini belirtmiştir.</p>
+        <h2
+        id="peygamberliğin-16.-yılı-3-ah624-625-uhud-savaşı-ve-sonuçları">17.
+        Peygamberliğin 16. Yılı (3 AH/624-625 ): Uhud Savaşı ve
+        Sonuçları</h2>
+        <p>Peygamberliğin on altıncı yılında, Mekke'li müşrikler
+        Bedir'in intikamını almak amacıyla daha büyük bir orduyla
+        Medine'ye saldırmışlardır. Bu savaş, Uhud Dağı eteklerinde
+        gerçekleşmiş ve Müslümanlar için zorlu bir sınav olmuştur.
+        Başlangıçta üstünlük sağlayan Müslümanlar, bazı okçuların
+        peygamberin emrine itaatsizlik etmesi sonucu ağır kayıplar
+        vermişlerdir. Bu savaşta, Hz. Muhammed'in amcası Hamza bin
+        Abdulmuttalib de şehit düşmüştür. Uhud Savaşı, Müslümanlar için
+        bir yenilgi olmasa da, büyük bir kayıp ve önemli bir ders
+        olmuştur.</p>
+        <p>Bu dönemde Hz. Muhammed, Hafsa bint Ömer ile evlenmiştir.</p>
+        <p>Peygamberliğin on altıncı yılında nazil olan Kur'an ayetleri,
+        Uhud Savaşı'nın nedenlerini, sonuçlarını ve Müslümanların bu
+        olaydan çıkarması gereken dersleri ele almıştır. Ali İmran
+        Suresi'nin (3. sure) büyük bir bölümü bu savaşla ilgili olarak
+        nazil olmuş ve müminlere sabırlı olmanın, itaatin önemini ve
+        Allah'ın takdirine razı olmanın gerekliliğini hatırlatmıştır.
+        Ayrıca, şehitlerin durumu, savaşın stratejik hataları ve
+        münafıkların tutumu gibi konular da bu ayetlerde
+        açıklanmıştır.</p>
+        <h2
+        id="peygamberliğin-17.-yılı-4-ah625-626-çeşitli-seferler-ve-toplumsal-gelişmeler">18.
+        Peygamberliğin 17. Yılı (4 AH/625-626 ): Çeşitli Seferler ve
+        Toplumsal Gelişmeler</h2>
+        <p>Peygamberliğin on yedinci yılında, Medine'deki Müslüman
+        topluluğu Uhud Savaşı'nın yaralarını sarmaya çalışırken, çeşitli
+        askeri seferler de düzenlenmiştir. Bu seferler genellikle
+        Medine'ye yönelik tehditleri bertaraf etmek veya İslam'ı çevre
+        kabilelere duyurmak amacıyla yapılmıştır. Kaynaklarda bu yıla
+        ait çeşitli küçük çaplı askeri harekatlar kaydedilmektedir.</p>
+        <p>Bu dönemde Hz. Hüseyin bin Ali dünyaya gelmiştir. Ayrıca, Hz.
+        Muhammed, Ümmü Seleme ile evlenmiştir.</p>
+        <p>Peygamberliğin on yedinci yılında nazil olan Kur'an ayetleri,
+        toplumsal düzen, aile ilişkileri ve müminlerin ahlaki
+        davranışları gibi çeşitli konularda rehberlik sağlamıştır. Nisa
+        Suresi'nin (4. sure) büyük bir bölümünün bu dönemde nazil olduğu
+        düşünülmektedir ve bu surede kadınların hakları, yetimlerin
+        korunması, miras hukuku ve aile içi ilişkiler gibi önemli
+        toplumsal konular ele alınmaktadır.</p>
+        <h2
+        id="peygamberliğin-18.-yılı-5-ah626-627-hendek-savaşı-ve-beni-kureyza-savaşı">19.
+        Peygamberliğin 18. Yılı (5 AH/626-627 ): Hendek Savaşı ve Beni
+        Kureyza Savaşı</h2>
+        <p>Peygamberliğin on sekizinci yılında, Mekke'li müşrikler ve
+        müttefiklerinden oluşan büyük bir ordu Medine'yi kuşatmıştır. Bu
+        savaş, Hendek Savaşı (Khandaq) olarak bilinir ve Müslümanların
+        etrafına kazdıkları hendek sayesinde Medine savunulmuştur.
+        Kuşatma uzun sürmüş ancak müşrikler hedeflerine ulaşamamış ve
+        geri çekilmek zorunda kalmışlardır. Hendek Savaşı, Müslümanların
+        savunma stratejisi açısından önemli bir başarıdır.</p>
+        <p>Hendek Savaşı'nın ardından, Medine'deki Yahudi kabilelerinden
+        Beni Kureyza, müşriklerle işbirliği yaptıkları gerekçesiyle
+        kuşatılmış ve sonuçta teslim olmuşlardır. Bu olay, Medine'deki
+        iç güvenliğin sağlanması açısından önemli bir gelişmedir.</p>
+        <p>Bu dönemde Hz. Muhammed, Zeyneb bint Cahş ile
+        evlenmiştir.</p>
+        <p>Peygamberliğin on sekizinci yılında nazil olan Kur'an
+        ayetleri, Hendek Savaşı ve Beni Kureyza Savaşı ile ilgili
+        olayları ele almış, müminlere sabır, sebat ve Allah'a güvenmenin
+        önemini vurgulamıştır. Ahzab Suresi'nin (33. sure) büyük bir
+        bölümü bu savaşla ilgili olarak nazil olmuş ve müminlerin
+        karşılaştığı zorluklar, münafıkların tutumu ve Allah'ın yardımı
+        detaylı bir şekilde anlatılmıştır. Ayrıca, evlilik ve toplumsal
+        etik konularında da ayetler nazil olmuştur.</p>
+        <h2
+        id="peygamberliğin-19.-yılı-6-ah627-628-hudeybiye-antlaşması">20.
+        Peygamberliğin 19. Yılı (6 AH/627-628 ): Hudeybiye
+        Antlaşması</h2>
+        <p>Peygamberliğin on dokuzuncu yılında, Hz. Muhammed ve
+        beraberindeki Müslümanlar, umre yapmak amacıyla Mekke'ye doğru
+        yola çıkmışlardır. Ancak, Mekke'ye yaklaştıklarında müşrikler
+        tarafından engellenmişlerdir. Bunun üzerine, Müslümanlar ve
+        Mekke'liler arasında Hudeybiye Antlaşması olarak bilinen önemli
+        bir barış antlaşması imzalanmıştır. Bu antlaşma, görünüşte
+        Müslümanların aleyhine gibi dursa da, uzun vadede İslam'ın
+        yayılması için önemli bir zemin hazırlamıştır. Antlaşma, on yıl
+        sürecek bir ateşkesi öngörmüş ve Müslümanların bir sonraki yıl
+        umre yapmalarına izin vermiştir.</p>
+        <p>Peygamberliğin on dokuzuncu yılında nazil olan Kur'an
+        ayetleri, Hudeybiye Antlaşması'nın önemini ve bu antlaşmanın
+        Müslümanlar için aslında büyük bir zafer olduğunu vurgulamıştır.
+        Fetih Suresi (48. sure), bu antlaşma sonrasında nazil olmuş ve
+        "Şüphesiz biz sana apaçık bir fetih verdik." ayetiyle
+        başlamaktadır. Bu surede, antlaşmanın hikmetleri ve gelecekteki
+        zaferler müjdelenmektedir.</p>
+        <h2
+        id="peygamberliğin-20.-yılı-7-ah628-629-hayber-savaşı-ve-umre-ziyareti">21.
+        Peygamberliğin 20. Yılı (7 AH/628-629 ): Hayber Savaşı ve Umre
+        Ziyareti</h2>
+        <p>Peygamberliğin yirminci yılında, Müslümanlar Hayber'e bir
+        sefer düzenlemişlerdir. Hayber, Medine'nin kuzeyinde önemli bir
+        Yahudi yerleşimiydi ve Müslümanlara karşı düşmanca bir tutum
+        sergiliyorlardı. Bu sefer sonucunda Müslümanlar Hayber'i
+        fethetmişlerdir. Hayber'in fethi, Medine'deki Müslümanların
+        ekonomik ve siyasi gücünü önemli ölçüde artırmıştır.</p>
+        <p>Hudeybiye Antlaşması gereğince, Hz. Muhammed ve beraberindeki
+        Müslümanlar bu yıl Mekke'ye giderek umre ziyaretini
+        gerçekleştirmişlerdir. Bu ziyaret, Müslümanların Kabe'ye olan
+        bağlılıklarını göstermeleri ve Mekke'li müşriklerle barışçıl bir
+        etkileşimde bulunmaları açısından önemli olmuştur.</p>
+        <p>Peygamberliğin yirminci yılında nazil olan Kur'an ayetleri,
+        Hayber'in fethi ve umre ziyareti ile ilgili olayları ele almış,
+        ganimetlerin paylaşımı ve toplumsal düzen gibi konularda
+        hükümler getirmiştir.</p>
+        <h2 id="peygamberliğin-21.-yılı-8-ah629-630-mekkenin-fethi">22.
+        Peygamberliğin 21. Yılı (8 AH/629-630 ): Mekke'nin Fethi</h2>
+        <p>Peygamberliğin yirmi birinci yılında, Mekke'li müşriklerin
+        Hudeybiye Antlaşması'nı ihlal etmesi üzerine, Hz. Muhammed büyük
+        bir orduyla Mekke'ye doğru hareket etmiştir. Sayıları on bini
+        bulan Müslüman ordusu, Mekke'ye girdiğinde herhangi bir
+        direnişle karşılaşmamış ve Mekke kan dökülmeden fethedilmiştir.
+        Hz. Muhammed, Mekke'ye girdikten sonra Kabe'deki putları
+        temizlemiş ve halka genel af ilan etmiştir. Mekke'nin fethi,
+        İslam'ın Arabistan yarımadasındaki hakimiyetinin önemli bir
+        göstergesi olmuştur.</p>
+        <p>Mekke'nin fethinden sonra, Huneyn ve Taif bölgelerinde bazı
+        çatışmalar yaşanmış ancak Müslümanlar bu savaşlardan da galip
+        ayrılmışlardır.</p>
+        <p>Peygamberliğin yirmi birinci yılında nazil olan Kur'an
+        ayetleri, Mekke'nin fethi ve sonrasındaki olaylarla ilgili
+        olarak hükümler ve açıklamalar getirmiştir. Nasr Suresi (110.
+        sure), Mekke'nin fethini müjdeleyen ve Allah'a hamd etmeyi
+        emreden önemli bir suredir.</p>
+        <h2
+        id="peygamberliğin-22.-yılı-9-ah630-631-tebük-seferi-ve-heyetler-yılı">23.
+        Peygamberliğin 22. Yılı (9 AH/630-631 ): Tebük Seferi ve
+        Heyetler Yılı</h2>
+        <p>Peygamberliğin yirmi ikinci yılında, Bizans İmparatorluğu'nun
+        Müslümanlara karşı bir hazırlık içinde olduğu haberleri üzerine,
+        Hz. Muhammed büyük bir orduyla Tebük seferine çıkmıştır. Bu
+        seferde herhangi bir çatışma yaşanmamış ancak Müslümanların gücü
+        ve kararlılığı gösterilmiştir.</p>
+        <p>Bu yıl, aynı zamanda "Heyetler Yılı" olarak da bilinir.
+        Arabistan'ın çeşitli bölgelerinden birçok heyet Medine'ye
+        gelerek İslam'ı kabul etmiş ve Hz. Muhammed'e bağlılıklarını
+        bildirmişlerdir. Bu olaylar, İslam'ın Arabistan yarımadasında
+        hızla yayıldığının bir göstergesidir.</p>
+        <p>Peygamberliğin yirmi ikinci yılında nazil olan Kur'an
+        ayetleri, Tebük seferi, münafıkların tutumu ve İslam'ı kabul
+        eden heyetlerle ilgili çeşitli konuları ele almıştır. Tevbe
+        Suresi (9. sure), bu dönemin önemli surelerinden biridir ve
+        münafıkların ikiyüzlülüğünü, cihadın önemini ve Müslüman
+        topluluğunun birliğini vurgulamaktadır.</p>
+        <h2
+        id="peygamberliğin-23.-yılı-10-11-ah631-632-veda-haccı-ve-hz.-muhammedin-vefatı">24.
+        Peygamberliğin 23. Yılı (10-11 AH/631-632 ): Veda Haccı ve Hz.
+        Muhammed'in Vefatı</h2>
+        <p>Peygamberliğin yirmi üçüncü yılında, Hz. Muhammed hayatının
+        tek haccı olan Veda Haccı'nı gerçekleştirmiştir. Bu hacda,
+        Arafat'ta Müslümanlara önemli bir hutbe vermiş ve İslam'ın temel
+        prensiplerini özetlemiştir. Veda Hutbesi, insan hakları,
+        eşitlik, adalet ve İslam'ın evrensel mesajı gibi konuları içeren
+        tarihi bir belgedir.</p>
+        <p>Veda Haccı'ndan sonra Medine'ye dönen Hz. Muhammed, kısa bir
+        süre sonra hastalanmış ve 632  yılında (Hicri 11. yıl) vefat
+        etmiştir. Vefatı, Müslüman toplumu için büyük bir kayıp
+        olmuştur. Hz. Muhammed, Medine'deki Mescid-i Nebevi'ye
+        defnedilmiştir.</p>
+        <p>Peygamberliğin sonlarına doğru nazil olan Kur'an ayetleri,
+        dinin tamamlandığını ve Allah'ın nimetinin kemale erdiğini
+        müjdelemiştir. Maide Suresi'nin (5. sure) 3. ayeti bu durumu
+        ifade eder: "...Bugün sizin için dininizi kemale erdirdim,
+        üzerinize nimetimi tamamladım ve size din olarak İslam'ı
+        seçtim...". Bu ayet, Hz. Muhammed'in 23 yıllık peygamberlik
+        görevinin ilahi bir tamamlanmaya ulaştığını göstermektedir.</p>
+        <h2
+        id="sonuç-23-yıllık-peygamberlik-sürecinin-değerlendirilmesi-ve-mirası">25.
+        Sonuç: 23 Yıllık Peygamberlik Sürecinin Değerlendirilmesi ve
+        Mirası</h2>
+        <p>Hz. Muhammed'in 23 yıllık peygamberlik süreci, İslam dininin
+        doğuşu, yayılışı ve temel prensiplerinin şekillenmesi açısından
+        hayati bir öneme sahiptir. Bu süre zarfında yaşanan önemli
+        olaylar ve nazil olan Kur'an ayetleri, İslam'ın sadece bir inanç
+        sistemi değil, aynı zamanda ahlaki, sosyal ve siyasi bir düzen
+        olarak da nasıl geliştiğini gözler önüne sermektedir. Mekke'deki
+        ilk zorluklar, Habeşistan'a hicret, Medine'ye hicret, Bedir ve
+        Uhud savaşları, Hudeybiye Antlaşması, Mekke'nin fethi ve Veda
+        Haccı gibi olaylar, bu dönemin dönüm noktalarını
+        oluşturmaktadır.</p>
+        <p>Kur'an-ı Kerim'in bu 23 yıllık süreçte parça parça nazil
+        olması, hem yaşanan olaylara rehberlik etmiş hem de Müslüman
+        topluluğunun inancını ve anlayışını derinleştirmiştir. İlk
+        vahiyden itibaren tevhid inancı, ahlaki değerler, adalet,
+        eşitlik ve merhamet gibi temel prensipler vurgulanmış ve bu
+        prensipler, İslam toplumunun temelini oluşturmuştur.</p>
+        <p>Hz. Muhammed'in peygamberlik mirası, sadece o dönemi değil,
+        sonraki yüzyılları da derinden etkilemiş ve günümüzde de
+        milyonlarca insan için bir ilham kaynağı olmaya devam
+        etmektedir. Onun hayatı ve öğretileri, Müslümanlar için en
+        mükemmel örnek ve rehberdir.</p>
+      
+    </div>
+	 
+   </div>
+   <script src="js/script.js?v=1.0.3"></script>
+   <script src="js/toc.js?v=1.0.3"></script>
+   <script src="js/modal.js?v=1.0.3"></script>
+ 
+</body>
+</html>
