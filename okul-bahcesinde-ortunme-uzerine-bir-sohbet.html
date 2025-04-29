@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!----======== CSS ======== -->
+  <link rel="stylesheet" href="css/style.css?v=1.0.1">
+  <link rel="stylesheet" href="css/toc.css?v=1.0.1">
+  <link rel="stylesheet" href="css/modal.css?v=1.0.1">
+  <link rel="stylesheet" href="css/fihrist.css?v=1.0.1">
+     <style>
+     #reading-area { max-width: 800px; margin: auto; padding: 20px; }
+    </style>
+</head>
+<body>
+  <!-- Modal -->
+  <!-- Modal -->
+<div id="listeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+background-color:rgba(0,0,0,0.7); z-index:1000; overflow:auto;">
+<div id="modalContent"  style="background:white; margin:50px auto; padding:20px; width:90%; max-width:1000px; border-radius:8px;">
+  <button onclick="closeModal()">Kapat</button>
+  <HR>
+  <h2>FİHRİST</h2>
+  <div id="listeContainer"></div>
+  <button onclick="closeModal()">Kapat</button>
+</div>
+</div>
+  <!-- Sol üst menü butonu -->
+  <button class="menu-button left" id="openLeftMenu">&#9776;</button>
+
+
+  <!-- Sol menü paneli: İçindekiler -->
+  <div class="menu-left" id="leftMenu">
+  <h2>Ayarlar</h2>
+ 
+
+    <div class="control-group">
+      <button class="btn btn-primary" id="decreaseFont">A -</button>
+      <button class="btn btn-primary" id="increaseFont">A +</button>
+	   <button class="btn btn-primary" id="toggleMode">🌙</button>
+    </div>
+	
+    <hr>
+    <h2>İçindekiler</h2>
+    
+    <div class="filter-container">
+      <input
+        type="text"
+        id="filter-input"
+        placeholder="Filtrele.."
+        class="filter-input"
+      />
+    </div>
+    <button type="button" class="btn btn-primary btn-block" onclick="showModal()">Fihrist</button> 
+ <ul>
+ <li><a href="#okul-bahçesinde-örtünme-üzerine-bir-sohbet"
+ id="toc-okul-bahçesinde-örtünme-üzerine-bir-sohbet"><strong>Okul
+ Bahçesinde Örtünme Üzerine Bir Sohbet</strong></a></li>
+ </ul>
+  </div>
+
+
+
+   <!-- Okuma alanı -->
+   <div class="reading-container" id="readingArea">
+
+    <div class="reading-area" id="reading-area">
+	
+        <h1 id="okul-bahçesinde-örtünme-üzerine-bir-sohbet"><strong>Okul
+        Bahçesinde Örtünme Üzerine Bir Sohbet</strong></h1>
+        <p><em>Teneffüs zili çalıyor. Zeynep, Sıla, Rümeysa, Betül ve
+        Hira okul bahçesinde bir ağacın altında buluşuyorlar.</em></p>
+        <p><strong>Zeynep:</strong> <em>(Telefonunda bir Kore dans
+        videosu izlerken)</em> Bu kızların dansları inanılmaz ya! Bakın
+        şu hareketlere!</p>
+        <p><strong>Sıla:</strong> <em>(Sessizce gülümseyerek)</em>
+        Gerçekten çok güzel dans ediyorlar.</p>
+        <p><strong>Rümeysa:</strong> <em>(Hevesle)</em> Bir gün ben de
+        böyle dans etmek istiyorum! Belki dans kursuna yazılabilirim.
+        Annem izin verse tabii.</p>
+        <p><strong>Betül:</strong> <em>(Üzerindeki eşarbını hafifçe
+        düzelterek)</em> Bugün hava çok sıcak ya. Voleybol antrenmanında
+        nasıl dayanacağım bilmiyorum.</p>
+        <p><strong>Zeynep:</strong> <em>(Snapchat'te bir fotoğraf
+        çekerken)</em> Sıla, gel sen de gir fotoğrafa! Arkadaşlarımla
+        paylaşacağım.</p>
+        <p><strong>Sıla:</strong> <em>(Çekinerek)</em> Tamam ama yüzüm
+        çok çıkmasın lütfen.</p>
+        <p><strong>Rümeysa:</strong> <em>(İç çekerek)</em> Annem yine bu
+        sabah örtünmem gerektiğini söyledi. "Artık büyüdün" diyor
+        sürekli. Ama ben hazır değilim ki!</p>
+        <p><strong>Betül:</strong> <em>(Düşünceli bir ifadeyle)</em>
+        Annem hiç zorlamadı beni örtünmem için. Kendim karar verdim. Ama
+        bazen... Bilmiyorum, voleybol oynarken ya da böyle sıcak
+        günlerde çok zorlanıyorum.</p>
+        <p><strong>Zeynep:</strong> <em>(Telefonunu indirerek)</em>
+        Biliyor musunuz, ben örtünmeye karar verdiğimde kore danslarını
+        yapamayacağımı düşünüyordum. Ama sonra YouTube'da tesettürlü
+        dance cover yapan K-pop hayranları buldum. Onlar bana ilham
+        verdi.</p>
+        <p><strong>Rümeysa:</strong> <em>(Şaşkınlıkla)</em> Gerçekten
+        mi? Tesettürlü K-pop dansçıları mı var?</p>
+        <p><strong>Zeynep:</strong> <em>(Hevesle)</em> Evet! Sana
+        gösteririm istersen. Onları izleyince anladım ki örtünmek
+        istediğim şeyleri yapmama engel değil. Sadece biraz farklı
+        yapıyorum.</p>
+        <p><strong>Sıla:</strong> <em>(Sessizce)</em> Ben örtündüğümden
+        beri daha huzurluyum. Sanki kimliğimi bulmuş gibiyim. Ama bazen
+        insanlar benimle konuşmaktan çekiniyorlar, sanki farklı bir
+        gezegenden gelmişim gibi.</p>
+        <p><strong>Rümeysa:</strong> <em>(Elindeki kulaklığıyla
+        oynayarak)</em> Annem "Müzik dinlemeyi bırakman gerek" diyor
+        örtünürsem. Bu doğru mu?</p>
+        <p><strong>Betül:</strong> <em>(Gülerek)</em> Kim söyledi sana
+        bunu? Ben örtülüyüm ama müzik dinliyorum. Örtünmek kıyafet ile
+        ilgili bir şey, müzikle değil.</p>
+        <p><strong>Rümeysa:</strong> <em>(Rahatlamış bir şekilde)</em>
+        Gerçekten mi? Annem örtünmenin her şeyi değiştireceğini
+        söylüyor. Sanki bambaşka biri olacakmışım gibi.</p>
+        <p><strong>Zeynep:</strong> <em>(Snapchat'ten başını
+        kaldırarak)</em> Örtündüğümde ben değişmedim, sadece kıyafetim
+        değişti. Hâlâ aynı Kore şarkılarını dinliyorum, aynı dans
+        hareketlerini öğrenmeye çalışıyorum. Sadece şimdi bunu yaparken
+        başım örtülü.</p>
+        <p><strong>Betül:</strong> <em>(Çantasından su şişesini
+        çıkararak)</em> Ama dürüst olmak gerekirse, bazen açılmayı
+        düşünüyorum. Özellikle voleybol maçlarında çok zorlanıyorum.
+        Geçen hafta turnuvada o kadar sıcaktı ki...</p>
+        <p><strong>Sıla:</strong> <em>(Anlayışla)</em> Neden
+        zorlandığını anlıyorum, Betül. Bazen kolay olmuyor.</p>
+        <p><strong>Öğretmen Ayşe:</strong> <em>(Yanlarına
+        yaklaşarak)</em> Merhaba kızlar, ne konuşuyorsunuz böyle derin
+        derin?</p>
+        <p><strong>Rümeysa:</strong> <em>(Biraz utanarak)</em> Örtünme
+        hakkında konuşuyorduk öğretmenim. Annem örtünmem gerektiğini
+        söylüyor ama ben emin değilim.</p>
+        <p><strong>Öğretmen Ayşe:</strong> <em>(Yanlarına oturarak)</em>
+        Bu çok doğal bir soru. Size öncelikle şunu söylemek isterim:
+        Örtünmenin İslam'da derin hikmetleri ve amaçları var. Sadece bir
+        kıyafet seçimi değil.</p>
+        <p><strong>Rümeysa:</strong> <em>(Merakla)</em> Ne gibi
+        hikmetleri var öğretmenim?</p>
+        <p><strong>Öğretmen Ayşe:</strong> İlk olarak, örtünme bir iffet
+        ve hayâ sembolüdür. Hayâ, utanma duygusu demek, bu duygu insanı
+        kötülüklerden koruyan bir kalkandır. İkincisi, örtünme insanın
+        dış görünüşüyle değil, kalbi ve aklıyla değerlendirilmesini
+        sağlar.</p>
+        <p><strong>Hira:</strong> <em>(Usulca)</em> Annem her zaman
+        "Örtü, kalbi korur" der. Ben küçükken anlamıyordum ama şimdi
+        daha iyi anlıyorum.</p>
+        <p><strong>Öğretmen Ayşe:</strong> Çok güzel bir söz Hira.
+        Örtünme aslında bizi dışarıdan gelebilecek bakışların ve
+        değerlendirmelerin etkisinden korur. Üçüncü olarak, İslam'da
+        örtünme Allah'ın emridir. Kur'an-ı Kerim'de Nur Suresi'nde
+        açıkça belirtilmiştir.</p>
+        <p><strong>Betül:</strong> <em>(Düşünceli)</em> Ama sıcaklarda
+        çok zorlanıyorum öğretmenim...</p>
+        <p><strong>Öğretmen Ayşe:</strong> <em>(Anlayışla)</em> Bu
+        zorlukları anlıyorum Betül. Size bir şey anlatabilir miyim? Ben
+        üniversitedeyken arkadaşlarımla pikniğe gitmiştik. Bir arkadaşım
+        örtülüydü ve çok sıcak bir gündü. "Keşke açsam" diye düşündüğünü
+        söylemişti. Sonra bir sincap gördük. Sincap bize bakıp kaçtı.
+        Arkadaşım gülümsedi ve "Gördün mü, o sincap tüylerini dökmüyor
+        sıcak diye. Çünkü o tüyler onun kimliğinin bir parçası"
+        dedi.</p>
+        <p><strong>Betül:</strong> <em>(Düşünceli)</em> Ama sincaplar
+        tüylerini yaz gelince döker öğretmenim...</p>
+        <p><strong>Öğretmen Ayşe:</strong> <em>(Gülerek)</em> Haklısın
+        Betül, pek iyi bir örnek olmadı! Ama şunu söylemek istiyorum:
+        Her ibadetin zorlukları olabilir, sınavları olabilir. Örtünmek
+        de bir ibadet, bir kulluk göstergesi. Tıpkı oruç tutmanın açlık
+        zorluğu gibi, namazın uykudan feragat etme zorluğu gibi.
+        Zorluklar bizi güçlendirir. Ama elbette bu karar içinizden
+        gelmeli, dayatmayla olmaz.</p>
+        <p><strong>Zeynep:</strong> <em>(Heyecanla)</em> Ben karar
+        verdiğimde ailem çok şaşırdı. "Daha çok küçüksün" dediler. Ama
+        ben içimden öyle hissettim.</p>
+        <p><strong>Öğretmen Ayşe:</strong> Örtünme yaşı diye bir şey yok
+        aslında. Kimi 10 yaşında hazır hisseder, kimi 30 yaşında. Önemli
+        olan bunu anlamak ve içselleştirmek.</p>
+        <p><strong>Rümeysa:</strong> <em>(Endişeyle)</em> Peki ya ailem
+        zorluyorsa?</p>
+        <p><strong>Öğretmen Ayşe:</strong> Ailenle açık bir şekilde
+        konuşmayı deneyebilirsin. Onlara hazır olmadığını, ama dini
+        öğrenmeye ve anlamaya çalıştığını söyleyebilirsin. Belki onlarla
+        birlikte araştırma yapabilirsiniz.</p>
+        <p><strong>Betül:</strong> <em>(Voleybol topunu elinde
+        çevirerek)</em> Öğretmenim, sizce voleybol oynamak örtünmeye
+        engel mi? Bazen çok zorlanıyorum.</p>
+        <p><strong>Öğretmen Ayşe:</strong> Hiç de değil Betül.
+        Olimpiyatlarda bile örtülü voleybolcular var. Önemli olan uygun
+        kıyafeti bulmak. Spor için özel tasarlanmış eşarplar ve
+        kıyafetler var artık. Belki annenle birlikte araştırabilirsiniz.
+        Örtünmenin amacı seni engellemek değil, seni korumak ve içindeki
+        değerleri öne çıkarmak.</p>
+        <p><strong>Hira:</strong> <em>(Sessizce)</em> Annem der ki örtü,
+        içimizdeki cevheri koruyan bir kutu gibidir. Değerli bir
+        mücevheri herkes göremez, sadece ona layık olanlar
+        görebilir.</p>
+        <p><strong>Sıla:</strong> <em>(Sessizce)</em> Benim ailem hiç
+        zorlamadı. Hatta çok sevindiler..</p>
+        <p><strong>Hira:</strong> <em>(Sakince)</em> Ben ise çok
+        küçükken örtünmeye başladım. Annem örtülüydü, benim için doğal
+        geldi. İlkokulda arkadaşlarım hep soruyordu "Sıcak değil mi?"
+        diye. Ama ben alıştım artık, benim için normal bir şey.</p>
+        <p><strong>Öğretmen Ayşe:</strong> Her ailenin yaklaşımı farklı
+        olabiliyor. Bazı aileler korumacı davranıyor, bazıları daha
+        serbest. Önemli olan sizin ne hissettiğiniz.</p>
+        <p><strong>Zeynep:</strong> <em>(Telefonundan bir fotoğraf
+        göstererek)</em> Bakın, bu benim en sevdiğim tesettürlü K-pop
+        dansçısı! Görüyor musunuz, hem örtülü hem de harika dans
+        ediyor!</p>
+        <p><strong>Rümeysa:</strong> <em>(Fotoğrafa bakarak)</em> Vay
+        canına! Gerçekten de çok güzel dans ediyor.</p>
+        <p><strong>Öğretmen Ayşe:</strong> Gördüğünüz gibi, örtünmek
+        istediğiniz şeyleri yapmanıza engel değil. Sadece belki biraz
+        farklı şekillerde yapmanızı gerektirebilir. Tıpkı gözlük takan
+        birinin yüzme gözlüğü takması gibi.</p>
+        <p><strong>Betül:</strong> <em>(Düşünceli)</em> Ben de özel spor
+        eşarbı almayı düşüneceğim. Belki o zaman daha rahat ederim.</p>
+        <p><strong>Rümeysa:</strong> <em>(Merakla)</em> Öğretmenim,
+        örtünmeye karar verirsem ve sonra pişman olursam ne olur?</p>
+        <p><strong>Öğretmen Ayşe:</strong> Rümeysa, öncelikle şunu
+        anlamalısın ki örtünmek, bir Müslüman için sadece bir tercih
+        değil, aynı zamanda bir ibadettir. İbadetlerde samimiyet ve
+        niyet çok önemlidir. İçten gelerek yapılan ibadetler insana
+        huzur verir. Eğer örtünmeye karar verirsen, bunun anlamını iyice
+        kavrayarak ve içselleştirerek yapman önemli.</p>
+        <p><strong>Hira:</strong> <em>(Usulca)</em> Ben küçükken
+        örtündüm ve hiç pişman olmadım. Çünkü benim için örtünmek sadece
+        başörtüsü takmak değil, Allah'a olan sevgimi göstermek.</p>
+        <p><strong>Öğretmen Ayşe:</strong> Çok güzel söyledin Hira.
+        Örtünmek sadece fiziksel bir örtü değil, kalbin de örtünmesi çok
+        önemli. Gözünü haramdan sakındırmak, dilini kötü sözlerden
+        korumak da örtünmenin bir parçası. Allah niyetlerimize
+        bakar.</p>
+        <p><strong>Zeynep:</strong> <em>(Snapchat'te bir fotoğraf daha
+        çekerken)</em> Ben örtündüğümde okuldaki arkadaşlarım önce
+        şaşırdı. Bazıları "Artık bizimle takılamaz" diye düşünmüş. Ama
+        sonra anladılar ki ben hâlâ aynı Zeynep'im. Hâlâ gülüyorum, hâlâ
+        dans etmeyi seviyorum.</p>
+        <p><strong>Sıla:</strong> <em>(Gülümseyerek)</em> Benim için de
+        öyle oldu. İlk başta zor geldi ama sonra benimsedim. Şimdi
+        kendimi daha güvende hissediyorum.</p>
+        <p><strong>Betül:</strong> <em>(İç çekerek)</em> Bence en zoru
+        insanların bakışları. Geçen gün otobüste bir teyze bana bakıp
+        "yazık" dedi. Çok üzüldüm.</p>
+        <p><strong>Öğretmen Ayşe:</strong> Maalesef insanlar bazen
+        anlamadıkları şeylere önyargılı olabiliyorlar. Ama unutmayın ki,
+        her seçim saygıyı hak eder. Birinin seçimine katılmayabilirsiniz
+        ama saygı göstermelisiniz.</p>
+        <p><strong>Rümeysa:</strong> <em>(Düşünceli)</em> Ben de bazen
+        örtülü arkadaşlarımın tercihleri hakkında düşünüyorum. Ama şimdi
+        daha iyi anlıyorum. Herkesin kendi hikâyesi var.</p>
+        <p><strong>Zil çalar.</strong></p>
+        <p><strong>Öğretmen Ayşe:</strong> Ders zili çaldı kızlar. Hadi
+        sınıfa gidelim. Bu konuyu istediğiniz zaman tekrar
+        konuşabiliriz. Önemli olan birbirinizi anlamak ve
+        desteklemek.</p>
+        <p><strong>Zeynep:</strong> <em>(Ayağa kalkarak)</em>
+        Öğretmenim, çok teşekkür ederiz. Biliyor musunuz, bugün
+        Snapchat'teki hikâyeme "Herkes farklı, herkes güzel" diye
+        yazdım.</p>
+        <p><strong>Öğretmen Ayşe:</strong> <em>(Ciddiyetle)</em> Zeynep,
+        güzel bir söz. Ama unutmayın ki örtünmek sadece "farklı olmak"
+        için yapılan bir şey değil. Allah'ın emrine uymak, iffeti
+        korumak ve manevi bir kimlik oluşturmak için yapılan önemli bir
+        ibadet. Her ibadet gibi bunun da insana huzur veren bir yönü
+        var.</p>
+        <p><strong>Hira:</strong> <em>(Sakin bir şekilde)</em> Ben
+        örtündüğümden beri kendimi daha güvende hissediyorum. Sanki
+        Allah'ın koruması altındaymışım gibi.</p>
+        <p><strong>Öğretmen Ayşe:</strong> <em>(Gülümseyerek)</em>
+        Hepiniz farklı yollarda ilerliyorsunuz ve hepinizin yolculuğu
+        değerli. Önemli olan birbirinizi anlamanız ve desteklemeniz.</p>
+        <p><em>Kızlar sınıfa doğru yürürken, Rümeysa Zeynep'in yanına
+        yaklaşır.</em></p>
+        <p><strong>Rümeysa:</strong> <em>(Fısıldayarak)</em> Bana o
+        K-pop dans videolarını gösterir misin okul çıkışında?</p>
+        <p><strong>Zeynep:</strong> <em>(Gülümseyerek)</em> Tabii ki! Ve
+        istersen sana da dans etmeyi öğretebilirim!</p>
+        <p><em>Betül ise düşünceli bir şekilde voleybol topunu elinde
+        çevirmeye devam eder. Sıla yanına gelip usulca omzuna
+        dokunur.</em></p>
+        <p><strong>Sıla:</strong> İyi misin?</p>
+        <p><strong>Betül:</strong> İyiyim. Sadece... eşarbımı spor
+        yaparken nasıl bağlayacağımı düşünüyordum. Belki sen bana yardım
+        edebilirsin?</p>
+        <p><strong>Sıla:</strong> <em>(Gülümseyerek)</em> Tabii ki!
+        Birlikte çözeriz.</p>
+        <p><strong>Hira:</strong> <em>(Yanlarına yaklaşarak)</em> Ben de
+        size yardım edebilirim. Annem bana spor yaparken rahat
+        edebileceğim farklı eşarp bağlama teknikleri öğretti.</p>
+        <p><em>Beşi de sınıfa girerken, her birinin yüzünde farklı
+        duygular vardır. Ama hepsinin ortak noktası, dini değerleri
+        anlamaya çalışmaları ve birbirlerini bu yolda
+        desteklemeleridir.</em></p>
+      
+    </div>
+	 
+   </div>
+   <script src="js/script.js?v=1.0.3"></script>
+   <script src="js/toc.js?v=1.0.3"></script>
+   <script src="js/modal.js?v=1.0.3"></script>
+ 
+</body>
+</html>
