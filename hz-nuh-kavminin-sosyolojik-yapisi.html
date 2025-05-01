@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!----======== CSS ======== -->
+  <link rel="stylesheet" href="css/style.css?v=1.0.1">
+  <link rel="stylesheet" href="css/toc.css?v=1.0.1">
+  <link rel="stylesheet" href="css/modal.css?v=1.0.1">
+  <link rel="stylesheet" href="css/fihrist.css?v=1.0.1">
+     <style>
+     #reading-area { max-width: 800px; margin: auto; padding: 20px; }
+    </style>
+</head>
+<body>
+  <!-- Modal -->
+  <!-- Modal -->
+<div id="listeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+background-color:rgba(0,0,0,0.7); z-index:1000; overflow:auto;">
+<div id="modalContent"  style="background:white; margin:50px auto; padding:20px; width:90%; max-width:1000px; border-radius:8px;">
+  <button onclick="closeModal()">Kapat</button>
+  <HR>
+  <h2>FİHRİST</h2>
+  <div id="listeContainer"></div>
+  <button onclick="closeModal()">Kapat</button>
+</div>
+</div>
+  <!-- Sol üst menü butonu -->
+  <button class="menu-button left" id="openLeftMenu">&#9776;</button>
+
+
+  <!-- Sol menü paneli: İçindekiler -->
+  <div class="menu-left" id="leftMenu">
+  <h2>Ayarlar</h2>
+ 
+
+    <div class="control-group">
+      <button class="btn btn-primary" id="decreaseFont">A -</button>
+      <button class="btn btn-primary" id="increaseFont">A +</button>
+	   <button class="btn btn-primary" id="toggleMode">🌙</button>
+    </div>
+	
+    <hr>
+    <h2>İçindekiler</h2>
+    
+    <div class="filter-container">
+      <input
+        type="text"
+        id="filter-input"
+        placeholder="Filtrele.."
+        class="filter-input"
+      />
+    </div>
+    <button type="button" class="btn btn-primary btn-block" onclick="showModal()">Fihrist</button> 
+ <ul>
+ <li><a href="#hz.nuh-kavminin-sosyolojik-yapisi"
+ id="toc-hz.nuh-kavminin-sosyolojik-yapisi">HZ.NUH KAVMİNİN SOSYOLOJİK
+ YAPISI</a>
+ <ul>
+ <li><a href="#giriş-hz.-nuh-ve-misyonunun-toplumsal-bağlamı"
+ id="toc-giriş-hz.-nuh-ve-misyonunun-toplumsal-bağlamı">1. Giriş: Hz.
+ Nuh ve Misyonunun Toplumsal Bağlamı</a></li>
+ <li><a href="#dini-manzara-kökleşmiş-putperestlik-ve-tevhidin-reddi"
+ id="toc-dini-manzara-kökleşmiş-putperestlik-ve-tevhidin-reddi">2. Dini
+ Manzara: Kökleşmiş Putperestlik ve Tevhidin Reddi</a></li>
+ <li><a href="#sosyal-hiyerarşi-ve-sınıf-çatışması-mele-ve-erzelûn"
+ id="toc-sosyal-hiyerarşi-ve-sınıf-çatışması-mele-ve-erzelûn">3. Sosyal
+ Hiyerarşi ve Sınıf Çatışması: 'Mele' ve 'Erzelûn'</a>
+ <ul>
+ <li><a href="#seçkin-sınıf-mele" id="toc-seçkin-sınıf-mele">Seçkin
+ Sınıf ('Mele'): </a></li>
+ <li><a href="#takipçiler-erzelûn"
+ id="toc-takipçiler-erzelûn">Takipçiler ('Erzelûn'): </a></li>
+ <li><a href="#sınıf-çatışması-dinamikleri"
+ id="toc-sınıf-çatışması-dinamikleri">Sınıf Çatışması Dinamikleri:
+ </a></li>
+ </ul></li>
+ <li><a href="#hakim-sosyal-normlar-ve-ahlaki-özellikler"
+ id="toc-hakim-sosyal-normlar-ve-ahlaki-özellikler">4. Hakim Sosyal
+ Normlar ve Ahlaki Özellikler</a>
+ <ul>
+ <li><a href="#yozlaşma-ve-kötülük"
+ id="toc-yozlaşma-ve-kötülük">Yozlaşma ve Kötülük: </a></li>
+ <li><a href="#şiddet-ve-adaletsizlik-hamas-zulm"
+ id="toc-şiddet-ve-adaletsizlik-hamas-zulm">Şiddet ve Adaletsizlik
+ ('Hamas' / 'Zulm'): </a></li>
+ <li><a href="#kibir-ve-alaycılık" id="toc-kibir-ve-alaycılık">Kibir ve
+ Alaycılık: </a></li>
+ <li><a href="#inatçılık-ve-direniş"
+ id="toc-inatçılık-ve-direniş">İnatçılık ve Direniş: </a></li>
+ <li><a href="#materyalizm-ve-dünyevilik"
+ id="toc-materyalizm-ve-dünyevilik">Materyalizm ve Dünyevilik:</a></li>
+ </ul></li>
+ <li><a href="#ekonomik-boyutlar-ve-günlük-yaşam"
+ id="toc-ekonomik-boyutlar-ve-günlük-yaşam">5. Ekonomik Boyutlar ve
+ Günlük Yaşam</a>
+ <ul>
+ <li><a href="#ekonomik-faaliyetler"
+ id="toc-ekonomik-faaliyetler">Ekonomik Faaliyetler:</a></li>
+ <li><a href="#değer-sistemi" id="toc-değer-sistemi">Değer
+ Sistemi:</a></li>
+ <li><a href="#teknoloji-ve-yaşam-süresi"
+ id="toc-teknoloji-ve-yaşam-süresi">Teknoloji ve Yaşam Süresi:</a></li>
+ <li><a href="#günlük-yaşam" id="toc-günlük-yaşam">Günlük
+ Yaşam:</a></li>
+ </ul></li>
+ <li><a
+ href="#karşılaştırmalı-sosyolojik-bakış-açıları-kuran-tekvin-ve-mezopotamya"
+ id="toc-karşılaştırmalı-sosyolojik-bakış-açıları-kuran-tekvin-ve-mezopotamya">6.
+ Karşılaştırmalı Sosyolojik Bakış Açıları: Kur'an, Tekvin ve
+ Mezopotamya</a>
+ <ul>
+ <li><a
+ href="#tablo-6.1-tufan-anlatılarının-karşılaştırmalı-sosyolojik-yönleri"
+ id="toc-tablo-6.1-tufan-anlatılarının-karşılaştırmalı-sosyolojik-yönleri">Tablo
+ 6.1: Tufan Anlatılarının Karşılaştırmalı Sosyolojik Yönleri</a></li>
+ </ul></li>
+ <li><a href="#büyük-tufan-sosyolojik-bir-zirve"
+ id="toc-büyük-tufan-sosyolojik-bir-zirve">7. Büyük Tufan: Sosyolojik
+ Bir Zirve</a>
+ <ul>
+ <li><a href="#yozlaşmış-bir-sisteme-yargı"
+ id="toc-yozlaşmış-bir-sisteme-yargı">Yozlaşmış Bir Sisteme Yargı:
+ </a></li>
+ <li><a href="#seçkinlerin-başarısızlığı"
+ id="toc-seçkinlerin-başarısızlığı">Seçkinlerin Başarısızlığı:</a></li>
+ <li><a href="#ezilenlerin-haklı-çıkması"
+ id="toc-ezilenlerin-haklı-çıkması">Ezilenlerin Haklı Çıkması:</a></li>
+ <li><a href="#islah-edilemezlik" id="toc-islah-edilemezlik">Islah
+ Edilemezlik:</a></li>
+ <li><a href="#bir-sıfırlama" id="toc-bir-sıfırlama">Bir
+ 'Sıfırlama':</a></li>
+ </ul></li>
+ <li><a href="#sonuç-nuh-kavminin-sosyolojik-portresi"
+ id="toc-sonuç-nuh-kavminin-sosyolojik-portresi">8. Sonuç: Nuh Kavmi'nin
+ Sosyolojik Portresi</a>
+ <ul>
+ <li><a href="#dini-yapı" id="toc-dini-yapı">Dini Yapı:</a></li>
+ <li><a href="#sosyal-hiyerarşi" id="toc-sosyal-hiyerarşi">Sosyal
+ Hiyerarşi:</a></li>
+ <li><a href="#ahlaki-iklim" id="toc-ahlaki-iklim">Ahlaki
+ İklim:</a></li>
+ <li><a href="#ekonomik-değerler" id="toc-ekonomik-değerler">Ekonomik
+ Değerler:</a></li>
+ </ul></li>
+ </ul></li>
+ </ul>
+  </div>
+
+
+
+   <!-- Okuma alanı -->
+   <div class="reading-container" id="readingArea">
+
+    <div class="reading-area" id="reading-area">
+	
+        <h1 id="hz.nuh-kavminin-sosyolojik-yapisi">HZ.NUH KAVMİNİN
+        SOSYOLOJİK YAPISI</h1>
+        <h2 id="giriş-hz.-nuh-ve-misyonunun-toplumsal-bağlamı">1. Giriş:
+        Hz. Nuh ve Misyonunun Toplumsal Bağlamı</h2>
+        <p>Bu rapor, Hz. Nuh'un (a.s.) peygamber olarak gönderildiği
+        kavmin sosyolojik yapısını, Kur'an-ı Kerim'i temel alarak ve
+        ilgili karşılaştırmalı kaynaklardan bağlamsal bilgilerle
+        destekleyerek analiz etmeyi amaçlamaktadır. Hz. Nuh, insanlık
+        tarihinde önemli bir dönüm noktasında yer alan ve belirli bir
+        toplumsal bağlama hitap eden merkezi bir figürdür. Kur'an, onun
+        misyonunu açıkça tanımlar: Hz. Nuh, kendi kavmine, başlarına acı
+        bir azap gelmeden önce onları uyarmak üzere gönderilmiştir. Bu
+        misyonun uzun soluklu doğası, Kur'an'da geçen ve Hz. Nuh'un
+        kavmi içinde "bin yıldan elli yıl eksik" (yani 950 yıl)
+        kaldığını belirten ifadeyle vurgulanır. Bu uzun süre, peygamber
+        ile kavmi arasındaki toplumsal ve dini çatışmanın derinliğini ve
+        sürekliliğini göstermektedir.</p>
+        <p>Bu çalışma, sosyolojik bir mercek kullanarak, Tufan öncesi bu
+        toplumun sosyal yapısını, hiyerarşisini, dini inançlarını,
+        ekonomik faktörlerini ve ahlaki iklimini Kur'an anlatısı
+        ekseninde inceleyecektir. Kur'an birincil kaynak olmakla
+        birlikte, Tevrat (Tekvin/Yaratılış bölümü) ve Mezopotamya
+        destanları (Gılgamış, Atrahasis) gibi karşılaştırmalı
+        kaynaklardaki paralellikler ve farklılıklar, konuya derinlik
+        katmak ve bağlam sağlamak amacıyla dikkate alınacaktır.</p>
+        <p>Raporun temel tezi, Kur'an'ın Nuh Kavmi'ni, kibir ve
+        materyalizme dayalı seçkin bir sınıfın direnişiyle karakterize
+        edilen, derinlemesine katmanlaşmış bir toplum olarak tasvir
+        ettiğidir. Bu toplumda yaygın putperestlik tevhid inancına
+        meydan okumuş ve ciddi bir ahlaki çöküş yaşanmıştır; tüm bu
+        faktörler nihayetinde Tufan aracılığıyla ilahi bir yargılamaya
+        yol açmıştır.</p>
+        <p>Kur'an'ın defalarca Hz. Nuh'un "kendi kavmine" (kavmi)
+        gönderildiğini belirtmesi, mesajın (Tevhid) evrenselliğine
+        rağmen, anlatılan misyonun başlangıçta yerel bir odak taşıdığını
+        düşündürmektedir. Bu durum, Tekvin'de sıklıkla tasvir edilen ve
+        evrensel bir soruna işaret eden potansiyel küresel Tufan
+        kapsamıyla bir tezat oluşturabilir. Kur'an'daki Tufan'ın yerel
+        mi yoksa küresel mi olduğu yönündeki farklı yorumlar, bu
+        çerçeveleme farkını vurgular. Kur'an, <em>o</em> topluluk
+        içindeki spesifik sosyolojik dinamiklere ve reddedişe
+        odaklanırken, Tekvin daha çok evrensel insan kötülüğünü
+        vurgular. Bu ayrım, incelenen 'sosyoloji'nin anlaşılma biçimini
+        etkiler: Bu, belirli bir vaka çalışması mıdır, yoksa evrensel
+        bir arketip midir? Rapor, bu nüansı ele alacaktır.</p>
+        <h2
+        id="dini-manzara-kökleşmiş-putperestlik-ve-tevhidin-reddi">2.
+        Dini Manzara: Kökleşmiş Putperestlik ve Tevhidin Reddi</h2>
+        <p>Hz. Nuh'un misyonunun merkezinde, onun tek tanrı inancına
+        (Tevhid) yaptığı çağrı ile kavminin yerleşik çok
+        tanrılı/putperest sistemi arasındaki temel dini çatışma yer
+        alır. Kaynaklar, bu toplumun temelde çok tanrılı olduğunu ve
+        başlangıçtaki tevhid inancından saptığını belirtir.
+        Putperestlik, toplumun dokusuna derinlemesine işlemiş bir
+        olguydu.</p>
+        <p>Kur'an, Nuh Suresi'nde (71:23) bu kavmin taptığı beş putun
+        ismini özel olarak zikreder: Vedd, Suvâ', Yeğûs, Ye'ûk ve Nesr.
+        Bu isimlerin başlangıçta, zamanla saygı duyulan ve ölümlerinden
+        sonra heykelleri dikilerek ilahlaştırılan salih kişilere ait
+        olduğu rivayet edilir. Zamanla bu heykellere tapınma başlamış,
+        insanlar onları Allah ile aralarında aracı olarak görmüşlerdir.
+        Farklı kaynaklarda bu putların tasvirlerine dair yorumlar da
+        bulunur; örneğin Vedd'in erkek, Suvâ'ın kadın, Yeğûs'un aslan,
+        Ye'ûk'un at ve Nesr'in kartal/akbaba şeklinde temsil edildiği
+        belirtilir. Toplumun seçkinleri (Mele'), bu putlara tapınmayı
+        aktif olarak teşvik etmiş ve halkı onları terk etmemeleri
+        konusunda uyarmışlardır.</p>
+        <p>Hz. Nuh'un tevhid çağrısı ise şiddetli bir direnişle
+        karşılanmıştır. İnsanların bu çağrıyı duymamak için parmaklarını
+        kulaklarına tıkadıkları, (muhtemelen yüzlerini görmek veya
+        tanınmamak için) elbiselerine büründükleri, inkârlarında ısrar
+        ettikleri ve büyük bir kibir (istikbar) gösterdikleri anlatılır.
+        Hz. Nuh, davetinin onların yalnızca kaçışını artırdığından
+        yakınır. Bu direniş, doğrudan doğruya Nuh'un temel mesajına
+        yönelikti: "Ey kavmim! Allah'a kulluk edin, sizin O'ndan başka
+        ilâhınız yoktur". Onların reddi, tevhidin kategorik olarak reddi
+        anlamına geliyordu.</p>
+        <p>Karşılaştırmalı olarak bakıldığında, Mezopotamya toplumları
+        da belirgin bir şekilde çok tanrılıydı; tanrıların genellikle
+        belirli işlevleri ve şehirlerle ilişkilendirildiği görülür.
+        Tekvin 6'daki "Tanrı oğulları" ifadesiyle ilgili yorumlar ise,
+        bu ifadenin putperestlik veya ilahi-insani sınırlar arasındaki
+        ihlallerle ilişkili olabileceğine işaret eder. Ancak Kur'an'ın
+        Nuh kıssasındaki odak noktası, Mezopotamya'daki tanrıların
+        işlevsel rollerinden ziyade, bu ismi zikredilen putlar
+        aracılığıyla işlenen <em>şirk</em> eyleminin kendisidir.</p>
+        <p>Toplumun seçkinlerinin putları bu denli güçlü bir şekilde
+        savunması, yerleşik dinin sadece kişisel bir inanç meselesi
+        olmadığını, aynı zamanda toplumsal düzenin ve seçkinlerin
+        gücünün bir temel taşı olduğunu göstermektedir. Zira seçkinler
+        mevcut toplumsal yapıdan fayda sağlamaktaydılar (Bölüm 3'te
+        detaylandırılacaktır). Putları savunmak, statükoyu ve bu statüko
+        içindeki ayrıcalıklı konumlarını savunmakla eş anlamlıydı.
+        Dolayısıyla, bu putları gayri meşru kılan Hz. Nuh'un tevhid
+        çağrısı, seçkinler tarafından sadece dini bir anlaşmazlık olarak
+        değil, kendi egemenliklerini sürdüren toplumsal ve siyasi düzene
+        yönelik doğrudan bir tehdit olarak algılanmıştır.</p>
+        <p>İnsanların parmaklarını kulaklarına tıkamaları ve örtülerine
+        bürünmeleri gibi davranışlar, sadece bir anlaşmazlığı değil,
+        aynı zamanda kendi dünya görüşlerini ve yaşam tarzlarını tehdit
+        eden bir mesaja karşı kasıtlı bir cehalet ve psikolojik savunma
+        mekanizmasını da yansıtır. Bu, reddedişin entelektüel bir karşı
+        argümandan ziyade, değişime ve Hz. Nuh'un uyarısının sonuçlarına
+        (statü kaybı, alışılmış inançların terk edilmesi vb.) karşı daha
+        derin, belki de duygusal veya ideolojik bir dirence dayandığını
+        ima eder. Bu durum, peygamberlerin çağrılarına yönelik toplumsal
+        direncin psikolojik boyutunu gözler önüne serer.</p>
+        <h2 id="sosyal-hiyerarşi-ve-sınıf-çatışması-mele-ve-erzelûn">3.
+        Sosyal Hiyerarşi ve Sınıf Çatışması: 'Mele' ve 'Erzelûn'</h2>
+        <p>Nuh Kavmi'nin sosyolojik yapısını anlamada merkezi bir unsur,
+        toplumdaki belirgin sınıf ayrımları ve bu ayrımların Hz. Nuh
+        etrafında şekillenen toplumsal çatışmadaki rolüdür. Kur'an
+        anlatısı, bu hiyerarşiyi ve sınıf temelli gerilimleri net bir
+        şekilde ortaya koyar.</p>
+        <h3 id="seçkin-sınıf-mele">Seçkin Sınıf ('Mele'): </h3>
+        <p>Kur'an, Hz. Nuh'a karşı çıkanların başını çeken grubu
+        sıklıkla 'Mele' (ileri gelenler, kodamanlar, yönetici konsey)
+        olarak tanımlar. Bu grup, toplumun nüfuzlu liderlerini temsil
+        eder ve anlatıda sürekli olarak ana muhalif güç olarak
+        konumlandırılır. Tavırları kibir, alt sınıflara karşı küçümseme,
+        materyalizm ve statülerini sarsacak her türlü mesaja karşı
+        direnişle karakterizedir.</p>
+        <p>'Mele' sınıfının Hz. Nuh'a karşı ileri sürdüğü argümanlar,
+        onların sosyolojik konumlarını ve dünya görüşlerini
+        yansıtır:</p>
+        <p>Hz. Nuh'un kendileri gibi sadece bir beşer olduğunu iddia
+        ederler. Bu, peygamberlik iddiasını sıradanlaştırma ve reddetme
+        çabasıdır.</p>
+        <p>Ona uyanların toplumun 'en aşağılıkları', 'en rezilleri'
+        ('Erzelûn') olduğunu söyleyerek, mesajının itibarsız olduğunu
+        ima ederler. Bu, sosyal statüyü hakikatin bir ölçütü olarak
+        gördüklerini gösterir.</p>
+        <p>Hz. Nuh ve takipçilerinde kendilerine karşı bir üstünlük
+        görmediklerini belirtirler. Bu, kendi toplumsal konumlarını
+        mutlak bir değer olarak kabul ettiklerini ve manevi üstünlüğü
+        tanımadıklarını ortaya koyar.</p>
+        <p>Hz. Nuh'u, peygamberlik iddiasıyla kendilerine üstünlük
+        kurmaya ve başlarına geçmeye çalışmakla suçlarlar. Bu, onun
+        çağrısını siyasi bir güç mücadelesi olarak algıladıklarını
+        gösterir.</p>
+        <p>Özellikle Hz. Nuh'un gemiyi inşa etme sürecinde onunla alay
+        ederler. Bu, onların anlamadıkları veya küçümsedikleri ilahi
+        emirlere karşı alaycı ve saygısız tutumlarını sergiler.</p>
+        <h3 id="takipçiler-erzelûn">Takipçiler ('Erzelûn'): </h3>
+        <p>Hz. Nuh'a iman edenlerin, seçkinler tarafından 'Erzelûn' (en
+        aşağılıklar, en bayağılar, en fakirler) olarak adlandırılan alt
+        sosyo-ekonomik tabakadan geldiği anlaşılmaktadır. Bu terimin
+        kullanılması, seçkinlerin sınıf önyargısını ve bir mesajın
+        geçerliliğini yargılamak için sosyal statüyü bir kriter olarak
+        kullanmalarını yansıtır. Hz. Nuh ise bu suçlamalara karşı,
+        inananları geçmişleri veya sosyal konumları nedeniyle
+        kovamayacağını, onların hesabının Allah'a ait olduğunu
+        belirterek takipçilerini savunur.</p>
+        <h3 id="sınıf-çatışması-dinamikleri">Sınıf Çatışması
+        Dinamikleri: </h3>
+        <p>'Mele' sınıfı, Hz. Nuh'un takipçilerinin düşük sosyal
+        statüsünü, hem kendi inkârları için bir gerekçe olarak kullanmış
+        hem de başkalarını onun mesajından uzaklaştırmak için bir araç
+        olarak değerlendirmiştir. Temel argümanları şuydu: "Eğer bu
+        mesaj doğru olsaydı, sadece fakirler ve aşağılananlar mı
+        inanırdı?" Seçkinlerin, potansiyel olarak iman etme şartı olarak
+        fakir takipçilerin kovulmasını talep etmeleri (bu durum
+        ayetlerden dolaylı olarak anlaşılmaktadır), sosyal ayrımcılığı
+        ve kendi ayrıcalıklarını koruma arzusunu açıkça ortaya
+        koymaktadır.</p>
+        <p>Bu durum, genel olarak Mezopotamya toplumlarında görülen
+        belirgin sınıf yapılarıyla (krallar, rahipler,
+        soylular/memurlar, kâtipler, tüccarlar, zanaatkârlar, çiftçiler,
+        köleler) paralellik gösterir. Kur'an'ın kullandığı 'Mele' ve
+        'Erzelûn' gibi spesifik terimler, antik Yakın Doğu bağlamında
+        yaygın olan seçkin gücü ve alt sınıflara yönelik küçümseme
+        dinamiklerini yansıtır. Tekvin anlatısı ise Tufan bağlamında
+        sınıf farklılıklarına Kur'an kadar açıkça odaklanmaz, daha çok
+        evrensel kötülüğü vurgular.</p>
+        <p>Seçkinlerin, takipçilerin düşük statüsüne ('Erzelûn')
+        dayanarak Hz. Nuh'u reddetmesi, daha derin bir korkuyu açığa
+        çıkarır. Allah katında eşitliği vurgulayan tevhid inancı, 'Mele'
+        sınıfına güçlerini ve ayrıcalıklarını bahşeden katı sosyal
+        hiyerarşiye doğası gereği meydan okuyordu. Bu ayrıcalıklar
+        muhtemelen toprak mülkiyeti, zenginlik ve Mezopotamya'da
+        görüldüğü gibi dini/ekonomik kurumlar üzerindeki kontrolle
+        bağlantılıydı. Dolayısıyla, 'Mele' sınıfı Hz. Nuh'un çağrısını
+        sadece dini bir anlaşmazlık olarak değil, kendi egemenliklerini
+        garanti altına alan sosyo-ekonomik düzene yönelik temel bir
+        tehdit olarak algılamış olmalıdır. Hz. Nuh'u kabul etmek,
+        'Erzelûn'u Allah katında eşit kabul etmek anlamına geliyordu ki
+        bu, 'Mele' sınıfının değer verdiği dünyevi statüyü
+        değersizleştirecekti.</p>
+        <p>Ayrıca, 'Mele' sınıfı, toplumsal normları aktif olarak
+        şekillendiren ve uygulayan bir konumdaydı. Dini pratikleri
+        (putları teşvik etme) ve sosyal dışlamayı ( 'Erzelûn'u reddetme)
+        yönlendiriyorlardı. Alaycılıkları, Hz. Nuh'u itibarsızlaştırmaya
+        ve ona karşı mevcut toplumsal konsensüsü pekiştirmeye hizmet
+        ediyordu. Bu durum, onların toplumsal liderler olarak kabul
+        edilebilir inanç ve sosyal etkileşim sınırlarını aktif olarak
+        tanımladıklarını ve savunduklarını, nüfuzlarını kontrolü
+        sürdürmek ve Hz. Nuh'un meydan okumasına direnmek için
+        kullandıklarını göstermektedir.</p>
+        <h2 id="hakim-sosyal-normlar-ve-ahlaki-özellikler">4. Hakim
+        Sosyal Normlar ve Ahlaki Özellikler</h2>
+        <p>Kaynaklar, Hz. Nuh Kavmi'nin etik ve ahlaki iklimine dair
+        karanlık bir tablo çizmektedir. Toplum, yaygın bir yozlaşma ve
+        kötülükle maluldü.</p>
+        <h3 id="yozlaşma-ve-kötülük">Yozlaşma ve Kötülük: </h3>
+        <p>Kur'an, bu kavmi defalarca "kötü bir kavim" (kavm sev'in)
+        veya "zalimler" olarak nitelendirir. Tekvin 6 ise kötülüğün
+        yaygınlığını, "insanın yeryüzünde yaptığı kötülüğün çok olduğunu
+        ve aklının fikrinin hep kötülükte olduğunu" belirterek vurgular.
+        Bu ifadeler, ahlaki çürümenin toplumun geneline nüfuz ettiğini
+        gösterir.</p>
+        <h3 id="şiddet-ve-adaletsizlik-hamas-zulm">Şiddet ve
+        Adaletsizlik ('Hamas' / 'Zulm'): </h3>
+        <p>Tekvin 6:11 ve 13'te yeryüzünün şiddetle ('hamas') dolduğu
+        açıkça belirtilir. 'Hamas' terimi, kanunsuzluk ve adaletsizliği
+        ima eder , bu da toplumsal düzenin ve etik davranışın çöktüğünü
+        gösterir. Kur'an da onları sık sık 'zalimûn' (zalimler,
+        haksızlık edenler, zulmedenler) olarak tanımlar. Bu 'zulüm', hem
+        Allah'a karşı işlenen en büyük haksızlık olan putperestliği
+        (şirk) hem de insanlar arasındaki sosyal adaletsizlikleri
+        kapsar. Yahudi geleneğinde de Nuh nesline atfedilen günahlar
+        arasında özellikle soygunculuk/hırsızlık ('gezel') veya daha
+        genel anlamda şiddet/kanunsuzluk ('hamas') vurgulanır.</p>
+        <h3 id="kibir-ve-alaycılık">Kibir ve Alaycılık: </h3>
+        <p>Kavmin Hz. Nuh'u reddedişi, büyük bir kibirle (istikbar)
+        karakterizedir. Özellikle Hz. Nuh'un karadan uzak bir yerde gemi
+        inşa etmesiyle sürekli alay etmişlerdir. Hz. Nuh'u "apaçık bir
+        sapıklık içinde" veya "cinlenmiş/deli" (mecnun) olarak
+        niteleyerek onu küçümsemişlerdir.</p>
+        <h3 id="inatçılık-ve-direniş">İnatçılık ve Direniş: </h3>
+        <p>İnkârlarında aşırı bir inatçılık ('ısrar') göstermişlerdir.
+        Hz. Nuh'un çağrısına aktif olarak direnmişler ve eğer doğru
+        söylüyorsa vaat ettiği azabı hemen getirmesi için ona meydan
+        okumuşlardır.</p>
+        <h3 id="materyalizm-ve-dünyevilik">Materyalizm ve
+        Dünyevilik:</h3>
+        <p>Liderleri, mal ve çocukları kendilerine ziyandan başka bir
+        şey artırmayan kimselere uymuşlardır. Bu, değer sistemlerinin
+        maddi kazanç ve soy üzerine kurulu olduğunu gösterir. Hz. Nuh'un
+        tövbe karşılığında mal ve evlat artışı vaat etmesi, bunların
+        toplum tarafından ne kadar değerli görüldüğünü teyit eder.
+        Tekvin bağlamı da, yaklaşan yargıdan habersiz, "yiyip içme,
+        evlenip evlendirme" gibi dünyevi işlerle meşgul bir topluma
+        işaret eder.</p>
+        <p>Bu çeşitli günahlar – putperestlik, kibir, adaletsizlik,
+        şiddet, alaycılık, materyalizm – birbirinden izole sorunlar
+        değil, toplumsal bir çöküşün birbirine bağlı yönleridir. Kibir,
+        ilahi rehberliğin reddini besler ve zulmü meşrulaştırır.
+        Materyalizm, sınıf ayrımlarını ve servet yerine takvayı
+        önemseyen bir mesaja karşı direnişi körükler. Putperestlik,
+        mevcut yozlaşmış düzen için sahte bir dini gerekçe sunar. Bu
+        özellikler, Allah'ın reddedilmesinin toplumsal çürümeye yol
+        açtığı, derinden kusurlu bir sosyolojik ve ahlaki sistemin
+        belirtileridir.</p>
+        <p>Tekvin 6'da tarif edilen kötülüğün yaygınlığı ("her
+        eğilimi... daima kötüydü"), yozlaşma ve şiddetin normalleştiği
+        bir toplumu düşündürmektedir. Hz. Nuh'un doğruluğu, tam da
+        toplumsal ölçütlerin bu kadar düşük olması nedeniyle öne çıkar.
+        Hz. Nuh ile alay edilmesi, Allah'a itaatin ve dindarlığın
+        sapkınlık veya aptallık olarak görüldüğünü gösterir. Bu, toplum
+        içinde ahlaki değerlerin tamamen tersine döndüğüne işaret eder;
+        kötülük norm haline geldiğinde, doğruluk anormal veya 'deli'
+        olarak algılanır.</p>
+        <h2 id="ekonomik-boyutlar-ve-günlük-yaşam">5. Ekonomik Boyutlar
+        ve Günlük Yaşam</h2>
+        <p>Nuh Kavmi'nin sosyolojik yapısını tam olarak anlamak için,
+        çıkarımsal ekonomik faaliyetlerine, değer sistemlerine ve
+        potansiyel teknolojik seviyelerine de bakmak gerekir.</p>
+        <h3 id="ekonomik-faaliyetler">Ekonomik Faaliyetler:</h3>
+        <p>Toplumun temelinin, erken Mezopotamya medeniyetleriyle uyumlu
+        olarak tarıma dayalı olması muhtemeldir. Tekvin, erken
+        dönemlerden itibaren çiftçilik ve hayvancılığın varlığından
+        bahseder. Daha geniş Mezopotamya toplumunu yansıtıyorsa, ticaret
+        ve zanaatkârlığın da (tüccarlar, zanaatkârlar) varlığına dair
+        ipuçları bulunur.</p>
+        <h3 id="değer-sistemi">Değer Sistemi:</h3>
+        <p>Kur'an, mal (servet) ve evlat (banin/evlad) birikimine statü
+        ve gurur kaynağı olarak vurgu yapıldığını, ancak bunun
+        paradoksal bir şekilde onların yıkımına yol açtığını belirtir.
+        Hz. Nuh'un tövbe karşılığında mal ve çocuk artışı vaat etmesi,
+        bunların toplum tarafından ne kadar değer verildiğini gösterir.
+        Seçkin sınıfın ('Mele'), güçlerine ve kibirlerine katkıda
+        bulunan önemli kaynakları kontrol ettiği anlaşılmaktadır (Bu
+        durum S7, S30, S62, S63'ten ve Mezopotamya bağlamından
+        çıkarılabilir).</p>
+        <h3 id="teknoloji-ve-yaşam-süresi">Teknoloji ve Yaşam
+        Süresi:</h3>
+        <p>Tekvin, Tufan öncesi dönemde metal işleme (bronz, demir),
+        müzik ve şehir kurma bilgisinin varlığına işaret eder. Bu,
+        potansiyel olarak gelişmiş bir maddi kültüre işaret edebilir.
+        Tekvin'de bahsedilen olağanüstü uzun ömürler , bilgi birikimi ve
+        toplumsal gelişim açısından etkileri olabileceğini düşündürse de
+        bu spekülatiftir. Kur'an ise Hz. Nuh'un kavmi arasında 950 yıl
+        kaldığını belirtir. Hz. Nuh'un gemiyi inşa etmesi, ister ilahi
+        ilhamla isterse mevcut beceriyle olsun, önemli bir
+        mühendislik/gemi yapımı bilgisine işaret eder.</p>
+        <h3 id="günlük-yaşam">Günlük Yaşam:</h3>
+        <p>Günlük hayatın muhtemelen çiftçilik, aile yaşamı,
+        yapılandırılmış bir topluluk içindeki sosyal etkileşimler ve
+        putları etrafında dönen dini ritüelleri içerdiği düşünülebilir.
+        Hz. İsa'nın Tufan öncesi döneme dair tasviri, Tufan gelene kadar
+        sıradan faaliyetlerin devam ettiğine işaret eder.</p>
+        <p>Kur'an'ın, insanların mal ve evlatlarına olan bağlılığını ve
+        dünyevi başarıları kendi ruhsal kayıplarını artıran liderleri
+        takip etmelerini özellikle vurgulaması, önemli bir noktaya
+        işaret eder: Onların ekonomik değerleri ve maddi refaha
+        odaklanmaları, Hz. Nuh'un manevi mesajına ve uyarılarına karşı
+        onları doğrudan körleştirmiştir. Başarı ölçütleri dünyevi olduğu
+        için, iman ve Allah'a karşı sorumluluğu önceliklendiren bir
+        çağrıya kapalıydılar. Bu nedenle, ekonomik yönelimleri ve
+        materyalizmleri, Hz. Nuh'un çağrısını kabul etmelerinin önünde
+        önemli bir sosyolojik engel işlevi görmüştür.</p>
+        <p>Potansiyel ileri teknoloji (metal işleme ) ve uzun ömürlerin
+        aşırı ahlaki çöküşle bir arada bulunması, ibretlik bir tema
+        sunar: Maddi veya teknolojik ilerleme, ahlaki veya manevi
+        ilerlemeyle eş anlamlı değildir. Toplum bazı ölçütlere göre
+        'gelişmiş' olabilir, ancak temelde yozlaşmış olması yıkımına yol
+        açmıştır. Maddi ilerlemeler, eğer etik veya ilahi ilkelerle
+        yönlendirilmezse, ahlaki düşüşle bir arada var olabilir, hatta
+        kibir ve materyalizmi körükleyerek bu düşüşe katkıda
+        bulunabilir.</p>
+        <h2
+        id="karşılaştırmalı-sosyolojik-bakış-açıları-kuran-tekvin-ve-mezopotamya">6.
+        Karşılaştırmalı Sosyolojik Bakış Açıları: Kur'an, Tekvin ve
+        Mezopotamya</h2>
+        <p>Kur'an'daki Nuh Kavmi anlatısını daha geniş bir bağlama
+        oturtmak için, paralel geleneklerdeki (Tekvin ve Mezopotamya
+        destanları) sosyolojik tasvirlerle kısa bir karşılaştırma yapmak
+        faydalıdır. Bu karşılaştırma, Kur'an'ın özgün vurgularını ve
+        aynı zamanda paylaşılan motifleri daha net görmeyi sağlar.</p>
+        <p>Aşağıdaki tablo, üç ana gelenekteki Tufan anlatılarının temel
+        sosyolojik ve teolojik yönlerini karşılaştırmaktadır:</p>
+        <h3
+        id="tablo-6.1-tufan-anlatılarının-karşılaştırmalı-sosyolojik-yönleri">Tablo
+        6.1: Tufan Anlatılarının Karşılaştırmalı Sosyolojik Yönleri</h3>
+        <table>
+        <colgroup>
+        <col style="width: 25%" />
+        <col style="width: 25%" />
+        <col style="width: 25%" />
+        <col style="width: 25%" />
+        </colgroup>
+        <thead>
+        <tr>
+        <th style="text-align: left;">Özellik</th>
+        <th style="text-align: left;">Kur'an Anlatısı</th>
+        <th style="text-align: left;">Tekvin (Yaratılış) Anlatısı</th>
+        <th style="text-align: left;">Mezopotamya Anlatıları
+        (Atrahasis/Gılgamış)</th>
+        </tr>
+        <tr>
+        <th style="text-align: left;"><strong>Tufan'ın Birincil
+        Nedeni</strong></th>
+        <th style="text-align: left;">Peygamberin reddi, putperestlik
+        (Şirk), kibir, zulüm (Nuh'un kavmi özelinde)</th>
+        <th style="text-align: left;">Evrensel insan kötülüğü, yozlaşma,
+        şiddet ('hamas'), Tanrı'nın kederi</th>
+        <th style="text-align: left;">İnsanların aşırı çoğalması ve
+        gürültülerinin tanrıları (Enlil) rahatsız etmesi (Atrahasis).
+        Gılgamış'ta neden daha belirsiz.</th>
+        </tr>
+        <tr>
+        <th style="text-align: left;"><strong>Sosyal Yapı
+        Vurgusu</strong></th>
+        <th style="text-align: left;">Sınıf çatışması ('Mele' vs.
+        'Erzelûn'), seçkinlerin kibir ve materyalizminin rolü</th>
+        <th style="text-align: left;">Evrensel ahlaki başarısızlık,
+        Nuh'un istisna olması. Anlatı içinde iç sosyal katmanlaşmaya
+        daha az vurgu.</th>
+        <th style="text-align: left;">Bilinen Mezopotamya sınıf
+        yapılarını (krallar, rahipler, işçiler, köleler) ve ilahi
+        hiyerarşileri yansıtır. İnsanların amacı genellikle tanrılara
+        hizmettir.</th>
+        </tr>
+        <tr>
+        <th style="text-align: left;"><strong>Kurtulanların
+        Seçimi</strong></th>
+        <th style="text-align: left;">Nuh ve inananlar (tevhide ve Nuh'a
+        uyanlar, statüden bağımsız) + Nuh'un ailesi (inkârcı eşi ve oğlu
+        hariç)</th>
+        <th style="text-align: left;">Nuh (lütuf bulmuş, doğru,
+        kusursuz, Tanrı ile yürüyen) ve yakın ailesi (eşi, üç oğlu,
+        gelinleri).</th>
+        <th style="text-align: left;">Utnapiştim/Atrahasis, belirli bir
+        tanrı (Ea/Enki) tarafından bilgeliği veya dindarlığı nedeniyle,
+        diğer tanrıların (Enlil) iradesine karşı uyarılarak
+        seçilir.</th>
+        </tr>
+        <tr>
+        <th style="text-align: left;"><strong>Tufan'ın
+        Kapsamı</strong></th>
+        <th style="text-align: left;">Genellikle yerel olarak
+        yorumlanır, Nuh'un belirli kavmini etkiler , ancak farklı
+        yorumlar da vardır.</th>
+        <th style="text-align: left;">Açıkça küresel.</th>
+        <th style="text-align: left;">Genellikle yıkıcı derecede yaygın
+        olarak tasvir edilir, muhtemelen bölgedeki büyük nehir
+        taşkınlarını yansıtır.</th>
+        </tr>
+        <tr>
+        <th style="text-align: left;"><strong>İlahi
+        Motivasyon</strong></th>
+        <th style="text-align: left;">Toplumsal adaletsizlik ve şirke
+        karşı ilahi adalet ve uyarı.</th>
+        <th style="text-align: left;">İnsanlığın ahlaki bozulmasına
+        karşı ilahi yargı ve keder, ardından antlaşma (ahid).</th>
+        <th style="text-align: left;">Tanrıların rahatsızlığı (gürültü),
+        öfkesi veya kaprisi; bazen nüfus kontrolü amacı.</th>
+        </tr>
+        <tr>
+        <th style="text-align: left;"><strong>Tufan Sonrası
+        Sonuç</strong></th>
+        <th style="text-align: left;">Yeni bir başlangıç, Nuh ve
+        inananlarla yeryüzünün yeniden iskanı.</th>
+        <th style="text-align: left;">Tanrı ile Nuh arasında evrensel
+        bir antlaşma, doğanın düzeninin garantisi.</th>
+        <th style="text-align: left;">Tanrıların pişmanlığı,
+        Utnapiştim/Atrahasis'e ölümsüzlük verilmesi veya yeni, daha az
+        doğurgan insanlar yaratılması.</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+        </table>
+        <p>Bu tablo, Kur'an anlatısının kendine özgü vurgusunu (sınıf
+        çatışması, Tevhid-Şirk mücadelesi) ortaya koyarken, paylaşılan
+        motifleri (tufan, doğru kurtulan, ilahi yargı) ve Tekvin
+        (evrensel günah, ahid) ile Mezopotamya'nın (tanrısal
+        ihtiyaçlar/rahatsızlık, nüfus kontrolü) farklı bakış açılarını
+        da kabul etmektedir. Bu karşılaştırmalı bakış açısı, her bir
+        anlatıyı diğerleriyle diyalog içine sokarak anlaşılmasını
+        derinleştirir.</p>
+        <h2 id="büyük-tufan-sosyolojik-bir-zirve">7. Büyük Tufan:
+        Sosyolojik Bir Zirve</h2>
+        <p>Kur'an perspektifinden Tufan, sadece ilahi bir ceza eylemi
+        değil, aynı zamanda Nuh Kavmi'nin sosyolojik ve ahlaki
+        başarısızlıklarının kaçınılmaz bir sonucu ve zirvesidir.</p>
+        <h3 id="yozlaşmış-bir-sisteme-yargı">Yozlaşmış Bir Sisteme
+        Yargı: </h3>
+        <p>Tufan, toplumun ısrarlı putperestliği, kibri, adaletsizliği,
+        şiddeti ve ilahi rehberliği reddetmesinin doğrudan bir neticesi
+        olarak çerçevelenir. Bu, o belirli sosyal düzenin iflasını
+        temsil eder.</p>
+        <h3 id="seçkinlerin-başarısızlığı">Seçkinlerin
+        Başarısızlığı:</h3>
+        <p>'Mele' sınıfının toplumu saptırmadaki ve reformlara aktif
+        olarak direnişteki rolü vurgulanmalıdır. Tufan, onların
+        liderliğinin ve değer sisteminin iflasını simgeler. Kendi maddi
+        çıkarlarını ve statülerini koruma güdüleri, tüm toplumun
+        helakına yol açan bir direnişe neden olmuştur.</p>
+        <h3 id="ezilenlerin-haklı-çıkması">Ezilenlerin Haklı
+        Çıkması:</h3>
+        <p>Nuh ve inananların ('Erzelûn') kurtuluşu, imanın statüye
+        üstünlüğünün ve seçkinlerin değer ölçütlerinin nihai
+        başarısızlığının bir kanıtıdır. Allah katında gerçek değerin,
+        dünyevi güç veya zenginlikte değil, iman ve itaatte yattığını
+        gösterir.</p>
+        <h3 id="islah-edilemezlik">Islah Edilemezlik:</h3>
+        <p>Hz. Nuh'un, inkârcıların yalnızca başkalarını saptıracakları
+        ve daha fazla inkârcı nesil yetiştirecekleri gerekçesiyle helak
+        olmaları için yaptığı son dua ve artık kimsenin iman
+        etmeyeceğine dair ilahi vahiy, toplumun Kur'an perspektifinden
+        sosyolojik ve ahlaki olarak ıslah edilemez bir noktaya
+        ulaştığını gösterir. Toplumsal yapı o kadar bozulmuştu ki, ilahi
+        müdahale kaçınılmaz hale gelmişti.</p>
+        <h3 id="bir-sıfırlama">Bir 'Sıfırlama':</h3>
+        <p>Tufan, yozlaşmış bir sosyal yapıyı ortadan kaldıran ve Hz.
+        Nuh (insanlığın ikinci atası olarak kabul edilir) ve inananlarla
+        yeni bir başlangıca izin veren ilahi bir 'sıfırlama' işlevi
+        görür.</p>
+        <p>Sosyolojik açıdan Tufan, başarısız bir sosyal sistemin nihai
+        olarak yapıbozuma uğratılması olarak görülebilir. Güç yapılarını
+        ( 'Mele' yok edilir), egemen ideolojiyi (putperestlik) ve
+        yozlaşmış sosyal normları (şiddet, adaletsizlik) ortadan
+        kaldırır. Gemi, farklı ilkelere (iman, itaat) dayalı yeni bir
+        toplumun mikrokozmosu haline gelir. Bu, Tufan'ın sadece bir
+        yıkım eylemi olmadığını, aynı zamanda ilahi ilkelere dayalı
+        potansiyel bir yeniden yapılanmanın önünü açan radikal bir
+        sosyal yapıbozum işlevi gördüğünü gösterir.</p>
+        <h2 id="sonuç-nuh-kavminin-sosyolojik-portresi">8. Sonuç: Nuh
+        Kavmi'nin Sosyolojik Portresi</h2>
+        <p>Bu rapor, Kur'an-ı Kerim ve ilgili kaynaklar ışığında Hz. Nuh
+        Kavmi'nin sosyolojik yapısını analiz etmiştir. Analiz, Tufan
+        öncesi bu toplumun belirgin özelliklerini ortaya koymuştur:</p>
+        <h3 id="dini-yapı">Dini Yapı:</h3>
+        <p>Toplum, kökleşmiş bir putperestlik sistemi tarafından domine
+        ediliyordu. Vedd, Suvâ', Yeğûs, Ye'ûk ve Nesr gibi putlara
+        tapınma yaygındı ve bu durum, Hz. Nuh'un tevhid çağrısına karşı
+        şiddetli bir direnişin temelini oluşturuyordu. Seçkinler, bu
+        putperest sistemi kendi güçlerini ve toplumsal düzeni korumak
+        için aktif olarak savunuyorlardı.</p>
+        <h3 id="sosyal-hiyerarşi">Sosyal Hiyerarşi:</h3>
+        <p>Toplum, 'Mele' olarak adlandırılan kibirli ve materyalist bir
+        seçkin sınıf ile 'Erzelûn' olarak küçümsenen alt sosyo-ekonomik
+        tabaka arasında keskin bir şekilde bölünmüştü. Bu sınıf ayrımı,
+        Hz. Nuh'un mesajının reddedilmesinde merkezi bir rol oynamış,
+        seçkinler iman için sosyal statüyü bir ön koşul olarak
+        görmüşlerdir.</p>
+        <h3 id="ahlaki-iklim">Ahlaki İklim:</h3>
+        <p>Yaygın ahlaki yozlaşma, kibir, zulüm (adaletsizlik ve
+        şiddet), alaycılık ve materyalizm toplumun karakteristik
+        özellikleriydi. Bu olumsuzluklar birbirini besleyen bir döngü
+        oluşturmuş, toplumun ilahi rehberliğe karşı inatçı bir direniş
+        göstermesine neden olmuştur. Kötülüğün normalleştiği bir
+        ortamda, Hz. Nuh'un doğruluğu istisnai kalmıştır.</p>
+        <h3 id="ekonomik-değerler">Ekonomik Değerler:</h3>
+        <p>Maddi zenginlik ve soyun devamı (mal ve evlat) toplumda aşırı
+        değerli görülmüş, bu durum manevi değerlerin ve ahiret
+        sorumluluğunun göz ardı edilmesine yol açmıştır. Materyalist
+        dünya görüşü, Hz. Nuh'un çağrısına karşı önemli bir engel teşkil
+        etmiştir.</p>
+        <p>Kur'an anlatısı, özellikle Nuh Kavmi'nin iç sosyal
+        dinamiklerine, Hz. Nuh ile seçkinler arasındaki tartışmalara ve
+        toplumsal çöküşün temel nedenleri olarak şirk ve kibrin teolojik
+        sonuçlarına odaklanmaktadır. Bu, Tekvin'in evrensel insan
+        günahına veya Mezopotamya anlatılarının tanrıların ihtiyaçları
+        ve kaprislerine yaptığı vurgudan farklılaşır.</p>
+        <p>Nuh Kavmi kıssası, kontrolsüz seçkin gücünün tehlikeleri,
+        materyalizm ve kibrin aşındırıcı etkileri, sosyal adaletin önemi
+        ve ilahi rehberlik reddedildiğinde toplumların kendi kendini yok
+        etme potansiyeli gibi kalıcı sosyolojik temalar sunar.
+        Anlatıdaki uyarılar, daha geniş insani sosyal dinamiklerle
+        rezonansa girer.</p>
+        <p>Sonuç olarak, Kur'an, Nuh Kavmi'ni, dünyevi statüye ve
+        kökleşmiş geleneklere öncelik vererek manevi ve ahlaki
+        sorumluluğu reddetmekten kaynaklanan bir toplumsal başarısızlık
+        vakası olarak sunmaktadır. Bu portre, sosyal yapının, dini
+        inançların ve ahlaki değerlerin bir toplumun kaderini nasıl
+        şekillendirebileceğine dair derin bir ders içermektedir.</p>
+        <p><strong>Not:Bu Çalışma Gemini Deep Research Modeli
+        Kullanılarak Hazırlanmıştır.</strong></p>
+      
+    </div>
+	 
+   </div>
+   <script src="js/script.js?v=1.0.3"></script>
+   <script src="js/toc.js?v=1.0.3"></script>
+   <script src="js/modal.js?v=1.0.3"></script>
+ 
+</body>
+</html>
