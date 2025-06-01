@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!----======== CSS ======== -->
+  <link rel="stylesheet" href="css/style.css?v=1.0.1">
+  <link rel="stylesheet" href="css/toc.css?v=1.0.1">
+  <link rel="stylesheet" href="css/modal.css?v=1.0.1">
+  <link rel="stylesheet" href="css/fihrist.css?v=1.0.1">
+     <style>
+     #reading-area { max-width: 800px; margin: auto; padding: 20px; }
+    </style>
+</head>
+<body>
+  <!-- Modal -->
+  <!-- Modal -->
+<div id="listeModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+background-color:rgba(0,0,0,0.7); z-index:1000; overflow:auto;">
+<div id="modalContent"  style="background:white; margin:50px auto; padding:20px; width:90%; max-width:1000px; border-radius:8px;">
+  <button onclick="closeModal()">Kapat</button>
+  <HR>
+  <h2>FİHRİST</h2>
+  <div id="listeContainer"></div>
+  <button onclick="closeModal()">Kapat</button>
+</div>
+</div>
+  <!-- Sol üst menü butonu -->
+  <button class="menu-button left" id="openLeftMenu">&#9776;</button>
+
+
+  <!-- Sol menü paneli: İçindekiler -->
+  <div class="menu-left" id="leftMenu">
+  <h2>Ayarlar</h2>
+ 
+
+    <div class="control-group">
+      <button class="btn btn-primary" id="decreaseFont">A -</button>
+      <button class="btn btn-primary" id="increaseFont">A +</button>
+	   <button class="btn btn-primary" id="toggleMode">🌙</button>
+    </div>
+	
+    <hr>
+    <h2>İçindekiler</h2>
+    
+    <div class="filter-container">
+      <input
+        type="text"
+        id="filter-input"
+        placeholder="Filtrele.."
+        class="filter-input"
+      />
+    </div>
+    <button type="button" class="btn btn-primary btn-block" onclick="showModal()">Fihrist</button> 
+ <ul>
+ <li><a href="#giriş" id="toc-giriş">Giriş </a></li>
+ <li><a href="#kuranı-anlamak-ve-yorumlamak"
+ id="toc-kuranı-anlamak-ve-yorumlamak">Kur’an’ı Anlamak ve Yorumlamak
+ </a></li>
+ <li><a href="#kuran-yorumunda-semantik-yöntemin-imkânı"
+ id="toc-kuran-yorumunda-semantik-yöntemin-imkânı">Kur’an Yorumunda
+ Semantik Yöntemin İmkânı </a></li>
+ <li><a href="#kuran-yorumunda-hermenötik-yöntemin-imkânı"
+ id="toc-kuran-yorumunda-hermenötik-yöntemin-imkânı">Kur’an Yorumunda
+ Hermenötik Yöntemin İmkânı </a></li>
+ <li><a href="#kaynakça" id="toc-kaynakça">Kaynakça</a></li>
+ </ul>
+  </div>
+
+
+
+   <!-- Okuma alanı -->
+   <div class="reading-container" id="readingArea">
+
+    <div class="reading-area" id="reading-area">
+	
+        <p><strong>ÇAĞDAŞ YÖNTEMLERLE KUR’AN’I YORUMLAMANIN
+        İMKÂNI</strong></p>
+        <p><strong>Osman KARA</strong>
+        <b><sup class="modal-trigger" data-content="Prof. Dr., Tekirdağ Namık Kemal Üniversitesi İlahiyat Fakültesi Tefsir ABD," style="cursor: pointer;">1</sup></b></p>
+        <h1 id="giriş">Giriş </h1>
+        <p>Tarihin belli bir kesitinde oluşmuş bir metni/söylenmiş bir
+        sözü, daha sonraki bir zaman diliminde anlamak ve yorumlamak
+        için sadece dil çözümlemeleri ve dilin kuralları yeterli
+        değildir. Özellikle de bu bir dini metin olursa durum içinden
+        çıkılmaz bir hal alır. Çünkü bir metni/sözü doğru anlayabilmek
+        ve ne söylenmek istendiğini ortaya koyabilmek için metnin/sözün
+        yazıldığı/söylendiği dönemde muhataplar tarafından nasıl
+        algılandığını ve anlaşıldığını, metne/söze muhatap olanların
+        düşünce dünyasını, metnin iç ve dış bağlamlarını ve metnin
+        bütünlüğünü dikkate almak gereklidir. Ayrıca anlama ve
+        yorumlamada; metnin türü, ifade ve üslubu da en az yukarıda
+        ifade ettiklerimiz kadar önemlidir. Her metin kendi türü
+        içerisinde ortaya çıkan kavram ve terimlerle anlaşılır. Örneğin
+        bir şiirin kendine has formu olduğu gibi nesir için de aynı şey
+        söz konusudur. Çünkü şiirde teşbih, istiare, mecaz gibi pek çok
+        edebi sanatların yanı sıra imge ve metaforlar, sembolik
+        anlatımlar yer alır. Aynı zamanda şiirde kafiye ve ölçü vardır.
+        Hatta her şiirin biçimi aynı değildir. Aynı şekilde nesir türü
+        metinler de dini metinlerden farklıdır. Örneğin dini bir metin
+        ile iktisat, edebiyat veya tarih ilmine ait bir metnin üslubu
+        birbirine benzemez. Bir metni çözümlemek ve yorumlamak için
+        dilin kurallarının yanı sıra metnin ilgili olduğu ilim dalının
+        kavram ve terimlerine ihtiyaç duyulacağı kesindir. Her bir ilim
+        dalının kendine ait farklı anlama ve yorumlama yöntemi vardır.
+        Anlamaya ve yorumlamaya çalıştığımız Kur’an ise içerdiği itikat,
+        ibadet, hukuki hükümler/cezai müeyyideler, ahlak ve gayb alemine
+        dair konuları kendine has kavram örgüsü ve anlatım üslubuyla
+        tarihin belli bir kesitinde, belli bir muhatap kitlesine, kendi
+        dilleriyle inen sözel dini bir hitaptır. Kur’an vahyi; sınırları
+        belirli bir coğrafyada (Arap yarımadası) yaşayan bir kavmin
+        (Arap/Kureyş) içinden çıkmış onların dilini konuşan ve onların
+        örf, adet, gelenek ve kültür dünyasından seçilmiş bir
+        peygambere, yirmi üç yıllık bir süreç içerisinde parça parça
+        inerek gerçekleşmiştir. Ayrıca vahiy ilk defa gerçekleşen bir
+        olay değil, Hz. Adem’den itibaren süregelen ve pek çok
+        peygamberin tecrübe ettiği bir vakıadır. Hz. Peygamber ve ona
+        indirilen Kur’an, vahiy zincirinin son halkası olup önceki
+        vahiyleri tasdik ve tafsil etmektedir. Kur’an’ın indiği dönemde
+        anlama ve yorumlama (beyan) faaliyeti Peygamber’in inen ayetleri
+        okuması (tebliğ), açıklaması (beyan) ve hükümlerini
+        uygulamasıyla (teşri’) gerçekleşmiştir. Vahiy süreci
+        Peygamberimizin vefatından kısa bir süre önce sona erdiği için
+        iki kapak arasına alma imkânı bulunamamıştır. Hz. Peygamber’in
+        vefatının hemen ardından bu metinler/sȗreler, nüzȗl sırasına
+        göre değil, sȗre tertibine göre kitap haline getirilmiş ve bu
+        tertip üzerinde de icma’/konsensüs sağlanmıştır. Daha sonra
+        yapılan yorumlama (tefsir ve te’vîl) faaliyetleri bu tertibe
+        göre metin üzerinden yapılmıştır. Kur’an’ı bu tertibe göre
+        yorumlayan müfessirler ayetlerin yorumunda sebeb-i nüzûl,
+        mekkî-medenî ve nâsih-mensȗh bilgisine müracaat etme ve Kur’an’a
+        bütüncül bakma (Kur’an’ın Kur’an ile tefsiri) ihtiyacı
+        duymuşlardır.</p>
+        <p>Sözel bir hitap olarak inen ve sonradan bir metin haline
+        dönüştürülen Kur’an ayetlerini yorumlarken; indiği dönemdeki
+        Resulullah’ın açıklamalarından ve sahabe rivayetlerinden farklı
+        metot ve çözümleme tekniklerinin kullanılması gerekir. Klasik
+        dönemde ilgili ayetlerin yorumunda rivayet ve sahabe
+        yorumlarının dikkate alınmasının yanı sıra, hicri II. asırdan
+        itibaren doğup gelişen kelam, fıkıh, tasavvuf, tarih ve siyer
+        gibi dini ilimlerin geliştirdikleri metotlardan yararlanılarak
+        dirayet yöntemine başvurulmuştur. Günümüzde ise bu yorum
+        yöntemlerine batı düşüncesinin de etkisiyle yenileri
+        (hermenötik, semantik vb.) eklenmiştir. Bu çalışmada Kur’an’ı
+        anlama ve yorumlamada bu çağdaş yorum yöntemlerinden
+        faydalanmanın imkân ve sınırları araştırılmaya çalışılacaktır.
+        Konuya Kur’an’ı anlama ve yorumlama kavramlarını ele alarak
+        başlamak doğru olacaktır.</p>
+        <h1 id="kuranı-anlamak-ve-yorumlamak">Kur’an’ı Anlamak ve
+        Yorumlamak </h1>
+        <p>Dilbilimcilerin sözlü/yazılı bir ifadenin işaret ettiği
+        zihinsel muhtevanın kavranması olarak kabul ettikleri anlama;
+        dilbilimci Rickman’a göre zihinsel bir faaliyetin
+        ürünüdür.<b><sup class="modal-trigger" data-content="Rickman, H.P. Anlama ve İnsan Bilimleri, çev. Mehmet Dağ, Ankara 1992, s. 42." style="cursor: pointer;">2</sup></b>
+        Beş duyu organı vasıtasıyla elde edilen bilgi ve izlenimler,
+        akıl süzgecinden geçirilerek anlaşılır. Temelde doğru bir
+        anlamanın gerçekleşmesi, duyu organlarının sıhhatiyle doğru
+        orantılıdır. Tıpkı bunun gibi herhangi bir sözün/metnin ne
+        dediğini veya ne demek istediğini doğru anlamak için duyulardan
+        gelen bilgilerin akıl süzgecinden geçirilerek, mantık ilminin
+        ölçütlerine göre test edilmesi gerekir. Çünkü mantık, aklın
+        yanlış hüküm vermesini engelleyerek insanın doğru düşünme ve
+        doğru bilgi elde etmesini
+        sağlar.<b><sup class="modal-trigger" data-content="Necip Taylan, Ana Hatlarıyla Mantık, İstanbul: Ensar, 2010, s. 11-12; İbrahim Çapak, Ana Hatlarıyla Mantık, İstanbul: Ensar, 2013, s. 14." style="cursor: pointer;">3</sup></b>
+        Bu, deney ve tecrübe yoluyla elde edilen bilgi rasyonel
+        anlamanın sonucudur. Ancak duyulara dayanmayan gayb ile ilgili
+        konulara dair haberler içeren vahyi anlamak için, öncelikle bir
+        elçinin varlığına ve rehberliğine ihtiyaç vardır. Bu sebeple
+        Kur’an’a göre elçiler, gönderildiği kavmin içinden seçilmiş,
+        onların dillerini konuşmuş ve aynı kültür ortamında
+        bulunmuşlardır.</p>
+        <p>Vahiy indiği toplumun dilini ve kültürünü kullanır. Bu
+        sebeple vahyi anlamak için o dilin kurallarını ve kullanımlarını
+        bilmek gerekir. Zihinsel bir faaliyet olan anlama dilin
+        kuralları içerisinde gerçekleşir. Bir anlama faaliyetinin
+        temelinde üç unsur vardır: Birincisi, insanın karşısındaki ile
+        iletişim kurma isteğinde ve kendini ifade etme eğiliminde
+        olmasıdır. İkincisi, ifade alanına ait olan dil kuralları ve
+        dilin içinde bulunduğu toplumun örf, adet ve geleneklerinin
+        bilinmesidir. Çünkü bir söz/metin ait olduğu dilin kurallarını
+        ve toplumun sosyokültürel ortamını bilmekle anlaşılır. Üçüncüsü
+        ise, söz veya metnin bağlamını dikkate almaktır. Bir kelime
+        cümle içinde, cümle paragraf içinde, paragraf metnin bütünlüğü
+        içerisinde
+        anlaşılır.<b><sup class="modal-trigger" data-content="Rickman, Anlama ve İnsan Bilimleri, s. 55." style="cursor: pointer;">4</sup></b>
+        Bir kelimenin sözlükte birden fazla anlam ifade edebilme (temel
+        anlam/yan anlam/mecazi anlam vs.) imkân ve ihtimali olsa bile,
+        cümlede o anlamlardan sadece biri kastedilir. Kastedilen bu
+        anlamın tespiti ise cümlenin siyak-sibakından anlaşılır.</p>
+        <p>Kur’ân ayetleri, nazil olduğu Arap dilinin imkân ve
+        sınırlarıyla anlaşılır. Çünkü dil toplumsal bir olgu ve eylem,
+        söz ise bireysel bir etkinliktir. Sözden kastedilen anlam
+        karşılıklı iletişimle ortaya çıkar. Dilin kendisi bir şey
+        bildirmez, sadece insanın bir şeyi irade etmesine aracılık eder.
+        Aynı zamanda insanın duygu ve düşüncelerinin dışa aktarımında
+        rol üstlenir. Kişi duygu ve düşüncelerini dilin alanı
+        içerisinde, dilin imkanlarını ve kurallarını kullanarak
+        oluşturur. Anlam ise dilin kendisinden ziyade kullanımında
+        ortaya çıkar. Anlam, dilin genel bilgisi içinde değil, o dilde
+        konuşan kimsenin maksat ve muradında saklıdır. Anlamdaki gerçek
+        maksat, konuşanın ve yazarın niyetinde gizlidir. Bir sözü/metni
+        anlamak, kaçınılmaz olarak sözün/metnin sahibini ve maksadını,
+        sözü/metni oluşturan dili, bu dilin konuşulduğu toplumu ve
+        kültürünü, sözün/metnin zaman ve mekâna ait süreçlerini, kısaca
+        dil içi ve dil dışı olgu ve bağlamları bütüncül bir bakışla
+        derinlemesine anlamaya çabalamaktır. Bu bütüncül bakış ise,
+        dilin dışına çıkmayı, dilin arka planında kalan, ilk bakışta
+        fark edilemeyen olgu ve olayları dikkate almayı
+        gerektirir.<b><sup class="modal-trigger" data-content="Cündioğlu, Anlamın Buharlaşması ve Kur’an, İstanbul: Kitabevi, trs, s. 56." style="cursor: pointer;">5</sup></b>
+        Bunlar dikkate alınmadan sözü/metni doğru bir şekilde anlama
+        gerçekleşemez.</p>
+        <p>Buradan hareketle Kur’ân’ı anlamak bir dili (lisanı/Arapça),
+        dilde/ dille ifade edilmiş bir sözü/metni anlamayı ifade
+        ettiğini söyleyebiliriz. Kur’ân mahiyetini kavrayamadığımız
+        ilahi bir sözün (vahiy) Cebrail aracılığıyla Peygamberimize Arap
+        dilinde bildirilmiş
+        halidir.<b><sup class="modal-trigger" data-content="Cündioğlu, Anlamın Buharlaşması, s. 47." style="cursor: pointer;">6</sup></b>
+        Kur’an’ı anlamak demek, Arapça lisanına bürünmüş ontolojik
+        düzeyde bizim varlığımızdan farklı olan ilahi bir varlığın
+        (Allah) dilini anlamaktır. Bu sebeple Kur’ân’ı anlamak diğer
+        sözleri anlamak kadar kolay değildir. Çünkü bize yöneltilen bir
+        sözü/metni anlayamadığımız zaman karşımızdaki sözün/metnin
+        sahibine soru yönelterek, sözüyle neyi kastettiğini öğrenebilme
+        imkânımız vardır. Ancak Kur’ân için böyle bir imkândan
+        bahsedilemez. Çünkü ayeti vahyeden Allah’ın maksat ve muradını
+        sorma şansımız olmadığı gibi ilk muhatapların anladığını aynen
+        tekrar etme imkânımız da yoktur.</p>
+        <p>Bu sebeple ayette kastedilen anlamın tespiti için dil ve dil
+        dışı vasat ve imkânların araştırılması gerekir.</p>
+        <p>Kur’ân, kendi beyanıyla Arap diliyle (lisânen ‘arabiyyen) ve
+        o dili konuşan muhatapların anlayabileceği şekilde
+        indirilmiştir. Kur’ân, muhatapları tarafından anlaşılamayacak
+        şekilde kapalı ve anlaşılmaz bir dille indirilmiş bir kitap
+        değildir.<b><sup class="modal-trigger" data-content="Şu‘arâ, 26/193-194, Fussilet, 41/43-44, Ahkâf, 46/12" style="cursor: pointer;">7</sup></b>
+        Her peygamber gönderildiği kavmin diliyle o günkü bilgi düzeyine
+        uygun olarak (bi lisâni kavmihi) mesajını
+        getirmiştir.<b><sup class="modal-trigger" data-content="İbrahim, 14/4." style="cursor: pointer;">8</sup></b>
+        Kur’ân’ın anlaşılması, ayrıca peygamberin beyan etmesine de
+        bağlıdır. Zira beyanın imkânı, beyana muhatap olan kavimlerin
+        lisanlarında tezahür eder. Böylece muhatapların, kendi
+        dilleriyle ifade edilen sözü/metni anlama hususundaki ileri
+        sürdükleri/sürecekleri mazeretleri kalmaz. Çünkü kendilerine
+        sade, açık ve anlaşılır bir dille hitap
+        edilmiştir.<b><sup class="modal-trigger" data-content="Cündioğlu, Anlamın Buharlaşması, s. 64." style="cursor: pointer;">9</sup></b>
+        Anlaşılmayan bir söz/metin üzerinde düşünmek ve fikir beyan
+        etmek imkânsızdır. “Düşünesiniz diye onu Arapça olarak
+        indirdik”<b><sup class="modal-trigger" data-content="Yusuf, 12/ 2." style="cursor: pointer;">10</sup></b>
+        ayeti bir sözün üzerinde fikir yürütebilmek için onun manasını
+        bilmemiz gerektiğine vurgu yapar. Bir söz/metinden murat edilen
+        şey, sadece lafızlarının telaffuz edilmesiyle değil, lafızdan
+        kastedilen mananın anlaşılmasıyla ancak ortaya
+        çıkar.<b><sup class="modal-trigger" data-content="Takıyuddin Ahmed b. Abdulhalim b. Teymiyye, Mukaddime fî usûli’ttefsîr, thk. Adnan Zarzur, Şam 1972, s. 37" style="cursor: pointer;">11</sup></b>
+        Kur’ân’a göre anlama faaliyeti “akletme” faaliyeti olan
+        tedebbür, tefekkür, tezekkür, ta‘akkul ve tefekkuh kavramlarıyla
+        ve kalb, basiret ve lübb (akıl) vasıtalarıyla mümkün
+        olur.<b><sup class="modal-trigger" data-content="Şu‘arâ, 26/89, Yusuf, 12/108, Âl-i İmrân, 3/7, 190." style="cursor: pointer;">12</sup></b>
+        Çünkü bu anlama ve yorumlama faaliyetinin sadece rivayet yoluyla
+        tespit edilmesi bazen yeterli olamayabilir. Çünkü sosyal olaylar
+        ve sorunlar sınırsız, rivayetler ise sınırlıdır. Bu sebeple,
+        dirayet tefsirinin caiz olup olmadığıyla ilgili tartışmalara
+        rağmen dirayet yönteminin de tarih içerisinde yer aldığı ve
+        görmezlikten gelinemeyeceği ortadadır.</p>
+        <p>Bütün bunlara rağmen Kur’ân’ı en doğru anlayan, anlatan ve
+        uygulayanın Hz. Peygamber olduğunu da görmezden gelemeyiz. Bu
+        sebeple Kur’ân’ın indiği ortamla ilgili rivayet ve bilgiler
+        bizim için çok değerlidir. Sadece ayetlerin sebeb-i nüzûlü
+        değil, aynı zamanda o dönemde kullanılan dil, sosyokültürel
+        çevre, yaşayan insanların örf ve adetleri de ayetlerin ne demek
+        istediğinin anlaşılmasında önemli rol oynar. Kur’ân metninin
+        anlaşılabilmesi için, önce onun dil dokusunu, metni oluşturan
+        lafızların kök anlamlarını ve delaletlerini, kavramlarda meydana
+        gelen anlam kaymalarını (daralma/genişleme), çok anlamlı
+        kelimelerin ayette hangi anlama geldiğini, eş anlamlı lafızlar
+        arasındaki nüansları (furȗku’l-lugaviyye) tespit etmenin ne
+        kadar hayati öneme sahip olduğu izahtan varestedir. Ayrıca
+        anlamın oluşmasında etkisi olan dil dışı unsurları, yani
+        kültürel, toplumsal, tarihsel ve olgusal bağlamları dikkate
+        almak gereklidir. Bu söylenenlere ilaveten ayetin kime ne
+        söylediğinin, niçin söylediğinin, nerede ve ne zaman
+        söylediğinin tespit edilmesi, Kur’ân’ı doğru anlama ve
+        yorumlamanın en önemli unsurlarıdır. Sebeb-i nüzûl,
+        mekkî-medenî, iç ve dış bağlam ve makâsıda dair bilgiler bu
+        soruların cevaplarını içerisinde
+        barındırır.<b><sup class="modal-trigger" data-content="Muhsin Demirci, Tefsirde Metodolojik Sorunlar, İstanbul: İFAV, 2012, s. 261-273." style="cursor: pointer;">13</sup></b></p>
+        <p>Bunların yanı sıra lafızları sentaks/nahiv, morfoloji/sarf ve
+        belâgat açısından lafzî olarak tahlil etmek yorum için
+        gereklidir, ancak kesinlikle yeterli değildir. Çünkü sözü/metni
+        anlama ve yorumlamada asıl amaç; metnin arka planını, ne
+        söylemek istediğini (maksadını) anlamak ve kavramaktır. Bu
+        sebeple anlama ve yorumlamada dikkat edilmesi gereken önemli bir
+        nokta da Kur’ân metninin siyak-sibakını ve metnin bütünlüğünü
+        dikkate almaktır.</p>
+        <p>Dili ve dilin özelliklerini bilmenin ötesinde, doğru
+        anlamanın gerçekleşmesi için hayati öneme sahip diğer bir husus
+        ise kast-ı mütekellimin yani sözü söyleyenin veya metni yazanın
+        ondan ne kastettiğini
+        bilmektir.<b><sup class="modal-trigger" data-content="Muhammed ‘Âbid el-Cabirî, Bünyetu’l-‘akli’l-‘arabî, Beyrut: Merkezu dirasati’l-vahdeti’l-‘arabiyye, 1986, s. 68." style="cursor: pointer;">14</sup></b>
+        Bu sebebe ve maksada ulaştıran şeye kelamcılar delil, fakihler
+        illet, dilciler ise karine demişlerdir.</p>
+        <p>Yorum geleneğimizde klasik anlama ve yorumlama yöntemlerini
+        tefsîr ve te’vîl kavramları ifade eder. Tefsîr; “fsr” veya “sfr”
+        kökünden türemiştir. “Fsr” kökünden türeyen tefsir kelimesi,
+        üzeri kapalı bir şeyi açmak, izah etmek ve açıklamak anlamına
+        gelir. “Sfr” kökünden ise, aydınlatmak, ortaya çıkarmak,
+        üzerindeki örtüyü kaldırmak gibi manalarda
+        kullanılmaktadır.<b><sup class="modal-trigger" data-content="İbn Manzûr, Lisânu’l-‘arab, Beyrut: Daru Sadır, trs., V, 55, Zerkeşî, elBurhân fî ‘ulûmi’l-Kur’ân, thk., Mustafa Abdulkadir ‘Atâ, Beyrut: Dâru’lkütübi’l-ilmiyye, 1988, II, 162-163." style="cursor: pointer;">15</sup></b>
+        Istılahta ise; Allah’ın muradına delaleti bakımından beşer
+        gücünün yettiği ölçüde Kur’an’ın manasını araştıran bir ilimdir.
+        Arap dili ve belâgatı ile ilgili bütün araçları kullanıp,
+        ayetleri çevreleyen tarihsel şartları da dikkate alarak,
+        Allah’ın muradını kitap ve sünnet çerçevesinde ortaya
+        çıkarmak<b><sup class="modal-trigger" data-content="Zürkânî, Menâhil, I, 471; Demirci, Tefsir Usûlü, İstanbul: İFAV, 2017, s. 26." style="cursor: pointer;">16</sup></b>
+        şeklinde de ifade edilmiştir. Te’vîl ise; “evl” kökünden
+        gelmekte olup, sözlükte aslına dönmek, döndürmek ve işin
+        varacağı sonuç anlamlarına gelir. Istılahta ise; ayeti muhtemel
+        anlamlarından birine
+        yormaktır.<b><sup class="modal-trigger" data-content="Ragıb el-İsfahânî, Müfredât fî ğarîbi’l-Kur’ân, thk. Muhammed Seyyid Keylanî, Beyrut: Daru’l- Ma‘rife, trs., I, 39; Zerkeşî, Burhân, II, 165;" style="cursor: pointer;">17</sup></b>
+        Kur’an’da geçen bu kelime sözlük anlamıyla bir şeyin hakikatini,
+        sebebini ve sonucunu bilmek ve rüya tabiri anlamında
+        kullanılmıştır.<b><sup class="modal-trigger" data-content="Âl-i İmrân, 3/7, Kehf, 18/78, Nisâ 4/59, Yusuf, 12/100" style="cursor: pointer;">18</sup></b></p>
+        <p>Te’vîl, müteşâbih ayetlerin yorumu ve anlamı kapalı (mücmel),
+        müşkül, müphem ve çok anlamlı kelimelerin anlamlarını tespit
+        etmek için yapılır. Bu sebeple te’vîl, zannî bir yorumdur.
+        Tefsir lafızlarda söz konusu olurken; te’vîl mecâzî, derûnî ve
+        batınî anlamlara yöneliktir. Tefsir nakle, te’vîl akla dayanır.
+        Bu sebeple tefsir kesinlik ifade ederken; te’vîl, içerisinde
+        öznellik/sübjektiflik ve keyfilik, mezhebi ve ideolojik tutumlar
+        barındırır.</p>
+        <p>İslam düşünce geleneğinde üç tür te’vîl biçimi ortaya
+        çıkmıştır: Birincisi tefsir, fıkıh, kelam ve dilcilerin Arap
+        dilinin kuralları çerçevesinde Kur’an’ı yorumlamakta kullandığı
+        beyânî te’vîldir. Bu te’vîl şekline, Kelamcıların Allah’ın zat
+        ve sıfatlarıyla ilgili olarak yed, vech ve istivâ gibi
+        kelimeleri mecâzî, fıkıhçıların ahkâm ayetlerinde geçen çok
+        anlamlı kelimeleri farklı yorumlamaları örnek
+        gösterilebilir.</p>
+        <p>İkincisi tasavvuf ehlinin kalbine doğan keşf, ilham ve sezgi
+        gibi bir takım vehbî bilgilere dayanan tefekkür, tezekkür ve
+        arınmayla ulaşılan irfânî ve batınî te’vîldir. Bu tür te’vîl
+        tamamen öznel ve sübjektiftir. “Gerçek şu ki, insanlar için
+        yapılmış olan ilk ev, âlemlere bir hidayet ve bereket kaynağı
+        olan Mekke’deki evdir” ayetini yorumlayan Tusterî Allah’ın
+        evinden kastedilen batınî anlamın Rasulullah olduğunu ifade
+        eder.<b><sup class="modal-trigger" data-content="Âl-i İmran, 3/96, Tusterî, Tefsir, s. 41." style="cursor: pointer;">19</sup></b>
+        Üçüncüsü ise felsefecilerin kullandığı tamamen akla ve burhana
+        dayanan burhânî (aklî) te’vîldir.</p>
+        <p>Tedvin döneminden itibaren klasik tefsir çalışmalarında
+        Kur’ân’ı anlama ve yorumlama faaliyeti iki farklı mecrada devam
+        etmiştir. Bunlardan birisi rivayet diğeri ise dirayet
+        yöntemidir. Rivayet yöntemi ayetleri, sırasıyla ayet, sünnet ve
+        sahabe kavliyle anlamayı ve yorumlamayı esas alır. Bu yöntemde
+        ayetlerin nerede, kim hakkında, niçin indiği gibi bilgiler
+        önemlidir. Bu konuda başta Peygamberimiz olmak üzere, sahabe ve
+        tabiînden gelen rivayetler esas alınır. Ayrıca Kur’ân’ın indiği
+        ortama dair sebeb-i nüzûl, mekkî-medenî, nâsih-mensûh gibi
+        bilgiler, kelimelerin açıklanmasında şiirden istişhad edilmesi
+        de bu ekolün yöntemlerindendir. Ancak rivayet tefsirleri,
+        rivayetin sahihliğini sağlayan isnad zincirinin ortadan
+        kaldırılması, israiliyyât bilgilerinin eleştiri süzgecinden
+        geçirilmeden nakledilmesi ve sûrelerin faziletine dair bazı
+        zayıf ve uydurma rivayetleri içinde barındırması sebebiyle yoğun
+        biçimde eleştirilmiştir.</p>
+        <p>Dirayet yöntemi ise sınırsız sayıdaki problemlerin çözümü
+        için sınırlı sayıdaki rivayet ve bilgilerin Kur’ân’ı anlama ve
+        yorumlamada yetersiz kalması sebebiyle, müfessirin filoloji,
+        belâgat, tarih, siyer, fıkıh, kelam, tasavvuf gibi çeşitli
+        ilimlerden faydalanarak kendi düşüncesini kattığı yorumlama
+        faaliyetidir. Bu yöntem ortaya çıktığı dönemde “Kur’ân’ı kendi
+        re’yine göre yorumlayan isabet etse de hata etmiştir” hadisine
+        dayanılarak eleştirilmiştir. Ancak buradaki re’yden maksadın
+        herhangi bir rivayet ve kaynağa dayanmayan kişinin hevâ ve
+        arzusuna göre yapılan yorum olduğu karşı tezi ileri sürülerek
+        değişen ve gelişen zaman içerisinde ortaya çıkan yorum,
+        sorunlarının çözümü için bu metodun elzem olduğuna dikkat
+        çekilmiştir.</p>
+        <p>Dirayet yöntemiyle Kur’ân’ı anlamak için zihni bir ön
+        hazırlık (tedebbür, tefekkür, tezekkür) yaptıktan sonra
+        yorumlama faaliyetinin sistemli hale getirilmesi zorunludur.</p>
+        <p>Kur’an’ın mantukunu (zahirini, ne dediğini) anladıktan sonra
+        mefhumunu (ruhunu, makâsıdını) ortaya çıkarmak gerekir.
+        Kur’an’ın zahiri anlamının tespiti için tarihi bağlamın (sebeb-i
+        nüzûl, mekkî-medenî, nesh) yanı sıra, dil ve üslûp özellikleri
+        dikkate alınması, mefhumunun anlaşılması için ise makâsıd ve
+        maslahata göre yorum yapmanın ilkelerinin gözetilmesi
+        gereklidir. Bu sebeple tarihi şartlar ve tartışılan sorunlar
+        çerçevesinde Kur’an farklı perspektif ve bakış açısıyla çeşitli
+        yöntemlerle tefsir edilmiş ve edilmeye de devam edecektir.
+        Tefsir geleneğimiz içerisinde zamanın düşünce birikimine göre
+        mezhebî/itikâdî, fıkhî, işârî, bilimsel/fennî,
+        içtimâi/sosyolojik, ideolojik/siyasi, felsefî ve beyânî olmak
+        üzere pek çok yorum ekolü ortaya çıkmıştır. Bu yöntemlerin yanı
+        sıra XIX. asırdan itibaren günümüze kadar batıda ortaya çıkan
+        yorum yöntemleri zaman zaman Kur’an’a uygulanmaya çalışılmıştır.
+        Ancak her toplumun ve kültürün yorumlama tarzı ve kullandığı
+        araç ve yöntemler kendi gelenek, kültür ve düşünce dünyasının
+        ürettiği problemleri çözmek için ortaya çıkmıştır. Bu sebeple
+        her yorum yöntemi, ortaya çıktığı kendi düşünce geleneği
+        içerisinde değerli ve anlamlı durmaktadır.</p>
+        <p>şte bu sebeple, bundan sonraki başlıkta semantik yöntem
+        üzerinde durulduktan sonra, Batı’da önceleri metinleri anlama ve
+        yorumlama yöntemi olarak ortaya çıkan daha sonra kutsal
+        kitapların yorumunda kullanılan hermenötik ve bu iki yöntemin
+        Kur’an’a uygulanabilme imkânı üzerinde durulacaktır.</p>
+        <h1 id="kuran-yorumunda-semantik-yöntemin-imkânı">Kur’an
+        Yorumunda Semantik Yöntemin İmkânı </h1>
+        <p>Grekçe/Yunanca “sémantiké-sémantikos” kökünden gelen, ilk
+        defa 1897 yılında Fransız dilci Michel Bréal tarafından
+        kullanılan semantik (semantique) kavramı, sözlükte; anlamak,
+        anlamlı, manidar, gizli anlama sahip, anlam veren/belirten gibi
+        anlamlara gelir. Bu kelimenin fiil hali “semanein” olup;
+        göstermek, mana vermek, kastetmek, yönelmek manalarında
+        kullanılır. İhtiva ettiği bu anlamlardan hareketle, “semantikos”
+        kelimesine, “dilde bir manayı gösteren” anlamı yüklenmiştir. Bu
+        kelime Eski Yunanca’da işaret etmek, bir anlam ifade etmek
+        anlamlarına gelen sēmaínō fiilinden türetilmiştir. Bu fiilin kök
+        kelimesi sēma ise; işaret, simge ve gösterge anlamlarına
+        gelmektedir.<b><sup class="modal-trigger" data-content="Mehmet Soysaldı, Kur’an’ı Anlama Metodolojisi, Ankara: Fecr Yayınevi, 2001, s. 18" style="cursor: pointer;">20</sup></b>
+        İlmi bir disiplin olarak semantik, anlam bilimidir. Arapça ’da
+        bunun karşılığı ‘ılmu’lmeânî’dir.</p>
+        <p>Semantik, anlamla ilgili olarak kullanılan teknik bir
+        terimdir. Bir başka ifadeyle söyleyecek olursak; “anlam, dilin
+        bir parçası ise, semantik de dilbilimin bir parçasıdır”
+        denilebilir. İlmî bir disiplin olarak semantik; “kelimeler ve
+        önermelerle onların ifade ettiği anlam arasındaki ilişkiyi
+        inceleyen bilim dalıdır” denilebilir. Bu tarifi şöyle
+        açımlayabiliriz: Semantik; dili anlam yönünden ele alır,
+        göstergenin (sema) gösterilen bölümünü ya da içeriği
+        synchronic/eşsüremli ve diachronic/artsüremli açılardan inceler.
+        Anlambilim dilin en küçük öğesi olan kelimenin kök anlamından
+        başlayarak onun dilde diğer kelimelerle bir arada kullanılarak
+        cümlede oluşturduğu anlam ilişkisini (synchronic/eşsüremli) ve
+        zaman içerisinde geçirdiği anlam değişmelerini
+        (diachronic/artsüremli) ele alan ve inceleyen bir
+        disiplindir.<b><sup class="modal-trigger" data-content="Doğan Aksan, Anlambilimi ve Türk Anlambilimi, Ankara: Engin Yayınevi, 1999, s. 88." style="cursor: pointer;">21</sup></b>
+        Bu yaklaşım, semantiğin geleneğimizde kullanılan vücûh-nezâir,
+        garîbu’l-Kur’ân, ma‘âni’l-Kur’an, mecâzü’l-Kur’an,
+        furȗku’llugaviyye ve lafzu’l-müşterek gibi Kur’an ilimleri ve
+        belâgat ilmi ile örtüşen yanlarının bulunduğunu
+        göstermektedir.<b><sup class="modal-trigger" data-content="Mehmet Paçacı, “Tefsirde Semantik ve Hermenötik”, İslami İlimlerde Metodoloji/Usul Mes’elesi I, İstanbul: Ensar, 2005, s. 585." style="cursor: pointer;">22</sup></b></p>
+        <p>Batıda dilbilimsel incelemelerin farklı düzeylerde yapıldığı
+        bilinmektedir. Kelimelerin ses yapısını ve bu yapıların
+        kelimelerle ilişkisini konu edinen çalışmalar fonetik
+        (phonology); kelimelerin cümle içindeki ilişkilerini inceleyen
+        çalışmalar sentaks (syntax); kelime ve cümle yapılarının anlam
+        ilişkilerini inceleyen çalışmalar ise semantik (semantic) olarak
+        isimlendirilmektedir.<b><sup class="modal-trigger" data-content="Muhammed Coşkun, Modern Dünyada Kur’an Yorumu, İstanbul: İFAV, 2018, s. 71" style="cursor: pointer;">23</sup></b>
+        Bu dilbilimsel incelemeler Arap dili de dahil hemen hemen her
+        dilde yapılmakta, ancak farklı kavramlarla ifade
+        edilmektedir.</p>
+        <p>İslâm düşüncesi ve Kur’an’da ifade edilen dini ve ahlaki
+        kavramların semantik analizleri üzerine çalışmalar yapan Japon
+        şarkiyatçı Toshihiko Izutsu’ya (1914-1993) göre; anlambilim
+        (semantik), bir dilin anahtar terimleri üzerinde yapılan
+        tahlilî/analitik çalışmadır. Bu çalışmada dil, sadece konuşma
+        aleti olarak değil, o dili kullanan toplumun dünya hakkındaki
+        düşünce ve tasavvurlarını kavrayabilmek amacıyla, kendilerini
+        kuşatan dünya hakkındaki anlayış ve düşüncelerini yansıtan bir
+        araç olarak
+        incelenir.<b><sup class="modal-trigger" data-content="Toshihiko Izutsu, Kur’an’da Allah ve İnsan, çev. Süleyman Ateş, İstanbul: Yeni Ufuklar, trs., s. 15." style="cursor: pointer;">24</sup></b></p>
+        <p>Semantik, kelimelerin yapılarını, geçirdikleri anlam
+        değişmelerini, cümlede kullanılışlarını, geçirdikleri tarihsel
+        süreçlerini, insan düşünce kültür ve davranışlarıyla olan
+        ilişkilerini araştırır. Sözcüklerin anlamları üzerinde bilimsel
+        düzeyde ve eleştirel nitelikli araştırmalar yapar. Anlam
+        düzleminde görülen değişimler, dilsel yapıların içerik açısından
+        ortaya çıkardıkları çeşitli sorunlar semantiğin inceleme alanına
+        girer.<b><sup class="modal-trigger" data-content="Ahmet Rifat, XX. Yüzyılda Dilbilim ve Göstergebilim Kuramları, İstanbul: Yapı Kredi Yayınları, 2005, s. 122." style="cursor: pointer;">25</sup></b></p>
+        <p>Semantiğin sentaks incelemesinde bir bakıma kelimelerin soy
+        kütüğü çıkarılır, onların tarihsel süreçte geçirdikleri anlam
+        daralması ve genişlemesi gibi değişimler izlenir. Bu araştırma
+        ve incelemelerin sonucunda dilde kullanılan kelimelerin müşterek
+        anlamlı olması durumunda, bu anlamlar arasında temel ve yan
+        anlamların tespitinin yapılması mümkün hale gelir. Izutsu’nun
+        esas mana ve izafi mana şeklinde yaptığı bu ayrım sentaks
+        düzeyindeki incelemenin önemli bir basamağıdır. Bu incelemede
+        esas yöntem; kelime ve kavramların artsüremli olarak ele
+        alınması, yani tarihsel süreçte anlam genişlemesi ve daralması,
+        anlam kayması şeklindeki dönüşüm ve değişimlerin incelenmesidir.
+        Diğer taraftan cümle düzeyinde inceleme yapılırken dilbilimsel
+        malzeme eşsüremli olarak incelenir. Yani metinde kullanılan
+        kelime ve kavramlar, benzer ve zıt kavramlar üzerinden
+        değerlendirilir. Mesela; Kur’an metni incelenirken metinde geçen
+        bir kavramın nüzûl dönemindeki anlamının tespiti önem arz eder.
+        Çünkü bir Kur’an kavramı nüzûl dönemi öncesi ve nüzûl dönemi
+        sırasında ve sonrasında farklı anlamlarda kullanılabilmektedir.
+        İşte böyle bir kavramın tarih içerisinde kazandığı farklı
+        anlamlarının tespiti, artsüremli semantik bir incelemenin
+        alanına girmektedir. Diğer taraftan ayette geçen bir kavramı
+        benzer ve zıt kavramlarla ele alıp aralarında var olan ilişkiyi
+        incelemek ise eşsüremli semantik incelemenin konusunu teşkil
+        etmektedir.</p>
+        <p>Semantik alanında yapılan ilk çalışmalar, sözlük ve kelime
+        bilgisi merkezli incelemeler şeklinde ortaya çıkmıştır.</p>
+        <p>Diğer taraftan doğrudan semantik kelimesinin modern dilbilim
+        incelemeleri çerçevesinde ilk kullanıldığı metin Bréal’in
+        (1832-1915) Essai de Semantique: Sience de Signifiations isimli
+        eseridir. Bréal, bu eserinde semantiğin dilbilimsel çalışmalarda
+        son derece önemli fakat bir o kadar da göz ardı edilmiş bir alan
+        olduğuna vurgu yapmaktadır. Bréal’e göre, dili kullananlar onu
+        kelimelerin kök anlamlarına başvurmaksızın kullanmakta ve
+        anlamaktadırlar. Dahası dil sadece betimleyici ve anlatıcı
+        değil, aynı zamanda işlevsel yönleri olan bir yapıdır. Dilsel
+        ifadeler; soru sormak, durum bildirmek, iddia öne sürmek,
+        açıklama yapmak, söz vermek, izin talep etmek gibi pek çok
+        işlevi yerine getirir. Eserinde kelime ve kavramların tarihine
+        yönelik incelemeleri de konu edinen Bréal bu şekilde, sonraki
+        dönemlerde semantik incelemede önemli bir yer tutacak olan
+        “anlam dönüşümleri” meselesini dilbilimsel çalışmaların
+        merkezine
+        yerleştirmiştir.<b><sup class="modal-trigger" data-content="Aksan, Anlambilim, s. 18; Coşkun, Modern Dünyada Kur’an Yorumu, s. 76." style="cursor: pointer;">26</sup></b></p>
+        <p>Bréal’den sonra semantik alanında “kavramsal incelemeye”
+        ağırlık verenlerin başında Prag dilbilim okulundan Roman
+        Jakobson ve Zellig Harris gelmektedir. Semantiğin gelişim
+        sürecindeki bir sonraki aşama ise “semantik alan” teorisinin
+        konuşulmaya başlandığı dönem olmuştur. Aralarında zıtlık,
+        benzerlik, sebep-sonuç vb. ilişkiler bulunan ve bir şekilde
+        ortak bir kavramsal alana delalet eden kelimelerin bir arada ve
+        karşılaştırmalı olarak incelenmesine “semantik alan” teorisi
+        denilmektedir. Bu teori, belli bir metnin temasını yansıtan
+        dilsel unsurları ve bunlar arasındaki ilişkilerin tespitini
+        hedeflemektedir. İsviçreli dilbilimci Ferdinand Saussure’in
+        (1857-1913) dil-söz ayrımı ve dilsel göstergelerin sürekli
+        olarak birbirleriyle olan benzerlik ve farklılık ilişkileri
+        üzerinden anlamı inşa ettikleri yönündeki tezi, semantik alan
+        teorisinin temel fikrinin oluşmasına zemin
+        hazırlamıştır.<b><sup class="modal-trigger" data-content="Coşkun, Modern Dünyada Kur’an Yorumu, s. 76-77." style="cursor: pointer;">27</sup></b></p>
+        <p>Kelimeler bir dilin yapı taşlarıdır. Kelimelerin doğru
+        anlamları tutarlı bir şekilde belirlenmezse, cümleler
+        anlaşılamaz. Dolayısıyla okunan metin de doğru anlaşılamaz.
+        İnsanları dünya ve ahiret mutluluğuna ulaştırmak için gönderilen
+        Kur’an’ın, bu gayeye uygun olarak anlaşılması ve yorumlanması
+        büyük önem arz etmektedir. Bunun gerçekleşebilmesi için Kur’an
+        kelimelerinin delâlet ettiği manaların ortaya çıkarılması
+        lazımdır.<b><sup class="modal-trigger" data-content="Soysaldı, Kur’an’ı Anlama Metodolojisi, s. 33." style="cursor: pointer;">28</sup></b></p>
+        <p>Bu noktada Kur’an’ın tefsirinde çağdaş dönemde düşünce
+        dünyamıza giren anlambilim (semantik) disiplininden
+        yararlanabilmenin imkânı üzerinde kısaca durmak gerekir. Böylesi
+        bir disiplin Kur’an’ın dilbilimsel çözümlemesini yöntemlerinden
+        birisi olarak belirleyen tefsir içerisinde tabii olarak onun
+        yöntemleri ile örtüşecektir. Özellikle 20. yüzyılda çağdaş
+        dönemin ihtiyaçlarına göre gelişim gösteren bu disiplinin konu
+        alanı İslam uygarlığında konu edildiği gibi, İslam öncesi Yunan
+        felsefesinde de ele
+        alınmıştır.<b><sup class="modal-trigger" data-content="Aksan, Anlambilim, s. 16." style="cursor: pointer;">29</sup></b></p>
+        <p>Dilbilimin anlamla ilgilenen; kelimelerin ve kelimelerin
+        oluşturduğu cümlelerin anlamını inceleyen bir alt dalı olan
+        anlambilim, sözlü veya yazılı bir dil öğesini bir anlamla
+        ilişkilendiren her tür ifadeyi konu edinir. Nesneler ve onları
+        ifade eden sözcükler arasındaki ilişkiyi inceleyen çalışmalar
+        çok eskiye dayanır. Ancak bir bilim dalı olarak, dilbilimsel
+        anlam incelemeleri XIX. yüzyılın sonlarında gelişmeye
+        başlamıştır.</p>
+        <p>Metin yapısı ve bu yapıyı oluşturan kelime ve cümleler
+        arasındaki anlam ilişkileri gibi hususları konu edinen
+        anlambilim (semantik), tefsir disiplini ile doğrudan
+        irtibatlıdır. Bu çerçevede semantik metot içerisinde incelenen
+        bazı konuların klasik tefsir literatüründe tikel düzeyde
+        karşılıklarını bulmak mümkündür. Özellikle filolojik tefsirlerde
+        kelime ve kavram tahlilleri yapılmış, kelimelerin etimolojik
+        yapısı üzerinde durulmuştur. Nahiv ve belâgat ilimlerinde ise
+        dilin sistematiği ve dilsel öğelerin iç ilişkileri ve uyumu
+        etraflıca incelenmiştir. Bu çalışmaların yanı sıra müfessirler
+        Kur’an kelimelerinin tarihsel süreçte geçirdikleri anlam
+        değişimlerini göz önünde bulundurarak hem bu kelimelerin nüzûl
+        dönemindeki anlamını yansıtan rivayetlere hem de Cahiliye
+        şiirine sıklıkla müracaat etmişlerdir. Ancak bu çalışmalardan
+        hareketle klasik dini ilimler içerisinde çağdaş semantik
+        incelemelere birebir karşılık gelecek analizlerin yapıldığını
+        düşünemeyiz. Zaten farklı kültürlere ait disiplinleri
+        indirgemeci bir yaklaşımla ele alıp mukayese etmenin faydası
+        olmadığı gibi yanıltıcı sonuçlar da ortaya çıkarabilir. Çağdaş
+        sosyal bilimlerde ele alınan pek çok mesele hem İslami ilimlerde
+        hem de diğer kültürlerin bilimsel geleneklerinde tartışma konusu
+        edilmiş olma imkânı vardır. Çünkü belli bir kutsal kitaba sahip
+        olan ve onu anlamaya çalışan her toplum zamanla benzer
+        meselelerle karşılaşabilir. Ancak bu meselelerin tartışılma ve
+        inceleme biçiminin, kültürden kültüre farklılıklar göstermesi
+        doğaldır.<b><sup class="modal-trigger" data-content="Coşkun, Modern Dünyada Kur’an Yorumu, s 78." style="cursor: pointer;">30</sup></b></p>
+        <p>Buradan hareketle Batı’da ortaya çıkmış semantik kavramını
+        Kur’an’a uygulamanın imkânı ve sınırlarıyla ilgili kısa bir
+        bilgi vermek yerinde olacaktır: İster dini olsun ister olmasın
+        herhangi bir metnin doğru anlaşılmasının temel şartı metnin inşa
+        edildiği dilin yapısı ve özelliklerine göre anlaşılmasıdır. Bu
+        durumda ilgili metnin, zorunlu olarak dilbilimsel ve anlam
+        bilimsel açılardan analiz edilmesi gerekir. Metnin, tarihin
+        belli bir döneminde inşa edilmiş olması, dilin tarihi gelişim ve
+        değişim seyrinin araştırılmasını ve o dönemin kavram ve
+        kelimelerinin anlam düzeylerinin tespit edilmesini zorunlu
+        kılar.<b><sup class="modal-trigger" data-content="Hasan Yılmaz, Semantik Analiz Yönteminin Kur’an’a Uygulanması. Bursa: Kurav Yayınları 2007, s. 168." style="cursor: pointer;">31</sup></b>
+        Aksi takdirde metin doğru bir şekilde anlaşılamaz. Çünkü dil
+        sürekli değişen, gelişen ve zaman içerisinde dönüşen canlı ve
+        dinamik bir organizmadır. Kelimeler doğar, zaman içerisinde
+        anlam değişmelerine uğrar, belirli bir zaman sonra da diğer
+        canlılar gibi ölürler.</p>
+        <p>Yedinci asırda inmeye başlayan Kur’an da dönemin Hicaz
+        bölgesinde konuşulan Arap diliyle inmiştir. Bu sebeple o dönemde
+        yaşayan insanların konuştukları dilin üslûp ve özelliklerini
+        taşımaktadır. Kur’an’ı anlama, açıklama ve yorumlamaya çalışan
+        müfessirin, kelime ve kavramları dilbilimsel ve anlam bilimsel
+        açıdan incelemeye; odak ve anahtar kavramları ise
+        etimolojik/iştikak, lugavî/sözlükbilim, lenguistik ve semantik
+        açıdan tahlil etmeye ihtiyaç duyması gayet doğaldır. Bu tür
+        çalışmalar geçmiş dönemde yapıldığı gibi gelecek dönemde de
+        yapılacaktır.</p>
+        <p>Önceleri tek tek sözcüklerin anlamlarına yoğunlaşan ilk
+        anlambilim çalışmalarında; anlam, anlam değişmeleri ve bu
+        değişmelerin sebepleri üzerinde durulurken daha sonra dil
+        öğelerinin birbirleriyle sıkı ilişki içinde oldukları ve
+        birlikte işlev gördükleri ilkesi benimsenmiş, sözcükten büyük
+        birimlere ve dilin bütün olarak işleyişinin anlam yönüne
+        odaklanan çalışmalar yapılmıştır.</p>
+        <p>Bütün doğal diller anlamlı kelime ve cümlelerden oluşur.
+        Prensip olarak, her kelime veya cümle en az bir anlamla
+        ilişkilendirilebilir. Bağlam, durum gibi anlamı etkileyebilecek
+        nedenler varsa da sözcüklerin anlamını incelemek daha büyük
+        birimlere göre daha kolaydır. Cümle düzeyinde anlamın
+        incelenmesi ise daha karmaşıktır. Çünkü cümlelerin anlamı,
+        kendilerini oluşturan sözcüklerin anlamına bağlıdır.</p>
+        <p>Anlambilim, kelimenin anlamı ile cümlenin anlamı arasındaki
+        ilişkiyi ve bu ilişkinin ne şekilde ve ne dereceye kadar
+        cümlenin yapısına bağlı olduğunu da inceler. Sözcüklerin
+        birbirleriyle olan söz dizimsel ilişkileri anlamı
+        değiştirebilir. Mesela; “sadece sana kulluk yaparız”, “kulluk
+        yaparız sadece sana” cümleleri aynı sözcüklerden oluşsa ve
+        anlamda büyük örtüşme gösterse de iki ifade arasında nüans
+        vardır; çünkü her iki cümledeki farklı söz dizimi vurguların da
+        farklı olmasına sebep olmaktadır.</p>
+        <p>Anlambilim, genelde kelimelerin, işaretlerin ve simgelerin
+        aralarındaki ilişkinin biliminden çok, bunların insanın
+        deneyiminde tuttukları yerin bilgisi olarak tanımlanır. Biz
+        birbiriyle ilgili kelimeleri, şeyler dünyasında aldıkları
+        etiketten yani adlardan tanırız. Ancak bu tanıma, hangi
+        kelimelerin anlamlarıyla ilgili olduklarını anlamada yetersiz
+        kalır. Bazı kelimeler birbiriyle ilgili olmayan birden çok
+        anlama gelmektedir. Özellikle bazı dillerde okunuşu aynı, anlamı
+        farklı kelimelerin pek çok örneği vardır. Türkçe ’de de örneğin
+        acı duymak, kaymak, yar, baskı, yüz gibi kelimeler birden fazla
+        anlam taşırlar. Ayrıca aynı kökten türeyen bir kelime, kök
+        anlamından farklı anlamlarda kullanılabilmektedir. Kaçmak
+        kelimesi; hapisten kaçmak, treni kaçırmak, çorap kaçığı, aklını
+        kaçırmak ifadelerinde farklı anlamlara gelebilmektedir.
+        Zikrettiğimiz bu kelimeler/deyimler, çok anlamlı olmalarından
+        dolayı hangi anlamın kastedildiği meselesi cümle içerisindeki
+        kullanımından çıkarılır. Örneğin Kur’an’da geçen kitap kelimesi;
+        Kur’an, kutsal kitap, levh-i mahfuz, belirlenmiş süre, kanun,
+        sözleşme, hükümler ve amel defteri anlamlarına
+        gelmektedir.<b><sup class="modal-trigger" data-content="Mehmet Okuyan, Çok Anlamlılık Bağlamında Kur’an Sözlüğü, İstanbul: Düşün Yayınları, 2015, s. 537-540." style="cursor: pointer;">32</sup></b>
+        Ayette geçen bu kelimenin hangi anlamda kullanıldığını
+        belirleyecek olan cümlenin metin içerisindeki siyak ve sibak
+        ilişkisidir.</p>
+        <p>Anlama faaliyetinde çeşitli bakış açıları olduğundan,
+        anlambilimin sınırlarını belirlemek çok zordur. Kelimelerin
+        anlamını öğrenmek için en uygun yol bir sözlüğe bakmaktır. Ancak
+        sözlük bize yalnızca hangi kelimelerin ya da deyişlerin ne
+        anlama geldiğini gösterirken kelimenin cümle içerisinde
+        kazandığı anlamı belirlemez. Cümlenin anlamı da ilgili metnin
+        bütüncül olarak anlaşılmasına bağlıdır. Bütün bu bilgilerden
+        yola çıkarak her dilde metni/sözü anlamanın farklı yöntemlerinin
+        olduğunu söyleyebiliriz. Bir metni/sözü anlamanın ve
+        yorumlamanın en güvenilir yöntemi metni oluşturan dilin kendi
+        geleneği içerisinde oluşan dilbilim kavramlarını
+        kullanmaktır.</p>
+        <h1 id="kuran-yorumunda-hermenötik-yöntemin-imkânı">Kur’an
+        Yorumunda Hermenötik Yöntemin İmkânı </h1>
+        <p>Modern dönemde bir okuma ve yorum biçimi olarak dilimize
+        girmiş bulunan hermenötik, genelde edebi metinleri ve sanat
+        eserlerini anlama ve yorumlamada kullanılan bir kavramdır. Daha
+        sonra dini metinlerin derûnî anlamlarını ortaya çıkarmak için ve
+        yorumda bir yöntem olarak kullanılmaya başlanmıştır.</p>
+        <p>Hermenötik sözlükte; bildirme, tercüme etme, açıklama ve
+        yorumlama anlamlarına gelir. Bu kelimenin Yunanca “herméneuein”
+        kelimesinden ya da tanrıların mesajlarını insanlara aktardığı
+        söylenen Yunan mitolojisindeki Hermes’in adından türediği
+        söylenmiştir. Mitolojiye göre Hermes, tanrıların mesajlarını
+        insanlara olduğu gibi değil, ontolojik düzeyin farklılığından
+        dolayı bir bakıma zorunlu olarak kendi yorumu üzerinden
+        aktarmaktadır. Hem tanrıların hem de insanların dilini bilen
+        Hermes, tanrılarla insanlar arasında haber getirip götüren bir
+        elçilik görevi üstlendiğinden, yaptığı iş bir tür
+        tercümanlıktır. Hermes mesajı aktarırken aynı zamanda onu
+        yorumlar. Anlaşılmaz olanı insanın anlayacağı bir söz kalıbına
+        döken Hermes’in dil ve yazıyı icat ettiği ifade
+        edilir.<b><sup class="modal-trigger" data-content="Osman Bilen, Çağdaş Yorumbilim Kuramları, Ankara: Kitabiyat, 2002, s. 22." style="cursor: pointer;">33</sup></b></p>
+        <p>Grekçe kökenli “hermeneuein” fiilinden türeyen bu kelimeyi
+        Aristotales’in mantıkla ilgili yazılarında ve Farabi’nin
+        eserlerinde kullandığı ifade edilmiştir. Aristotales, bu kavramı
+        hüküm ve önerme anlamında kullanır. Kelimenin eski ve çağdaş
+        kullanımları aynı olmakla birlikte felsefe ve mitolojideki
+        kullanımları farklıdır. Bu tür yorumlama faaliyeti üç farklı
+        eylemi kapsamaktadır. a) Bir nesne veya lafızla ilişki kurma,
+        sözle ifade etmek; b) bir şeyi başka şeyle yorumlamak,
+        açıklamak; c) bir lisandan başka bir lisana çevirmek,
+        aktarmaktır.<b><sup class="modal-trigger" data-content="Bilen, Çağdaş Yorumbilim Kuramları, s. 21-23, Demir, Kur’an’ın Yeniden Yorumlanması, s. 118." style="cursor: pointer;">34</sup></b>
+        Hermenötiğin bu üç anlamı, geleneğimizde; birincisi, bir manayı
+        açığa çıkarmak, beyan etmek anlamında şerh; ikincisi, bir sözü
+        başka bir sözle aydınlatmak, izah etmek anlamında tefsir;
+        üçüncüsü, tercüme etmek, bir sonuca bağlamak ve döndürmek
+        anlamında te’vîl kelimeleriyle ifade edilen anlamların tümünü
+        kapsar.<b><sup class="modal-trigger" data-content="Bilen, Çağdaş Yorumbilim Kuramları, s. 23." style="cursor: pointer;">35</sup></b></p>
+        <p>Grek felsefesinde bir yorum biçimi olarak anlaşılan
+        hermenötik kavramına Platon, Aristotales ve Stoacılar tarafından
+        üç ayrı fonksiyon yüklenmiştir. Platon’a göre hermenötik sanatı,
+        bir tanrısal buyruk ve iradenin açıklanması ve yorumlanmasıdır.
+        Aristo, Platon’un yüklediği bu anlamdan farklı olarak, yorumu
+        işaret ve bulgular yardımıyla ifadenin anlaşılmasına yarayan bir
+        etkinlik olarak kabul eder.35 Stoacılar ise yorum ve ifadenin
+        formundan içsel/esas anlamı çıkarmaya ve anlamaya çalışmak
+        şeklinde yorumlamışlardır. Bilinen ve işaret edilen anlamın
+        yerine, Stoacıların yorumu, dış anlam ve iç anlam olarak kabul
+        etmeleri, hermenötik tarihinde bir dönüm noktası olmuştur.
+        Teolojik hermenötik de birbirini tamamlayan bu Stoacı ayrıma
+        dayanır. Stoacılar birbirinden farklı ve birbirini tamamlayan
+        iki anlamı kabul etmekle birlikte, bir hermenötik teori
+        geliştirmemişlerdir. Böyle bir teorinin ilk denemelerini yapan
+        ve içsel anlama ulaşmak için alegori (simgesel anlatım)
+        kavramına özel bir önem atfeden Yahudi filozofu Philon’dur (M.Ö.
+        15/10- M.S.
+        45/50).<b><sup class="modal-trigger" data-content="Özcan, Teolojik Hermenötik, s. 25." style="cursor: pointer;">36</sup></b></p>
+        <p>Hermenötik metodun gelişmesinde bilimlerin
+        sınıflandırılmasının da etkisi olmuştur. Bilimler, kuramsal ve
+        pratik olmak üzere ikiye ayrılır. Doğa bilimleri, mantık,
+        matematik ve gramer kuramsal ilimlerdir. Ahlak, siyaset ve hukuk
+        ise eyleme dayalı olan pratik ilimler arasında yer alır. Ayrıca
+        ilimler, teorik ve uygulamalı şeklinde ikili tasnife tabi
+        tutulur. Genel olarak bir bilimin uygulamasına sanat, el
+        becerisine dayalı uygulamasına ise teknik denir. Her bilimin
+        kendi konusuna göre aynı zamanda farklı birer sanat olduğu
+        düşünülmektedir. Eleştiri; edebi metinleri, tefsir; dinsel
+        metinleri, mantık ise doğa ve metafizikle ilgili konuları
+        yorumlayan sanatlardır. Bunların ortak paydası her üçünün de
+        dile ve gramere bağımlı olmalarıdır.</p>
+        <p>Orta Çağ eğitim müfredatında gramer, mantık ve retorik
+        ilimleri tali yorumlama yöntemlerini kullanırken, teolojik
+        yorumlamada ise gramer ve mantık ilimleri kullanılırdı. Edebi
+        metinlerdeki kullanımlarından hareketle kelimelerin etimolojik
+        ve mecazî anlamlarını tespit etmek ve açıklamak için dil ve
+        gramer bilgisine ihtiyaç vardır. Ancak kutsal metinleri
+        yorumlayacak olan teolog/müfessir için gramer, Tanrı’nın
+        sembolik kitabı olan yaratılmış dünyadaki varlıkların düzenini
+        yansıtır. Dünya derin bir anlam kabuğu ve perdesi, gramer ise bu
+        derin anlamın sembolü olan dilin bir aracıdır. Dünyadaki
+        nesneler Tanrı’nın sembolik dilinin kelimeleri gibidir.
+        Tanrı’nın sözel eseri olan kutsal yazılar da bu nesnelerin bir
+        tür sembolik temsilleridir. Nitekim bu anlamda Thomas Aquinas,
+        “Tanrı’nın kitabı, sıradan gramerde var olan lafzî anlamları
+        içerse de daha yüksek düzeyde manevi bir anlama da sahiptir”
+        der.<b><sup class="modal-trigger" data-content="Bilen, Çağdaş Yorumbilim Kuramları, s. 37-38." style="cursor: pointer;">37</sup></b>
+        Buna göre kutsal kitaplarda sözcükler literal/lafzi anlamın yanı
+        sıra tinsel ve ruhsal anlamları da içerisinde barındırır.
+        Böylece bir metnin anlamını ortaya koymak için, o metnin
+        sözel/lafzi, benzetme (teşbih, sembolik ve alegorik), batınî
+        (heterodoksi/anagojik) ve moral (ahlak) olmak üzere dört şekilde
+        yorumlanması
+        mümkündür.<b><sup class="modal-trigger" data-content="Mevlüt Erten, Nass ve Yorum İlişkisi, Ankara: Ankara Okulu Yayınları, 2013, s. 55." style="cursor: pointer;">38</sup></b></p>
+        <p>Teolojik hermenötik, ilgili metni, onun dogmatik çerçevesine
+        bağlı kalarak, dilsel ve ahlaki içeriğini gözeterek yorumlama
+        sanatıdır. Burada uygulanan yöntemler dogmatik ilkelere
+        bağımlıdır. Dinsel metinlerin yorum kurallarıyla ilgili kırılma
+        noktası, Batı geleneğinde Protestanlıkla başlar. Katolik
+        Kilisesinin geleneğe ve otoriteye bağımlı (dogmatik) geleneğine
+        karşı Protestanlık, kutsal metnin mecazî ve batınî anlamlarını
+        kabul etmemiştir. Anlamın sadeliğini, kendi kendine
+        yeterliliğini ve herhangi bir aracı kişi ve kurum olmadan herkes
+        tarafından anlaşılabileceğini savunmuştur. Böylece Protestanlık,
+        eski yorum geleneğinin dörtlü anlam kuramına karşılık yalnızca
+        metnin kendisiyle yorumlanması ilkesiyle ortaya çıkmıştır.
+        Protestan yorumcular, kutsal kitabın yalnızca kendisiyle
+        anlaşılabileceğini ve iç tutarlılığını ispat etmek için yeni
+        yöntemler geliştirmişlerdir. Bu yöntemi savunan Luther taraftarı
+        reformist Matthias Flacius Illyricus (1520-1575) kutsal metnin
+        iki temel yorumlama ilkesine dikkat çekmiştir. Ona göre kutsal
+        kitap anlaşılamıyorsa bunun iki sebebi vardır. Birincisi bilgi
+        eksikliği veya yorumlama konusundaki ön hazırlığın olmayışından
+        diğeri ise kutsal metinlerin iç bütünlüğünün dikkate
+        alınmamasından kaynaklanır. Bu sebeple kutsal metni anlamak ve
+        yorumlamak için metnin oluştuğu tarihsel döneme gidilmesi ve
+        Luther’in öne sürdüğü kutsal kitap metinlerinin sadece kendi
+        kendisiyle yorumlanması (sola scriptura) ilkesinin göz önünde
+        bulundurulması
+        gerekir.<b><sup class="modal-trigger" data-content="Bilen, Çağdaş Yorumbilim Kuramları, s. 38-39; Ahmet Bayındır, Ockhamlı William'ın Din Felsefesi, Bursa, Emin Yayınları, 2014, s. 127." style="cursor: pointer;">39</sup></b>Çağdaş
+        modernist Kur’an yorumcularında bu iki ilke Kur’an’ın indiği
+        dönemin dilinin esas alınması ve Kur’an’ı anlamak için “yalnızca
+        Kur’an yeter” görüşleriyle ifade edilmiştir. Protestan yoruma
+        göre kutsal metinler diğer ilahi olmayan metinler gibi kabul
+        edilmiş, geleneğin (Katolik kilisesinin) otoritesi yerini metnin
+        otoritesine bırakmıştır. Metni anlamak için kutsal metnin
+        bütünlüğü içerisinde lafzî (literal) okuma dikkate alınmıştır.
+        Bu yöntemin sonucu kutsal metinlerin yazıldığı tarihi şartların
+        ve yazarın niyetinin dikkate alınması gerektiği ifade
+        edilmiştir.</p>
+        <p>Hermenötiğin evrensel bir dil haline gelmesinde pozitivizmin
+        büyük oranda etkisi olmuştur. Zira Friedrich Schleirmeicher
+        (1768-1834) ve Dilthey’in (1833-1911) çabalarıyla hermenötik
+        yorum, sosyal bilimlerde egemen olan pozitivist yaklaşıma
+        alternatif bir yöntem olarak geliştirilmiştir. Diğer taraftan
+        Aydınlanmanın seküler karakteri, yorum kurallarını dinin ve
+        kutsal metnin yorumunun dışına taşırmıştır. Schleirmeicher ile
+        birlikte hermenötik sadece dini metinlerin yorum yöntemi değil
+        aynı zamanda bütün din dışı metinlerin hatta giderek insan ürünü
+        bütün nesnelerin yorum kuramı olmuştur. Bu konumu ile hermenötik
+        yöntemin, metnin yorumunda nesnel sonuçlara ulaştırabileceği
+        düşünülmüştür.<b><sup class="modal-trigger" data-content="Paçacı, “Tefsirde Semantik ve Hermenötik”, s. 584." style="cursor: pointer;">40</sup></b></p>
+        <p>Hermenötiği ilk defa Schleiermacher beşerî ilimlere
+        uygulanmaya elverişli bir metot haline getirmiştir. O, metni
+        okuyan kişinin kendisini metnin yazarının yerine koyabilmesiyle
+        anlamın ortaya çıkacağını savunur. Schleiermacher, kendisini
+        yazarın yerine koyan başarılı bir yorumcunun metni yazarından da
+        daha iyi anlayabileceğini iddia eder. Dilthey ise hermenötik
+        kavramını ilk defa felsefe alanına taşımıştır. Schleiermacher’in
+        etkisiyle hermenötik kavramına felsefi bir anlam kazandıran
+        Dilthey, hermenötiğin tinsel bilimlerin yöntemi olduğunu
+        savunmuştur. Dilthey, yazılı metinleri önce filolojik bir anlam
+        eleştirisinden geçirmek, daha sonra da sözcüklerin belli bir
+        dönem ya da çağda söz konusu olan anlamlarını ortaya çıkarmak
+        gerektiğini öne sürmüştür. Çünkü ona göre metnin sadece lâfzî
+        anlamını ortaya çıkarmak onu anlamak için yeterli değildir.
+        Ayrıca, sözcüklerin anlam daralması, anlam genişlemesi veya
+        anlam kayması gibi sonraki dönemlerde kazandıkları anlamı da
+        ortaya çıkarmak gerekir. Bu anlamları açığa çıkaracak olan
+        yöntem de bir tür anlama ve yorumlama sanatı olarak
+        hermenötiktir.<b><sup class="modal-trigger" data-content="Ahmet Cevizci, Felsefe Sözlüğü, İstanbul: Ekin Yayınları, 1997, s. 311." style="cursor: pointer;">41</sup></b></p>
+        <p>Hermenötiği ilk defa bir bilim ve evrensel anlama
+        sanatı/bilimi olarak kurulmasına öncülük eden Schleirmeicher,
+        metinleri anlamada tarih ile aklı karşı karşıya getiren
+        sorunları ortadan kaldırmayı hedeflemiştir. O anlama ve
+        yorumlama sanatı olarak hermenötiği, sadece kutsal kitapları
+        anlamada karşılaşılan sorunların çözülmesi için başvurulan
+        sıradan bir yardımcı disiplin olmaktan çıkaran Schleirmeicher,
+        aynı zamanda hermenötiği yazılı ve sözlü ifadeleri anlama ve
+        yorumlamanın temel ilkelerinin tespitini yapan ve bu ilkeleri
+        uygulama yöntemleri üzerinde çalışan bir bilim olarak
+        geliştirmeye çalışmıştır. Schleirmeicher bunu yaparken “gramatik
+        yöntem”, “psikolojik ve teknik yöntem” olmak üzere iki temel
+        yöntem
+        kullanmıştır.<b><sup class="modal-trigger" data-content="Bilen, Çağdaş Yorumbilim Kuramları, s. 58-59" style="cursor: pointer;">42</sup></b>
+        Gramatik yöntemle cümlelerin ve metnin anlamı çözümlenirken,
+        psikolojik ve teknik yöntemle de dilin genel yapısı ve
+        özellikleri; yazarın düşünce yapısının bütünlüğü içinde eser
+        anlaşılır ve yorumlanır.</p>
+        <p>Hermenötiği insan bilimlerinin temel araştırma yöntemi
+        konumuna yükselten Dilthey ise, Schleirmeicher’in ortaya koyduğu
+        psikolojik yöntemi, yani yazarın niyetindeki anlama ulaşma
+        ilkesini reddetmiştir. Ona göre hermenötik için önemli olanın
+        eser sahibinin psikolojisine ulaşmak değil, salt metinde ifade
+        edileni
+        anlamaktır.<b><sup class="modal-trigger" data-content="Demir, Kur’an’ın Yeniden Yorumlanması, s. 122." style="cursor: pointer;">43</sup></b>
+        Diltey bu düşüncesiyle, anlama sürecinde, salt metnin ve metni
+        anlayan/yorumlayan öznenin içinde bulunduğu tarihsel ve
+        toplumsal şartların dikkate alınması gerektiğini ifade
+        etmiştir.</p>
+        <p>Dilthey’den sonra Martin Heidegger (1889-1976) hermenötiği,
+        bütün beşeri ürün/metin/söz ve davranışları anlamaya imkân
+        verecek şekilde genişletmiştir. O, bütün bir dünya görüşünü
+        yorum ilkesi üstüne kurmuştur. Ancak bu anlama, tarihsel bir
+        biçimde oluşmuş, insan bilincinin olgularla karşı karşıya
+        gelmesi ve olguları yaşamasıyla biriken veriler üstüne
+        temellenmiş bir anlamadır. Hans-George Gadamer’e (1900- 2002)
+        göre ise hermenötik; daha ziyade kendi özelliğimizin farkında
+        olmaya yarayan bir sistemdir. Ona göre içinde bulunduğumuz zaman
+        ve mekân, olguları/metni/sözü anlamamızı etkiler. Bu sebeple ön
+        yargısız/nesnel anlamadan söz edilemez. Gadamer’in bu öznelci
+        yorumunu tenkit eden Dilthey’in takipçileri olan Hirsch
+        (1902-1985) ve Betti (1890-1968), söz/metnin anlamının
+        nesnel/objektif bir şekilde anlaşılabileceğini ileri
+        sürmüşlerdir. Nitekim Betti, bu nesnel/objektif yorum
+        anlayışıyla daha sonra Fazlurrahman’a ilham kaynağı
+        olmuştur.<b><sup class="modal-trigger" data-content="Fazlurrahman, İslam ve Çağdaşlık, Çev. Alpaslan Açıkgenç, M. Hayri Kırbaşoğlu, Ankara 1996, s. 67–68." style="cursor: pointer;">44</sup></b></p>
+        <p>Batılı hermenötik yorumcuların yukarıda özetlenen
+        görüşlerinden hareketle şu sonuçlar ortaya çıkarılabilir:
+        Hermenötik teorilerinde genelde öznellik/subjektiflik ve
+        nesnellik/objektiflik şeklinde iki görüş vardır. Mesela Dilthey
+        ve Betti nesnel/objektif anlamanın mümkün olduğunu savunurken,
+        Gadamer gibi düşünenler ise ön yargısız anlamanın mümkün
+        olmadığını söyler. Bu durumda Gadamer’e göre; söz/metin zamana
+        ve okuyucuya göre değişmekte ve her okura göre aynı/tek bir
+        anlamdan söz etmek mümkün değildir. Betti’de ise Gadamer’deki
+        öznelciliğin karşıt ucunu oluşturan sınırları belli olmayan bir
+        nesnelciliğe şahit olmaktayız.</p>
+        <p>Hermenötiği tabiat bilimlerinin yöntemi olan öznenesne
+        ikileminden kurtaran Edmund Husserl (1859-1938) ise, nesnelerin
+        özünü oldukları gibi kavramaya yönelik bir bilincin olduğunu
+        vurgulamıştır. Ancak Heiddeger daha sonra nesnelerin özünü
+        oldukları gibi kavramanın mümkün olmadığını hem nesnenin hem de
+        öznenin kendi tarihsel bağlamlarının dışına çıkamayacaklarına
+        dikkat çekmiş, öznenin her zaman bir metni/sözü veya bir olguyu
+        anlamaya çalışırken ön-anlamaya sahip olması gerektiğine vurgu
+        yapmıştır.<b><sup class="modal-trigger" data-content="Paçacı, “Tefsirde Semantik ve Hermenötik”, s. 584-585." style="cursor: pointer;">45</sup></b></p>
+        <p>Bu tartışmalardan çıkan sonuca göre hermenötik yorum, bizim
+        dışımızda teşekkül eden özellikle ilahi kaynaklı bir
+        sözün/metnin içsel (derȗnî) ve hakiki (kastedilen) anlam ve
+        amacına, yazarın gerçek niyetine ulaşabileceğimizi iddia eder.
+        Bu iddianın gerçekleşmesinin, özellikle vahye dayalı dini
+        metinleri anlama ve yorumlama imkânı var mıdır? Böyle bir imkân
+        varsa bu ne kadar gerçekleştirilebilir? Bu soruya olumlu cevap
+        vermenin beşerî düzeyde oluşturulmuş metinler için mümkün olduğu
+        söylenebilir. Çünkü beşerî düzeyde teşekkül etmiş bir metnin
+        nihai amacı ve anlamı, aynı ontolojik düzeyde olan bir insanın
+        niyeti belki kolayca anlaşılabilir. Ancak ontolojik bakımdan
+        insanla aynı mahiyette olmayan Allah’ın sözündeki muradını diğer
+        insanlarınki gibi aynı yöntem ve araçlarla tam olarak doğru
+        anlamanın mümkün olmadığı izahtan varestedir. Bu durum metni
+        anlamada insan ile Allah arasındaki mahiyet farkından dolayı
+        zorluk çıkardığı gibi, dinlerin kutsal kitapları arasındaki
+        metinleşme farklılıkları sebebiyle de güçlük çıkarmaktadır.
+        Çünkü her ne kadar Hıristiyan ve Yahudiliğin kutsal kitaplarının
+        (İncil ve Tevrat) kaynağı ilahi de olsa Kur’an gibi metni
+        değiştirilmemiş bizzat ilahi bir söz değil, sadece dini bir
+        metindir. Hermenötik yorumu ilahi kelama uyguladığımızda; ilahi
+        kelamı anlamak isteyen özne, anlaşılmak istenen Kur’an, Kur’an’ı
+        vahyeden Allah ve Allah’ın muradı şeklinde dört düzey ile karşı
+        karşıya kalırız. Burada şu sorulara vereceğimiz cevaplar
+        meselenin ne kadar zor olduğunu ortaya koymaktadır. Kur’an’ı
+        anlamaya çalışırken, kendimizi sözün/metnin sahibinin (Allah)
+        yerine koyabilir miyiz? Metni onu vahyedenden daha iyi
+        anlayabilir miyiz?</p>
+        <p>Hermenötik yöntemle anlamaya/yorumlamaya çalıştığımız kutsal
+        metni Allah’ın hakiki muradından farklı yorumlayabilir miyiz?
+        Kur’an metnini normal bir metin olarak görüp sadece metinden
+        hareketle sünnet ve onun açıklayıcısı ve uygulayıcısı olan
+        Peygamberden bağımsız anlamamız mümkün müdür? Böyle bir
+        yorumlama sonucunda doğru ve nesnel bir anlama ulaşabilir miyiz?
+        Bize göre tefsir geleneğimiz açısından bu sorulara olumlu cevap
+        vermemiz mümkün gözükmemektedir. Dilthey’in metni nesnel olarak
+        anlayabileceğimiz görüşünün kutsal metinlere özellikle de
+        Kur’an’a uygulanması imkânsızdır. Çünkü Allah, zihin dünyasına
+        nüfuz edebileceğimiz herhangi bir yazar gibi
+        değildir.<b><sup class="modal-trigger" data-content="Özcan, Teolojik Hermenötik, s. 81-85." style="cursor: pointer;">46</sup></b>
+        Sanat eserlerini, edebi ve dini metinleri anlama ve yorumlama
+        biçimi olarak batıda ortaya çıkan hermenötik yorum yöntemi,
+        içinde doğduğu kültür dünyasının problemlerini çözmek, özelde
+        ise Kutsal Kitap içinde var olan çelişkileri ortadan kaldırmak
+        üzere geliştirilmiştir. Her yorum ve anlama metodu neşvünema
+        bulduğu kültürel ortamda uygulandığında anlamlıdır. Ancak söz ve
+        lafzıyla vahiy kaynaklı olduğu kesin olan Kur’an’ı anlama ve
+        yorumlamada bu metottan faydalanmamız ne kadar mümkündür? Çünkü
+        batılılar, vahyinden uzun bir zaman geçtikten sonra
+        anlatı/rivayet yoluyla kaleme alınan ve lafızlarında, mana ve
+        yorumlarında ciddi tahrifata uğrayan İncil ve Tevrat metinlerini
+        normal bir metin gibi kabul etmişler, metinlerdeki tutarsızlık
+        ve çelişkileri eleştiriye ve metin kritiğine tabi tutmuşlardır.
+        Oysa bizim için Kur’an, ilahi kaynaklı bir metindir. Tek bir
+        harfine bile hiçbir beşerin müdahalesi söz konusu olmadığı gibi
+        metnin içerisinde herhangi bir çelişki ve tutarsızlık ta söz
+        konusu değildir. Allah ile beşer arasındaki ontolojik mahiyet
+        farkından dolayı, Kur’an’ı bu metot ile anlamaya çalışmamız
+        nasıl mümkün olacaktır? Çünkü hermenötik yorumda metni yazarın
+        niyetinden daha iyi anlayacağımız iddia edilmektedir. Bunun
+        mümkün olması bir yana, kendimizi Allah’ın yerine koymamız ve
+        söylemiş olduğu sözdeki maksat ve muradı tam olarak tespit
+        etmemiz mümkün değildir. Durum böyle olunca, İncil ve Tevrat’ın
+        metinlerindeki çelişkileri keşfedip ortaya çıkarmak üzere
+        geliştirilmiş olan hermenötiği, Kur’an’ın anlaşılması ve
+        yorumlanmasında kullanmak metodolojik açıdan
+        sakıncalıdır.<b><sup class="modal-trigger" data-content="Ali Galip Gezgin, Tefsirde Semantik Metod, İstanbul: Rağbet, 2018, s. 387." style="cursor: pointer;">47</sup></b></p>
+        <h1 id="kaynakça">Kaynakça</h1>
+        <p>• Aksan, Doğan. <em>Anlambilimi ve Türk Anlambilimi.</em>
+        Ankara: Engin Yayınevi, 1999.</p>
+        <p>• Bayındır, Ahmet. <em>Ockhamlı William'ın Din
+        Felsefesi.</em> Bursa: Emin Yayınları, 2014.</p>
+        <p>• Bilen, Osman. <em>Çağdaş Yorumbilim Kuramları.</em> Ankara:
+        Kitabiyat, 2002.</p>
+        <p>• Cabirî, Muhammed ‘Âbid. <em>Bünyetu’l-‘akli’l-‘arabî.</em>
+        Beyrut: Merkezu dirasati’l-vahdeti’l-‘arabiyye, 1986.</p>
+        <p>• Cevizci, Ahmet. <em>Felsefe Sözlüğü.</em> İstanbul: Ekin
+        Yayınları, 1997.</p>
+        <p>• Coşkun, Muhammed. <em>Modern Dünyada Kur’an Yorumu.</em>
+        İstanbul: İFAV, 2018.</p>
+        <p>• Cündioğlu, Dücane. <em>Anlamın Buharlaşması ve Kur’an.</em>
+        İstanbul: Kitabevi, trs.</p>
+        <p>• Çapak, İbrahim. <em>Ana Hatlarıyla Mantık.</em> İstanbul:
+        Ensar, 2013.</p>
+        <p>• Demir, Şehmus. <em>Kur’an’ın Yeniden Yorumlanması: Batıyla
+        Münasebetin Kur’an Yorumuna Yansımaları.</em> İstanbul: İnsan
+        Yayınları, 2002.</p>
+        <p>• Demirci, Muhsin.</p>
+        <ul>
+        <li><p><em>Tefsir Usûlü.</em> İstanbul: İFAV, 2017.</p></li>
+        <li><p><em>Tefsirde Metodolojik Sorunlar.</em> İstanbul: İFAV,
+        2012.</p></li>
+        </ul>
+        <p>• Erten, Mevlüt. <em>Nass ve Yorum İlişkisi.</em> Ankara:
+        Ankara Okulu Yayınları, 2013.</p>
+        <p>• Fazlurrahman. <em>İslam ve Çağdaşlık.</em> Çev. Alpaslan
+        Açıkgenç, M. Hayri Kırbaşoğlu, Ankara, 1996.</p>
+        <p>• Gezgin, Ali Galip. <em>Tefsirde Semantik Metod.</em>
+        İstanbul: Rağbet Yayınları, 2018.</p>
+        <p>• Izutsu, Toshihiko. <em>Kur’an’da Allah ve İnsan.</em> Çev.
+        Süleyman Ateş, İstanbul: Yeni Ufuklar, trs.</p>
+        <p>• İsfahânî, Ragıb. <em>el-Müfredat fî ğarîbi’l-Kur’ân.</em>
+        thk. Muhammed Seyyid Keylanî, Beyrut: Daru’l-Ma‘rife, trs.</p>
+        <p>• Okuyan, Mehmet. <em>Çok Anlamlılık Bağlamında Kur’an
+        Sözlüğü.</em> İstanbul: Düşün Yayınları, 2015.</p>
+        <p>• Özcan, Zeki. <em>Teolojik Hermenötik.</em> İstanbul: Alfa
+        Yayınları, 2000.</p>
+        <p>• Paçacı, Mehmet. “Tefsir’de Semantik ve Hermenötik.”
+        <em>İslamî İlimlerde Metodoloji/Usûl Meselesi I.</em> İstanbul:
+        Ensar Yayınları, 2005.</p>
+        <p>• Palmer, Frank Robert. <em>Semantik: Yeni Bir Anlambilim
+        Projesi.</em> Çev. Ramazan Ertürk, Ankara: Kitabiyat, 2001.</p>
+        <p>• Richman, H. P. <em>Anlama ve İnsan.</em> Çev. Mehmet Dağ,
+        Ankara, 1992.</p>
+        <p>• Rifat, Ahmet. <em>XX. Yüzyılda Dilbilim ve Göstergebilim
+        Kuramları.</em> İstanbul: Yapı Kredi Yayınları, 2005.</p>
+        <p>• Soysaldı, H. Mehmet. <em>Kur’an’ı Anlama Metodolojisi.</em>
+        Ankara: Fecr Yayınevi, 2001.</p>
+        <p>• Taylan, Necip. <em>Ana Hatlarıyla Mantık.</em> İstanbul:
+        Ensar, 2010.</p>
+        <p>• Yılmaz, Hasan. <em>Semantik Analiz Yönteminin Kur’an’a
+        Uygulanması.</em> Bursa: Kurav Yayınları, 2007.</p>
+        <p>• Zerkeşî, Bedreddin. <em>el-Burhân fî ‘ulûmi’l-Kur’ân.</em>
+        thk. Mustafa Abdulkadir ‘Atâ, Beyrut: Dâru’l-kütübi’l-ilmiyye,
+        1988.</p>
+        <p>• Zürkânî, Muhammed Abdulazîm. <em>Menâhilü’l-‘irfân fi
+        ‘ulûmi’l-Kur’ân.</em> thk. Fevvâz Ahmed Zümerlî, Beyrut:
+        Dâru’l-kitâbi’l-‘arabî, 1995.</p>
+      
+    </div>
+	 
+   </div>
+   <script src="js/script.js?v=1.0.3"></script>
+   <script src="js/toc.js?v=1.0.3"></script>
+   <script src="js/modal.js?v=1.0.3"></script>
+ 
+</body>
+</html>
